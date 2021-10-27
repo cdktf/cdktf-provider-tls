@@ -2762,9 +2762,9 @@ graphql-tag@^2.11.0, graphql-tag@^2.12.3:
     tslib "^2.1.0"
 
 graphql@^15.5.1:
-  version "15.6.1"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.6.1.tgz#9125bdf057553525da251e19e96dab3d3855ddfc"
-  integrity sha512-3i5lu0z6dRvJ48QP9kFxBkJ7h4Kso7PS8eahyTFz5Jm6CvQfLtNIE8LX9N6JLnXTuwR+sIYnXzaWp6anOg0QQw==
+  version "15.7.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.7.0.tgz#caace26caf9b875b80982c45db58765d8a060e3e"
+  integrity sha512-1jvUsS5mSzcgXLTQNQyrP7eKkBZW+HUnmx2LYSnfvkyseVpij8wwO/sFBGgxbkZ+zzFwYQxrHsOana5oMXmMxg==
 
 handlebars@^4.7.6:
   version "4.7.7"
@@ -3442,10 +3442,10 @@ jsii-diff@^1.40.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^3.8.7:
-  version "3.8.7"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.7.tgz#e2c635b4c34f373bf14237d3f5a68ec898dfc7c3"
-  integrity sha512-55C/V295jTyHUvsssZmfVu7AgILTm2xlh3gCSQQg4BqSgIjrAGqJmgccuvHsAqF0mbCITRI3FdnM+Kn2qUwHjQ==
+jsii-docgen@^3.8.9:
+  version "3.8.9"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.9.tgz#fbb8870eb3217a3bbb6e3c8649bf48eeeec779ff"
+  integrity sha512-RHnuZqaXvSlnVcKrh0270ahjKkD4Aip5KjllfWRfG1IPSgZuYjtfW5Z7MeGqdcmUOYVsUMQ2IjQrlO+qQl/yQw==
   dependencies:
     "@jsii/spec" "^1.40.0"
     case "^1.6.3"
@@ -5342,9 +5342,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sscaff@^1.2.0:
-  version "1.2.107"
-  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.107.tgz#ea2afe398d5d940acc4818c8cb1b28a3062a5407"
-  integrity sha512-dbEGulSwPb5utQIW8zgyBMK+35a9iuknneQxZB/Jh3CHnsGnywu1Zm90I8XAo4eTUl/vbej2gJKSk3BBMx4U5g==
+  version "1.2.108"
+  resolved "https://registry.yarnpkg.com/sscaff/-/sscaff-1.2.108.tgz#2838d378d3b1832989a65048d87893605180efb2"
+  integrity sha512-YEfywHKLe/Fj5KlufCF29XtyxXapPI8gsMYSWcILlC4GGlTHEDhBXDQ3fqYCrKoZSBpGOgZwr82HcRqVcweZ+g==
 
 sshpk@^1.7.0:
   version "1.16.1"
