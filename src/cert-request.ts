@@ -83,7 +83,7 @@ export interface CertRequestSubject {
   readonly streetAddress?: string[];
 }
 
-function certRequestSubjectToTerraform(struct?: CertRequestSubject): any {
+export function certRequestSubjectToTerraform(struct?: CertRequestSubject): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -152,11 +152,11 @@ export class CertRequest extends cdktf.TerraformResource {
   }
 
   // dns_names - computed: false, optional: true, required: false
-  private _dnsNames?: string[] | undefined; 
+  private _dnsNames?: string[]; 
   public get dnsNames() {
     return this.getListAttribute('dns_names');
   }
-  public set dnsNames(value: string[] | undefined) {
+  public set dnsNames(value: string[]) {
     this._dnsNames = value;
   }
   public resetDnsNames() {
@@ -164,7 +164,7 @@ export class CertRequest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsNamesInput() {
-    return this._dnsNames
+    return this._dnsNames;
   }
 
   // id - computed: true, optional: true, required: false
@@ -173,11 +173,11 @@ export class CertRequest extends cdktf.TerraformResource {
   }
 
   // ip_addresses - computed: false, optional: true, required: false
-  private _ipAddresses?: string[] | undefined; 
+  private _ipAddresses?: string[]; 
   public get ipAddresses() {
     return this.getListAttribute('ip_addresses');
   }
-  public set ipAddresses(value: string[] | undefined) {
+  public set ipAddresses(value: string[]) {
     this._ipAddresses = value;
   }
   public resetIpAddresses() {
@@ -185,7 +185,7 @@ export class CertRequest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressesInput() {
-    return this._ipAddresses
+    return this._ipAddresses;
   }
 
   // key_algorithm - computed: false, optional: false, required: true
@@ -198,7 +198,7 @@ export class CertRequest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyAlgorithmInput() {
-    return this._keyAlgorithm
+    return this._keyAlgorithm;
   }
 
   // private_key_pem - computed: false, optional: false, required: true
@@ -211,15 +211,15 @@ export class CertRequest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyPemInput() {
-    return this._privateKeyPem
+    return this._privateKeyPem;
   }
 
   // uris - computed: false, optional: true, required: false
-  private _uris?: string[] | undefined; 
+  private _uris?: string[]; 
   public get uris() {
     return this.getListAttribute('uris');
   }
-  public set uris(value: string[] | undefined) {
+  public set uris(value: string[]) {
     this._uris = value;
   }
   public resetUris() {
@@ -227,7 +227,7 @@ export class CertRequest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get urisInput() {
-    return this._uris
+    return this._uris;
   }
 
   // subject - computed: false, optional: false, required: true
@@ -241,7 +241,7 @@ export class CertRequest extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subjectInput() {
-    return this._subject
+    return this._subject;
   }
 
   // =========

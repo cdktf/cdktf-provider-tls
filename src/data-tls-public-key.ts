@@ -74,7 +74,7 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyPemInput() {
-    return this._privateKeyPem
+    return this._privateKeyPem;
   }
 
   // public_key_fingerprint_md5 - computed: true, optional: false, required: false

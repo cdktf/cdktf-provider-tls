@@ -113,7 +113,7 @@ export interface SelfSignedCertSubject {
   readonly streetAddress?: string[];
 }
 
-function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubject): any {
+export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubject): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -191,7 +191,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowedUsesInput() {
-    return this._allowedUses
+    return this._allowedUses;
   }
 
   // cert_pem - computed: true, optional: false, required: false
@@ -200,11 +200,11 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
 
   // dns_names - computed: false, optional: true, required: false
-  private _dnsNames?: string[] | undefined; 
+  private _dnsNames?: string[]; 
   public get dnsNames() {
     return this.getListAttribute('dns_names');
   }
-  public set dnsNames(value: string[] | undefined) {
+  public set dnsNames(value: string[]) {
     this._dnsNames = value;
   }
   public resetDnsNames() {
@@ -212,15 +212,15 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsNamesInput() {
-    return this._dnsNames
+    return this._dnsNames;
   }
 
   // early_renewal_hours - computed: false, optional: true, required: false
-  private _earlyRenewalHours?: number | undefined; 
+  private _earlyRenewalHours?: number; 
   public get earlyRenewalHours() {
     return this.getNumberAttribute('early_renewal_hours');
   }
-  public set earlyRenewalHours(value: number | undefined) {
+  public set earlyRenewalHours(value: number) {
     this._earlyRenewalHours = value;
   }
   public resetEarlyRenewalHours() {
@@ -228,7 +228,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get earlyRenewalHoursInput() {
-    return this._earlyRenewalHours
+    return this._earlyRenewalHours;
   }
 
   // id - computed: true, optional: true, required: false
@@ -237,11 +237,11 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
 
   // ip_addresses - computed: false, optional: true, required: false
-  private _ipAddresses?: string[] | undefined; 
+  private _ipAddresses?: string[]; 
   public get ipAddresses() {
     return this.getListAttribute('ip_addresses');
   }
-  public set ipAddresses(value: string[] | undefined) {
+  public set ipAddresses(value: string[]) {
     this._ipAddresses = value;
   }
   public resetIpAddresses() {
@@ -249,15 +249,15 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressesInput() {
-    return this._ipAddresses
+    return this._ipAddresses;
   }
 
   // is_ca_certificate - computed: false, optional: true, required: false
-  private _isCaCertificate?: boolean | cdktf.IResolvable | undefined; 
+  private _isCaCertificate?: boolean | cdktf.IResolvable; 
   public get isCaCertificate() {
     return this.getBooleanAttribute('is_ca_certificate') as any;
   }
-  public set isCaCertificate(value: boolean | cdktf.IResolvable | undefined) {
+  public set isCaCertificate(value: boolean | cdktf.IResolvable) {
     this._isCaCertificate = value;
   }
   public resetIsCaCertificate() {
@@ -265,7 +265,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isCaCertificateInput() {
-    return this._isCaCertificate
+    return this._isCaCertificate;
   }
 
   // key_algorithm - computed: false, optional: false, required: true
@@ -278,7 +278,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyAlgorithmInput() {
-    return this._keyAlgorithm
+    return this._keyAlgorithm;
   }
 
   // private_key_pem - computed: false, optional: false, required: true
@@ -291,7 +291,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyPemInput() {
-    return this._privateKeyPem
+    return this._privateKeyPem;
   }
 
   // ready_for_renewal - computed: true, optional: false, required: false
@@ -300,11 +300,11 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
 
   // set_subject_key_id - computed: false, optional: true, required: false
-  private _setSubjectKeyId?: boolean | cdktf.IResolvable | undefined; 
+  private _setSubjectKeyId?: boolean | cdktf.IResolvable; 
   public get setSubjectKeyId() {
     return this.getBooleanAttribute('set_subject_key_id') as any;
   }
-  public set setSubjectKeyId(value: boolean | cdktf.IResolvable | undefined) {
+  public set setSubjectKeyId(value: boolean | cdktf.IResolvable) {
     this._setSubjectKeyId = value;
   }
   public resetSetSubjectKeyId() {
@@ -312,15 +312,15 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get setSubjectKeyIdInput() {
-    return this._setSubjectKeyId
+    return this._setSubjectKeyId;
   }
 
   // uris - computed: false, optional: true, required: false
-  private _uris?: string[] | undefined; 
+  private _uris?: string[]; 
   public get uris() {
     return this.getListAttribute('uris');
   }
-  public set uris(value: string[] | undefined) {
+  public set uris(value: string[]) {
     this._uris = value;
   }
   public resetUris() {
@@ -328,7 +328,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get urisInput() {
-    return this._uris
+    return this._uris;
   }
 
   // validity_end_time - computed: true, optional: false, required: false
@@ -346,7 +346,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get validityPeriodHoursInput() {
-    return this._validityPeriodHours
+    return this._validityPeriodHours;
   }
 
   // validity_start_time - computed: true, optional: false, required: false
@@ -365,7 +365,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subjectInput() {
-    return this._subject
+    return this._subject;
   }
 
   // =========

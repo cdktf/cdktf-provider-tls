@@ -78,15 +78,15 @@ export class PrivateKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get algorithmInput() {
-    return this._algorithm
+    return this._algorithm;
   }
 
   // ecdsa_curve - computed: false, optional: true, required: false
-  private _ecdsaCurve?: string | undefined; 
+  private _ecdsaCurve?: string; 
   public get ecdsaCurve() {
     return this.getStringAttribute('ecdsa_curve');
   }
-  public set ecdsaCurve(value: string | undefined) {
+  public set ecdsaCurve(value: string) {
     this._ecdsaCurve = value;
   }
   public resetEcdsaCurve() {
@@ -94,7 +94,7 @@ export class PrivateKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ecdsaCurveInput() {
-    return this._ecdsaCurve
+    return this._ecdsaCurve;
   }
 
   // id - computed: true, optional: true, required: false
@@ -123,11 +123,11 @@ export class PrivateKey extends cdktf.TerraformResource {
   }
 
   // rsa_bits - computed: false, optional: true, required: false
-  private _rsaBits?: number | undefined; 
+  private _rsaBits?: number; 
   public get rsaBits() {
     return this.getNumberAttribute('rsa_bits');
   }
-  public set rsaBits(value: number | undefined) {
+  public set rsaBits(value: number) {
     this._rsaBits = value;
   }
   public resetRsaBits() {
@@ -135,7 +135,7 @@ export class PrivateKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get rsaBitsInput() {
-    return this._rsaBits
+    return this._rsaBits;
   }
 
   // =========
