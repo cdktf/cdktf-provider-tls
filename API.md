@@ -141,6 +141,26 @@ public readonly urisInput: string[];
 
 ---
 
+##### `dnsNames`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.dnsNames"></a>
+
+```typescript
+public readonly dnsNames: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `ipAddresses`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.ipAddresses"></a>
+
+```typescript
+public readonly ipAddresses: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
 ##### `keyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.keyAlgorithm"></a>
 
 ```typescript
@@ -171,27 +191,7 @@ public readonly subject: CertRequestSubject[];
 
 ---
 
-##### `dnsNames`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequest.property.dnsNames"></a>
-
-```typescript
-public readonly dnsNames: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `ipAddresses`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequest.property.ipAddresses"></a>
-
-```typescript
-public readonly ipAddresses: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `uris`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequest.property.uris"></a>
+##### `uris`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.uris"></a>
 
 ```typescript
 public readonly uris: string[];
@@ -308,7 +308,7 @@ public readonly url: string;
 
 ---
 
-##### `verifyChain`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.property.verifyChain"></a>
+##### `verifyChain`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.property.verifyChain"></a>
 
 ```typescript
 public readonly verifyChain: boolean | IResolvable;
@@ -693,17 +693,7 @@ public readonly certRequestPem: string;
 
 ---
 
-##### `validityPeriodHours`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.validityPeriodHours"></a>
-
-```typescript
-public readonly validityPeriodHours: number;
-```
-
-- *Type:* `number`
-
----
-
-##### `earlyRenewalHours`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.earlyRenewalHours"></a>
+##### `earlyRenewalHours`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.earlyRenewalHours"></a>
 
 ```typescript
 public readonly earlyRenewalHours: number;
@@ -713,7 +703,7 @@ public readonly earlyRenewalHours: number;
 
 ---
 
-##### `isCaCertificate`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.isCaCertificate"></a>
+##### `isCaCertificate`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.isCaCertificate"></a>
 
 ```typescript
 public readonly isCaCertificate: boolean | IResolvable;
@@ -723,13 +713,23 @@ public readonly isCaCertificate: boolean | IResolvable;
 
 ---
 
-##### `setSubjectKeyId`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.setSubjectKeyId"></a>
+##### `setSubjectKeyId`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.setSubjectKeyId"></a>
 
 ```typescript
 public readonly setSubjectKeyId: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `validityPeriodHours`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.validityPeriodHours"></a>
+
+```typescript
+public readonly validityPeriodHours: number;
+```
+
+- *Type:* `number`
 
 ---
 
@@ -884,7 +884,7 @@ public readonly algorithm: string;
 
 ---
 
-##### `ecdsaCurve`<sup>Optional</sup> <a name="@cdktf/provider-tls.PrivateKey.property.ecdsaCurve"></a>
+##### `ecdsaCurve`<sup>Required</sup> <a name="@cdktf/provider-tls.PrivateKey.property.ecdsaCurve"></a>
 
 ```typescript
 public readonly ecdsaCurve: string;
@@ -894,7 +894,7 @@ public readonly ecdsaCurve: string;
 
 ---
 
-##### `rsaBits`<sup>Optional</sup> <a name="@cdktf/provider-tls.PrivateKey.property.rsaBits"></a>
+##### `rsaBits`<sup>Required</sup> <a name="@cdktf/provider-tls.PrivateKey.property.rsaBits"></a>
 
 ```typescript
 public readonly rsaBits: number;
@@ -1159,6 +1159,46 @@ public readonly allowedUses: string[];
 
 ---
 
+##### `dnsNames`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.dnsNames"></a>
+
+```typescript
+public readonly dnsNames: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `earlyRenewalHours`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.earlyRenewalHours"></a>
+
+```typescript
+public readonly earlyRenewalHours: number;
+```
+
+- *Type:* `number`
+
+---
+
+##### `ipAddresses`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.ipAddresses"></a>
+
+```typescript
+public readonly ipAddresses: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `isCaCertificate`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.isCaCertificate"></a>
+
+```typescript
+public readonly isCaCertificate: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
 ##### `keyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.keyAlgorithm"></a>
 
 ```typescript
@@ -1179,6 +1219,16 @@ public readonly privateKeyPem: string;
 
 ---
 
+##### `setSubjectKeyId`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.setSubjectKeyId"></a>
+
+```typescript
+public readonly setSubjectKeyId: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
 ##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.subject"></a>
 
 ```typescript
@@ -1189,6 +1239,16 @@ public readonly subject: SelfSignedCertSubject[];
 
 ---
 
+##### `uris`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.uris"></a>
+
+```typescript
+public readonly uris: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
 ##### `validityPeriodHours`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.validityPeriodHours"></a>
 
 ```typescript
@@ -1196,66 +1256,6 @@ public readonly validityPeriodHours: number;
 ```
 
 - *Type:* `number`
-
----
-
-##### `dnsNames`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.dnsNames"></a>
-
-```typescript
-public readonly dnsNames: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `earlyRenewalHours`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.earlyRenewalHours"></a>
-
-```typescript
-public readonly earlyRenewalHours: number;
-```
-
-- *Type:* `number`
-
----
-
-##### `ipAddresses`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.ipAddresses"></a>
-
-```typescript
-public readonly ipAddresses: string[];
-```
-
-- *Type:* `string`[]
-
----
-
-##### `isCaCertificate`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.isCaCertificate"></a>
-
-```typescript
-public readonly isCaCertificate: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `setSubjectKeyId`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.setSubjectKeyId"></a>
-
-```typescript
-public readonly setSubjectKeyId: boolean | IResolvable;
-```
-
-- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `uris`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.uris"></a>
-
-```typescript
-public readonly uris: string[];
-```
-
-- *Type:* `string`[]
 
 ---
 

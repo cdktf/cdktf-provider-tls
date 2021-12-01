@@ -129,15 +129,15 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
-    return this._url
+    return this._url;
   }
 
   // verify_chain - computed: false, optional: true, required: false
-  private _verifyChain?: boolean | cdktf.IResolvable | undefined; 
+  private _verifyChain?: boolean | cdktf.IResolvable; 
   public get verifyChain() {
     return this.getBooleanAttribute('verify_chain') as any;
   }
-  public set verifyChain(value: boolean | cdktf.IResolvable | undefined) {
+  public set verifyChain(value: boolean | cdktf.IResolvable) {
     this._verifyChain = value;
   }
   public resetVerifyChain() {
@@ -145,7 +145,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get verifyChainInput() {
-    return this._verifyChain
+    return this._verifyChain;
   }
 
   // =========

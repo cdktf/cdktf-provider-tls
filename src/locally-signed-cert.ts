@@ -120,7 +120,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowedUsesInput() {
-    return this._allowedUses
+    return this._allowedUses;
   }
 
   // ca_cert_pem - computed: false, optional: false, required: true
@@ -133,7 +133,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get caCertPemInput() {
-    return this._caCertPem
+    return this._caCertPem;
   }
 
   // ca_key_algorithm - computed: false, optional: false, required: true
@@ -146,7 +146,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get caKeyAlgorithmInput() {
-    return this._caKeyAlgorithm
+    return this._caKeyAlgorithm;
   }
 
   // ca_private_key_pem - computed: false, optional: false, required: true
@@ -159,7 +159,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get caPrivateKeyPemInput() {
-    return this._caPrivateKeyPem
+    return this._caPrivateKeyPem;
   }
 
   // cert_pem - computed: true, optional: false, required: false
@@ -177,15 +177,15 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get certRequestPemInput() {
-    return this._certRequestPem
+    return this._certRequestPem;
   }
 
   // early_renewal_hours - computed: false, optional: true, required: false
-  private _earlyRenewalHours?: number | undefined; 
+  private _earlyRenewalHours?: number; 
   public get earlyRenewalHours() {
     return this.getNumberAttribute('early_renewal_hours');
   }
-  public set earlyRenewalHours(value: number | undefined) {
+  public set earlyRenewalHours(value: number) {
     this._earlyRenewalHours = value;
   }
   public resetEarlyRenewalHours() {
@@ -193,7 +193,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get earlyRenewalHoursInput() {
-    return this._earlyRenewalHours
+    return this._earlyRenewalHours;
   }
 
   // id - computed: true, optional: true, required: false
@@ -202,11 +202,11 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
 
   // is_ca_certificate - computed: false, optional: true, required: false
-  private _isCaCertificate?: boolean | cdktf.IResolvable | undefined; 
+  private _isCaCertificate?: boolean | cdktf.IResolvable; 
   public get isCaCertificate() {
     return this.getBooleanAttribute('is_ca_certificate') as any;
   }
-  public set isCaCertificate(value: boolean | cdktf.IResolvable | undefined) {
+  public set isCaCertificate(value: boolean | cdktf.IResolvable) {
     this._isCaCertificate = value;
   }
   public resetIsCaCertificate() {
@@ -214,7 +214,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isCaCertificateInput() {
-    return this._isCaCertificate
+    return this._isCaCertificate;
   }
 
   // ready_for_renewal - computed: true, optional: false, required: false
@@ -223,11 +223,11 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
 
   // set_subject_key_id - computed: false, optional: true, required: false
-  private _setSubjectKeyId?: boolean | cdktf.IResolvable | undefined; 
+  private _setSubjectKeyId?: boolean | cdktf.IResolvable; 
   public get setSubjectKeyId() {
     return this.getBooleanAttribute('set_subject_key_id') as any;
   }
-  public set setSubjectKeyId(value: boolean | cdktf.IResolvable | undefined) {
+  public set setSubjectKeyId(value: boolean | cdktf.IResolvable) {
     this._setSubjectKeyId = value;
   }
   public resetSetSubjectKeyId() {
@@ -235,7 +235,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get setSubjectKeyIdInput() {
-    return this._setSubjectKeyId
+    return this._setSubjectKeyId;
   }
 
   // validity_end_time - computed: true, optional: false, required: false
@@ -253,7 +253,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get validityPeriodHoursInput() {
-    return this._validityPeriodHours
+    return this._validityPeriodHours;
   }
 
   // validity_start_time - computed: true, optional: false, required: false
