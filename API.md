@@ -4,7 +4,7 @@
 
 ### CertRequest <a name="@cdktf/provider-tls.CertRequest"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html tls_cert_request}.
+Represents a {@link https://www.terraform.io/docs/providers/tls/r/cert_request tls_cert_request}.
 
 #### Initializers <a name="@cdktf/provider-tls.CertRequest.Initializer"></a>
 
@@ -211,7 +211,7 @@ public readonly uris: string[];
 
 ### DataTlsCertificate <a name="@cdktf/provider-tls.DataTlsCertificate"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/tls/d/certificate.html tls_certificate}.
+Represents a {@link https://www.terraform.io/docs/providers/tls/d/certificate tls_certificate}.
 
 #### Initializers <a name="@cdktf/provider-tls.DataTlsCertificate.Initializer"></a>
 
@@ -328,7 +328,7 @@ public readonly verifyChain: boolean | IResolvable;
 
 ### DataTlsPublicKey <a name="@cdktf/provider-tls.DataTlsPublicKey"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/tls/d/public_key.html tls_public_key}.
+Represents a {@link https://www.terraform.io/docs/providers/tls/d/public_key tls_public_key}.
 
 #### Initializers <a name="@cdktf/provider-tls.DataTlsPublicKey.Initializer"></a>
 
@@ -446,7 +446,7 @@ public readonly privateKeyPem: string;
 
 ### LocallySignedCert <a name="@cdktf/provider-tls.LocallySignedCert"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html tls_locally_signed_cert}.
+Represents a {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert tls_locally_signed_cert}.
 
 #### Initializers <a name="@cdktf/provider-tls.LocallySignedCert.Initializer"></a>
 
@@ -743,7 +743,7 @@ public readonly validityPeriodHours: number;
 
 ### PrivateKey <a name="@cdktf/provider-tls.PrivateKey"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/tls/r/private_key.html tls_private_key}.
+Represents a {@link https://www.terraform.io/docs/providers/tls/r/private_key tls_private_key}.
 
 #### Initializers <a name="@cdktf/provider-tls.PrivateKey.Initializer"></a>
 
@@ -914,7 +914,7 @@ public readonly rsaBits: number;
 
 ### SelfSignedCert <a name="@cdktf/provider-tls.SelfSignedCert"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html tls_self_signed_cert}.
+Represents a {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert tls_self_signed_cert}.
 
 #### Initializers <a name="@cdktf/provider-tls.SelfSignedCert.Initializer"></a>
 
@@ -1404,7 +1404,7 @@ public readonly keyAlgorithm: string;
 
 Name of the algorithm to use to generate the certificate's private key.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#key_algorithm CertRequest#key_algorithm}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#key_algorithm CertRequest#key_algorithm}
 
 ---
 
@@ -1418,7 +1418,7 @@ public readonly privateKeyPem: string;
 
 PEM-encoded private key that the certificate will belong to.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#private_key_pem CertRequest#private_key_pem}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#private_key_pem CertRequest#private_key_pem}
 
 ---
 
@@ -1432,7 +1432,7 @@ public readonly subject: CertRequestSubject[];
 
 subject block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#subject CertRequest#subject}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#subject CertRequest#subject}
 
 ---
 
@@ -1446,7 +1446,7 @@ public readonly dnsNames: string[];
 
 List of DNS names to use as subjects of the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#dns_names CertRequest#dns_names}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#dns_names CertRequest#dns_names}
 
 ---
 
@@ -1460,7 +1460,7 @@ public readonly ipAddresses: string[];
 
 List of IP addresses to use as subjects of the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#ip_addresses CertRequest#ip_addresses}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#ip_addresses CertRequest#ip_addresses}
 
 ---
 
@@ -1474,7 +1474,7 @@ public readonly uris: string[];
 
 List of URIs to use as subjects of the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#uris CertRequest#uris}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#uris CertRequest#uris}
 
 ---
 
@@ -1496,7 +1496,7 @@ public readonly commonName: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#common_name CertRequest#common_name}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#common_name CertRequest#common_name}.
 
 ---
 
@@ -1508,7 +1508,7 @@ public readonly country: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#country CertRequest#country}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#country CertRequest#country}.
 
 ---
 
@@ -1520,7 +1520,7 @@ public readonly locality: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#locality CertRequest#locality}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#locality CertRequest#locality}.
 
 ---
 
@@ -1532,7 +1532,7 @@ public readonly organization: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#organization CertRequest#organization}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#organization CertRequest#organization}.
 
 ---
 
@@ -1544,7 +1544,7 @@ public readonly organizationalUnit: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#organizational_unit CertRequest#organizational_unit}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#organizational_unit CertRequest#organizational_unit}.
 
 ---
 
@@ -1556,7 +1556,7 @@ public readonly postalCode: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#postal_code CertRequest#postal_code}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#postal_code CertRequest#postal_code}.
 
 ---
 
@@ -1568,7 +1568,7 @@ public readonly province: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#province CertRequest#province}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#province CertRequest#province}.
 
 ---
 
@@ -1580,7 +1580,7 @@ public readonly serialNumber: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#serial_number CertRequest#serial_number}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#serial_number CertRequest#serial_number}.
 
 ---
 
@@ -1592,7 +1592,7 @@ public readonly streetAddress: string[];
 
 - *Type:* `string`[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#street_address CertRequest#street_address}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#street_address CertRequest#street_address}.
 
 ---
 
@@ -1654,7 +1654,7 @@ public readonly url: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate.html#url DataTlsCertificate#url}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#url DataTlsCertificate#url}.
 
 ---
 
@@ -1666,7 +1666,7 @@ public readonly verifyChain: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate.html#verify_chain DataTlsCertificate#verify_chain}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#verify_chain DataTlsCertificate#verify_chain}.
 
 ---
 
@@ -1730,7 +1730,7 @@ public readonly privateKeyPem: string;
 
 PEM formatted string to use as the private key.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key.html#private_key_pem DataTlsPublicKey#private_key_pem}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_pem DataTlsPublicKey#private_key_pem}
 
 ---
 
@@ -1794,7 +1794,7 @@ public readonly allowedUses: string[];
 
 Uses that are allowed for the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#allowed_uses LocallySignedCert#allowed_uses}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#allowed_uses LocallySignedCert#allowed_uses}
 
 ---
 
@@ -1808,7 +1808,7 @@ public readonly caCertPem: string;
 
 PEM-encoded CA certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#ca_cert_pem LocallySignedCert#ca_cert_pem}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_cert_pem LocallySignedCert#ca_cert_pem}
 
 ---
 
@@ -1822,7 +1822,7 @@ public readonly caKeyAlgorithm: string;
 
 Name of the algorithm used to generate the certificate's private key.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#ca_key_algorithm LocallySignedCert#ca_key_algorithm}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_key_algorithm LocallySignedCert#ca_key_algorithm}
 
 ---
 
@@ -1836,7 +1836,7 @@ public readonly caPrivateKeyPem: string;
 
 PEM-encoded CA private key used to sign the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#ca_private_key_pem LocallySignedCert#ca_private_key_pem}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_private_key_pem LocallySignedCert#ca_private_key_pem}
 
 ---
 
@@ -1850,7 +1850,7 @@ public readonly certRequestPem: string;
 
 PEM-encoded certificate request.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#cert_request_pem LocallySignedCert#cert_request_pem}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#cert_request_pem LocallySignedCert#cert_request_pem}
 
 ---
 
@@ -1864,7 +1864,7 @@ public readonly validityPeriodHours: number;
 
 Number of hours that the certificate will remain valid for.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#validity_period_hours LocallySignedCert#validity_period_hours}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#validity_period_hours LocallySignedCert#validity_period_hours}
 
 ---
 
@@ -1878,7 +1878,7 @@ public readonly earlyRenewalHours: number;
 
 Number of hours before the certificates expiry when a new certificate will be generated.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#early_renewal_hours LocallySignedCert#early_renewal_hours}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#early_renewal_hours LocallySignedCert#early_renewal_hours}
 
 ---
 
@@ -1892,7 +1892,7 @@ public readonly isCaCertificate: boolean | IResolvable;
 
 Whether the generated certificate will be usable as a CA certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#is_ca_certificate LocallySignedCert#is_ca_certificate}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#is_ca_certificate LocallySignedCert#is_ca_certificate}
 
 ---
 
@@ -1906,7 +1906,7 @@ public readonly setSubjectKeyId: boolean | IResolvable;
 
 If true, the generated certificate will include a subject key identifier.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#set_subject_key_id LocallySignedCert#set_subject_key_id}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#set_subject_key_id LocallySignedCert#set_subject_key_id}
 
 ---
 
@@ -1970,7 +1970,7 @@ public readonly algorithm: string;
 
 Name of the algorithm to use to generate the private key.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key.html#algorithm PrivateKey#algorithm}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#algorithm PrivateKey#algorithm}
 
 ---
 
@@ -1984,7 +1984,7 @@ public readonly ecdsaCurve: string;
 
 ECDSA curve to use when generating a key.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key.html#ecdsa_curve PrivateKey#ecdsa_curve}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
 
 ---
 
@@ -1998,7 +1998,7 @@ public readonly rsaBits: number;
 
 Number of bits to use when generating an RSA key.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key.html#rsa_bits PrivateKey#rsa_bits}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#rsa_bits PrivateKey#rsa_bits}
 
 ---
 
@@ -2062,7 +2062,7 @@ public readonly allowedUses: string[];
 
 Uses that are allowed for the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#allowed_uses SelfSignedCert#allowed_uses}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#allowed_uses SelfSignedCert#allowed_uses}
 
 ---
 
@@ -2076,7 +2076,7 @@ public readonly keyAlgorithm: string;
 
 Name of the algorithm to use to generate the certificate's private key.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#key_algorithm SelfSignedCert#key_algorithm}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#key_algorithm SelfSignedCert#key_algorithm}
 
 ---
 
@@ -2090,7 +2090,7 @@ public readonly privateKeyPem: string;
 
 PEM-encoded private key that the certificate will belong to.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#private_key_pem SelfSignedCert#private_key_pem}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
 
 ---
 
@@ -2104,7 +2104,7 @@ public readonly subject: SelfSignedCertSubject[];
 
 subject block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#subject SelfSignedCert#subject}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#subject SelfSignedCert#subject}
 
 ---
 
@@ -2118,7 +2118,7 @@ public readonly validityPeriodHours: number;
 
 Number of hours that the certificate will remain valid for.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#validity_period_hours SelfSignedCert#validity_period_hours}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#validity_period_hours SelfSignedCert#validity_period_hours}
 
 ---
 
@@ -2132,7 +2132,7 @@ public readonly dnsNames: string[];
 
 List of DNS names to use as subjects of the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#dns_names SelfSignedCert#dns_names}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#dns_names SelfSignedCert#dns_names}
 
 ---
 
@@ -2146,7 +2146,7 @@ public readonly earlyRenewalHours: number;
 
 Number of hours before the certificates expiry when a new certificate will be generated.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#early_renewal_hours SelfSignedCert#early_renewal_hours}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#early_renewal_hours SelfSignedCert#early_renewal_hours}
 
 ---
 
@@ -2160,7 +2160,7 @@ public readonly ipAddresses: string[];
 
 List of IP addresses to use as subjects of the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#ip_addresses SelfSignedCert#ip_addresses}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#ip_addresses SelfSignedCert#ip_addresses}
 
 ---
 
@@ -2174,7 +2174,7 @@ public readonly isCaCertificate: boolean | IResolvable;
 
 Whether the generated certificate will be usable as a CA certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#is_ca_certificate SelfSignedCert#is_ca_certificate}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
 
 ---
 
@@ -2188,7 +2188,7 @@ public readonly setSubjectKeyId: boolean | IResolvable;
 
 If true, the generated certificate will include a subject key identifier.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#set_subject_key_id SelfSignedCert#set_subject_key_id}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
 
 ---
 
@@ -2202,7 +2202,7 @@ public readonly uris: string[];
 
 List of URIs to use as subjects of the certificate.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#uris SelfSignedCert#uris}
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#uris SelfSignedCert#uris}
 
 ---
 
@@ -2224,7 +2224,7 @@ public readonly commonName: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#common_name SelfSignedCert#common_name}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#common_name SelfSignedCert#common_name}.
 
 ---
 
@@ -2236,7 +2236,7 @@ public readonly country: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#country SelfSignedCert#country}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#country SelfSignedCert#country}.
 
 ---
 
@@ -2248,7 +2248,7 @@ public readonly locality: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#locality SelfSignedCert#locality}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#locality SelfSignedCert#locality}.
 
 ---
 
@@ -2260,7 +2260,7 @@ public readonly organization: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#organization SelfSignedCert#organization}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#organization SelfSignedCert#organization}.
 
 ---
 
@@ -2272,7 +2272,7 @@ public readonly organizationalUnit: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#organizational_unit SelfSignedCert#organizational_unit}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#organizational_unit SelfSignedCert#organizational_unit}.
 
 ---
 
@@ -2284,7 +2284,7 @@ public readonly postalCode: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#postal_code SelfSignedCert#postal_code}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#postal_code SelfSignedCert#postal_code}.
 
 ---
 
@@ -2296,7 +2296,7 @@ public readonly province: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#province SelfSignedCert#province}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#province SelfSignedCert#province}.
 
 ---
 
@@ -2308,7 +2308,7 @@ public readonly serialNumber: string;
 
 - *Type:* `string`
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#serial_number SelfSignedCert#serial_number}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#serial_number SelfSignedCert#serial_number}.
 
 ---
 
@@ -2320,7 +2320,7 @@ public readonly streetAddress: string[];
 
 - *Type:* `string`[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#street_address SelfSignedCert#street_address}.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#street_address SelfSignedCert#street_address}.
 
 ---
 

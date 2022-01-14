@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/tls/r/private_key.html
+// https://www.terraform.io/docs/providers/tls/r/private_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,25 +10,25 @@ export interface PrivateKeyConfig extends cdktf.TerraformMetaArguments {
   /**
   * Name of the algorithm to use to generate the private key
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key.html#algorithm PrivateKey#algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#algorithm PrivateKey#algorithm}
   */
   readonly algorithm: string;
   /**
   * ECDSA curve to use when generating a key
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key.html#ecdsa_curve PrivateKey#ecdsa_curve}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
   */
   readonly ecdsaCurve?: string;
   /**
   * Number of bits to use when generating an RSA key
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key.html#rsa_bits PrivateKey#rsa_bits}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#rsa_bits PrivateKey#rsa_bits}
   */
   readonly rsaBits?: number;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/tls/r/private_key.html tls_private_key}
+* Represents a {@link https://www.terraform.io/docs/providers/tls/r/private_key tls_private_key}
 */
 export class PrivateKey extends cdktf.TerraformResource {
 
@@ -42,7 +42,7 @@ export class PrivateKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/private_key.html tls_private_key} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/private_key tls_private_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

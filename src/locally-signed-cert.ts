@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html
+// https://www.terraform.io/docs/providers/tls/r/locally_signed_cert
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,61 +10,61 @@ export interface LocallySignedCertConfig extends cdktf.TerraformMetaArguments {
   /**
   * Uses that are allowed for the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#allowed_uses LocallySignedCert#allowed_uses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#allowed_uses LocallySignedCert#allowed_uses}
   */
   readonly allowedUses: string[];
   /**
   * PEM-encoded CA certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#ca_cert_pem LocallySignedCert#ca_cert_pem}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_cert_pem LocallySignedCert#ca_cert_pem}
   */
   readonly caCertPem: string;
   /**
   * Name of the algorithm used to generate the certificate's private key
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#ca_key_algorithm LocallySignedCert#ca_key_algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_key_algorithm LocallySignedCert#ca_key_algorithm}
   */
   readonly caKeyAlgorithm: string;
   /**
   * PEM-encoded CA private key used to sign the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#ca_private_key_pem LocallySignedCert#ca_private_key_pem}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_private_key_pem LocallySignedCert#ca_private_key_pem}
   */
   readonly caPrivateKeyPem: string;
   /**
   * PEM-encoded certificate request
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#cert_request_pem LocallySignedCert#cert_request_pem}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#cert_request_pem LocallySignedCert#cert_request_pem}
   */
   readonly certRequestPem: string;
   /**
   * Number of hours before the certificates expiry when a new certificate will be generated
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#early_renewal_hours LocallySignedCert#early_renewal_hours}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#early_renewal_hours LocallySignedCert#early_renewal_hours}
   */
   readonly earlyRenewalHours?: number;
   /**
   * Whether the generated certificate will be usable as a CA certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#is_ca_certificate LocallySignedCert#is_ca_certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#is_ca_certificate LocallySignedCert#is_ca_certificate}
   */
   readonly isCaCertificate?: boolean | cdktf.IResolvable;
   /**
   * If true, the generated certificate will include a subject key identifier.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#set_subject_key_id LocallySignedCert#set_subject_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#set_subject_key_id LocallySignedCert#set_subject_key_id}
   */
   readonly setSubjectKeyId?: boolean | cdktf.IResolvable;
   /**
   * Number of hours that the certificate will remain valid for
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html#validity_period_hours LocallySignedCert#validity_period_hours}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#validity_period_hours LocallySignedCert#validity_period_hours}
   */
   readonly validityPeriodHours: number;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html tls_locally_signed_cert}
+* Represents a {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert tls_locally_signed_cert}
 */
 export class LocallySignedCert extends cdktf.TerraformResource {
 
@@ -78,7 +78,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert.html tls_locally_signed_cert} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert tls_locally_signed_cert} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/tls/d/certificate.html
+// https://www.terraform.io/docs/providers/tls/d/certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,11 +8,11 @@ import * as cdktf from 'cdktf';
 
 export interface DataTlsCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate.html#url DataTlsCertificate#url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#url DataTlsCertificate#url}
   */
   readonly url: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate.html#verify_chain DataTlsCertificate#verify_chain}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#verify_chain DataTlsCertificate#verify_chain}
   */
   readonly verifyChain?: boolean | cdktf.IResolvable;
 }
@@ -70,7 +70,7 @@ export class DataTlsCertificateCertificates extends cdktf.ComplexComputedList {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/tls/d/certificate.html tls_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/tls/d/certificate tls_certificate}
 */
 export class DataTlsCertificate extends cdktf.TerraformDataSource {
 
@@ -84,7 +84,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/tls/d/certificate.html tls_certificate} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/tls/d/certificate tls_certificate} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

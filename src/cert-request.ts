@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/tls/r/cert_request.html
+// https://www.terraform.io/docs/providers/tls/r/cert_request
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,75 +10,75 @@ export interface CertRequestConfig extends cdktf.TerraformMetaArguments {
   /**
   * List of DNS names to use as subjects of the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#dns_names CertRequest#dns_names}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#dns_names CertRequest#dns_names}
   */
   readonly dnsNames?: string[];
   /**
   * List of IP addresses to use as subjects of the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#ip_addresses CertRequest#ip_addresses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#ip_addresses CertRequest#ip_addresses}
   */
   readonly ipAddresses?: string[];
   /**
   * Name of the algorithm to use to generate the certificate's private key
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#key_algorithm CertRequest#key_algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#key_algorithm CertRequest#key_algorithm}
   */
   readonly keyAlgorithm: string;
   /**
   * PEM-encoded private key that the certificate will belong to
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#private_key_pem CertRequest#private_key_pem}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#private_key_pem CertRequest#private_key_pem}
   */
   readonly privateKeyPem: string;
   /**
   * List of URIs to use as subjects of the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#uris CertRequest#uris}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#uris CertRequest#uris}
   */
   readonly uris?: string[];
   /**
   * subject block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#subject CertRequest#subject}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#subject CertRequest#subject}
   */
   readonly subject: CertRequestSubject[];
 }
 export interface CertRequestSubject {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#common_name CertRequest#common_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#common_name CertRequest#common_name}
   */
   readonly commonName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#country CertRequest#country}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#country CertRequest#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#locality CertRequest#locality}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#locality CertRequest#locality}
   */
   readonly locality?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#organization CertRequest#organization}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#organization CertRequest#organization}
   */
   readonly organization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#organizational_unit CertRequest#organizational_unit}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#organizational_unit CertRequest#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#postal_code CertRequest#postal_code}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#postal_code CertRequest#postal_code}
   */
   readonly postalCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#province CertRequest#province}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#province CertRequest#province}
   */
   readonly province?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#serial_number CertRequest#serial_number}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#serial_number CertRequest#serial_number}
   */
   readonly serialNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html#street_address CertRequest#street_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#street_address CertRequest#street_address}
   */
   readonly streetAddress?: string[];
 }
@@ -103,7 +103,7 @@ export function certRequestSubjectToTerraform(struct?: CertRequestSubject): any 
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html tls_cert_request}
+* Represents a {@link https://www.terraform.io/docs/providers/tls/r/cert_request tls_cert_request}
 */
 export class CertRequest extends cdktf.TerraformResource {
 
@@ -117,7 +117,7 @@ export class CertRequest extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/cert_request.html tls_cert_request} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/cert_request tls_cert_request} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

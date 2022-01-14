@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html
+// https://www.terraform.io/docs/providers/tls/r/self_signed_cert
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,105 +10,105 @@ export interface SelfSignedCertConfig extends cdktf.TerraformMetaArguments {
   /**
   * Uses that are allowed for the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#allowed_uses SelfSignedCert#allowed_uses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#allowed_uses SelfSignedCert#allowed_uses}
   */
   readonly allowedUses: string[];
   /**
   * List of DNS names to use as subjects of the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#dns_names SelfSignedCert#dns_names}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#dns_names SelfSignedCert#dns_names}
   */
   readonly dnsNames?: string[];
   /**
   * Number of hours before the certificates expiry when a new certificate will be generated
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#early_renewal_hours SelfSignedCert#early_renewal_hours}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#early_renewal_hours SelfSignedCert#early_renewal_hours}
   */
   readonly earlyRenewalHours?: number;
   /**
   * List of IP addresses to use as subjects of the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#ip_addresses SelfSignedCert#ip_addresses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#ip_addresses SelfSignedCert#ip_addresses}
   */
   readonly ipAddresses?: string[];
   /**
   * Whether the generated certificate will be usable as a CA certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#is_ca_certificate SelfSignedCert#is_ca_certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
   */
   readonly isCaCertificate?: boolean | cdktf.IResolvable;
   /**
   * Name of the algorithm to use to generate the certificate's private key
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#key_algorithm SelfSignedCert#key_algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#key_algorithm SelfSignedCert#key_algorithm}
   */
   readonly keyAlgorithm: string;
   /**
   * PEM-encoded private key that the certificate will belong to
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#private_key_pem SelfSignedCert#private_key_pem}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
   */
   readonly privateKeyPem: string;
   /**
   * If true, the generated certificate will include a subject key identifier.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#set_subject_key_id SelfSignedCert#set_subject_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
   */
   readonly setSubjectKeyId?: boolean | cdktf.IResolvable;
   /**
   * List of URIs to use as subjects of the certificate
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#uris SelfSignedCert#uris}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#uris SelfSignedCert#uris}
   */
   readonly uris?: string[];
   /**
   * Number of hours that the certificate will remain valid for
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#validity_period_hours SelfSignedCert#validity_period_hours}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#validity_period_hours SelfSignedCert#validity_period_hours}
   */
   readonly validityPeriodHours: number;
   /**
   * subject block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#subject SelfSignedCert#subject}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#subject SelfSignedCert#subject}
   */
   readonly subject: SelfSignedCertSubject[];
 }
 export interface SelfSignedCertSubject {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#common_name SelfSignedCert#common_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#common_name SelfSignedCert#common_name}
   */
   readonly commonName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#country SelfSignedCert#country}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#country SelfSignedCert#country}
   */
   readonly country?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#locality SelfSignedCert#locality}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#locality SelfSignedCert#locality}
   */
   readonly locality?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#organization SelfSignedCert#organization}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#organization SelfSignedCert#organization}
   */
   readonly organization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#organizational_unit SelfSignedCert#organizational_unit}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#organizational_unit SelfSignedCert#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#postal_code SelfSignedCert#postal_code}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#postal_code SelfSignedCert#postal_code}
   */
   readonly postalCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#province SelfSignedCert#province}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#province SelfSignedCert#province}
   */
   readonly province?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#serial_number SelfSignedCert#serial_number}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#serial_number SelfSignedCert#serial_number}
   */
   readonly serialNumber?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html#street_address SelfSignedCert#street_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#street_address SelfSignedCert#street_address}
   */
   readonly streetAddress?: string[];
 }
@@ -133,7 +133,7 @@ export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubject)
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html tls_self_signed_cert}
+* Represents a {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert tls_self_signed_cert}
 */
 export class SelfSignedCert extends cdktf.TerraformResource {
 
@@ -147,7 +147,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert.html tls_self_signed_cert} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert tls_self_signed_cert} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
