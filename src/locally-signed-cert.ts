@@ -204,7 +204,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
   // is_ca_certificate - computed: false, optional: true, required: false
   private _isCaCertificate?: boolean | cdktf.IResolvable; 
   public get isCaCertificate() {
-    return this.getBooleanAttribute('is_ca_certificate') as any;
+    return this.getBooleanAttribute('is_ca_certificate');
   }
   public set isCaCertificate(value: boolean | cdktf.IResolvable) {
     this._isCaCertificate = value;
@@ -219,13 +219,13 @@ export class LocallySignedCert extends cdktf.TerraformResource {
 
   // ready_for_renewal - computed: true, optional: false, required: false
   public get readyForRenewal() {
-    return this.getBooleanAttribute('ready_for_renewal') as any;
+    return this.getBooleanAttribute('ready_for_renewal');
   }
 
   // set_subject_key_id - computed: false, optional: true, required: false
   private _setSubjectKeyId?: boolean | cdktf.IResolvable; 
   public get setSubjectKeyId() {
-    return this.getBooleanAttribute('set_subject_key_id') as any;
+    return this.getBooleanAttribute('set_subject_key_id');
   }
   public set setSubjectKeyId(value: boolean | cdktf.IResolvable) {
     this._setSubjectKeyId = value;

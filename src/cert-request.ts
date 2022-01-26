@@ -42,7 +42,7 @@ export interface CertRequestConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#subject CertRequest#subject}
   */
-  readonly subject: CertRequestSubject[];
+  readonly subject: CertRequestSubject[] | cdktf.IResolvable;
 }
 export interface CertRequestSubject {
   /**
@@ -83,8 +83,8 @@ export interface CertRequestSubject {
   readonly streetAddress?: string[];
 }
 
-export function certRequestSubjectToTerraform(struct?: CertRequestSubject): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function certRequestSubjectToTerraform(struct?: CertRequestSubject | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -231,12 +231,12 @@ export class CertRequest extends cdktf.TerraformResource {
   }
 
   // subject - computed: false, optional: false, required: true
-  private _subject?: CertRequestSubject[]; 
+  private _subject?: CertRequestSubject[] | cdktf.IResolvable; 
   public get subject() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subject') as any;
+    return this.interpolationForAttribute('subject');
   }
-  public set subject(value: CertRequestSubject[]) {
+  public set subject(value: CertRequestSubject[] | cdktf.IResolvable) {
     this._subject = value;
   }
   // Temporarily expose input value. Use with caution.
