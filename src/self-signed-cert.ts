@@ -72,7 +72,7 @@ export interface SelfSignedCertConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#subject SelfSignedCert#subject}
   */
-  readonly subject: SelfSignedCertSubject[];
+  readonly subject: SelfSignedCertSubject[] | cdktf.IResolvable;
 }
 export interface SelfSignedCertSubject {
   /**
@@ -113,8 +113,8 @@ export interface SelfSignedCertSubject {
   readonly streetAddress?: string[];
 }
 
-export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubject): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubject | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -255,7 +255,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   // is_ca_certificate - computed: false, optional: true, required: false
   private _isCaCertificate?: boolean | cdktf.IResolvable; 
   public get isCaCertificate() {
-    return this.getBooleanAttribute('is_ca_certificate') as any;
+    return this.getBooleanAttribute('is_ca_certificate');
   }
   public set isCaCertificate(value: boolean | cdktf.IResolvable) {
     this._isCaCertificate = value;
@@ -296,13 +296,13 @@ export class SelfSignedCert extends cdktf.TerraformResource {
 
   // ready_for_renewal - computed: true, optional: false, required: false
   public get readyForRenewal() {
-    return this.getBooleanAttribute('ready_for_renewal') as any;
+    return this.getBooleanAttribute('ready_for_renewal');
   }
 
   // set_subject_key_id - computed: false, optional: true, required: false
   private _setSubjectKeyId?: boolean | cdktf.IResolvable; 
   public get setSubjectKeyId() {
-    return this.getBooleanAttribute('set_subject_key_id') as any;
+    return this.getBooleanAttribute('set_subject_key_id');
   }
   public set setSubjectKeyId(value: boolean | cdktf.IResolvable) {
     this._setSubjectKeyId = value;
@@ -355,12 +355,12 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
 
   // subject - computed: false, optional: false, required: true
-  private _subject?: SelfSignedCertSubject[]; 
+  private _subject?: SelfSignedCertSubject[] | cdktf.IResolvable; 
   public get subject() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subject') as any;
+    return this.interpolationForAttribute('subject');
   }
-  public set subject(value: SelfSignedCertSubject[]) {
+  public set subject(value: SelfSignedCertSubject[] | cdktf.IResolvable) {
     this._subject = value;
   }
   // Temporarily expose input value. Use with caution.

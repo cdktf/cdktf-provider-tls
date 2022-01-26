@@ -124,10 +124,10 @@ public readonly privateKeyPemInput: string;
 ##### `subjectInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequest.property.subjectInput"></a>
 
 ```typescript
-public readonly subjectInput: CertRequestSubject[];
+public readonly subjectInput: CertRequestSubject[] | IResolvable;
 ```
 
-- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[]
+- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -184,10 +184,10 @@ public readonly privateKeyPem: string;
 ##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.subject"></a>
 
 ```typescript
-public readonly subject: CertRequestSubject[];
+public readonly subject: CertRequestSubject[] | IResolvable;
 ```
 
-- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[]
+- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -526,10 +526,10 @@ public readonly id: string;
 ##### `readyForRenewal`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.readyForRenewal"></a>
 
 ```typescript
-public readonly readyForRenewal: any;
+public readonly readyForRenewal: IResolvable;
 ```
 
-- *Type:* `any`
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -1012,10 +1012,10 @@ public readonly id: string;
 ##### `readyForRenewal`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.readyForRenewal"></a>
 
 ```typescript
-public readonly readyForRenewal: any;
+public readonly readyForRenewal: IResolvable;
 ```
 
-- *Type:* `any`
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 
@@ -1122,10 +1122,10 @@ public readonly setSubjectKeyIdInput: boolean | IResolvable;
 ##### `subjectInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.subjectInput"></a>
 
 ```typescript
-public readonly subjectInput: SelfSignedCertSubject[];
+public readonly subjectInput: IResolvable | SelfSignedCertSubject[];
 ```
 
-- *Type:* [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
 
 ---
 
@@ -1232,10 +1232,10 @@ public readonly setSubjectKeyId: boolean | IResolvable;
 ##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.subject"></a>
 
 ```typescript
-public readonly subject: SelfSignedCertSubject[];
+public readonly subject: IResolvable | SelfSignedCertSubject[];
 ```
 
-- *Type:* [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
 
 ---
 
@@ -1357,10 +1357,10 @@ const certRequestConfig: CertRequestConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -1425,10 +1425,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 ##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.subject"></a>
 
 ```typescript
-public readonly subject: CertRequestSubject[];
+public readonly subject: CertRequestSubject[] | IResolvable;
 ```
 
-- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[]
+- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 subject block.
 
@@ -1609,10 +1609,10 @@ const dataTlsCertificateConfig: DataTlsCertificateConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -1683,10 +1683,10 @@ const dataTlsPublicKeyConfig: DataTlsPublicKeyConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsPublicKeyConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -1747,10 +1747,10 @@ const locallySignedCertConfig: LocallySignedCertConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCertConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -1923,10 +1923,10 @@ const privateKeyConfig: PrivateKeyConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.PrivateKeyConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -2015,10 +2015,10 @@ const selfSignedCertConfig: SelfSignedCertConfig = { ... }
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.count"></a>
 
 ```typescript
-public readonly count: number | IResolvable;
+public readonly count: number;
 ```
 
-- *Type:* `number` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* `number`
 
 ---
 
@@ -2097,10 +2097,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 ##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.subject"></a>
 
 ```typescript
-public readonly subject: SelfSignedCertSubject[];
+public readonly subject: IResolvable | SelfSignedCertSubject[];
 ```
 
-- *Type:* [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
 
 subject block.
 
@@ -2357,12 +2357,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls#a
 ```typescript
 import { DataTlsCertificateCertificates } from '@cdktf/provider-tls'
 
-new DataTlsCertificateCertificates(terraformResource: ITerraformResource, terraformAttribute: string, complexComputedListIndex: string)
+new DataTlsCertificateCertificates(terraformResource: IInterpolatingParent, terraformAttribute: string, complexComputedListIndex: string, wrapsSet?: boolean)
 ```
 
 ##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.parameter.terraformResource"></a>
 
-- *Type:* [`cdktf.ITerraformResource`](#cdktf.ITerraformResource)
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
 
 ---
 
@@ -2378,6 +2378,12 @@ new DataTlsCertificateCertificates(terraformResource: ITerraformResource, terraf
 
 ---
 
+##### `wrapsSet`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.parameter.wrapsSet"></a>
+
+- *Type:* `boolean`
+
+---
+
 
 
 #### Properties <a name="Properties"></a>
@@ -2385,10 +2391,10 @@ new DataTlsCertificateCertificates(terraformResource: ITerraformResource, terraf
 ##### `isCa`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.isCa"></a>
 
 ```typescript
-public readonly isCa: any;
+public readonly isCa: IResolvable;
 ```
 
-- *Type:* `any`
+- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable)
 
 ---
 

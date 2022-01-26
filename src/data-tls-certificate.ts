@@ -20,7 +20,7 @@ export class DataTlsCertificateCertificates extends cdktf.ComplexComputedList {
 
   // is_ca - computed: true, optional: false, required: false
   public get isCa() {
-    return this.getBooleanAttribute('is_ca') as any;
+    return this.getBooleanAttribute('is_ca');
   }
 
   // issuer - computed: true, optional: false, required: false
@@ -111,7 +111,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
 
   // certificates - computed: true, optional: false, required: false
   public certificates(index: string) {
-    return new DataTlsCertificateCertificates(this, 'certificates', index);
+    return new DataTlsCertificateCertificates(this, 'certificates', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -135,7 +135,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   // verify_chain - computed: false, optional: true, required: false
   private _verifyChain?: boolean | cdktf.IResolvable; 
   public get verifyChain() {
-    return this.getBooleanAttribute('verify_chain') as any;
+    return this.getBooleanAttribute('verify_chain');
   }
   public set verifyChain(value: boolean | cdktf.IResolvable) {
     this._verifyChain = value;
