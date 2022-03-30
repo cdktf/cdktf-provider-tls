@@ -16,7 +16,45 @@ export interface DataTlsCertificateConfig extends cdktf.TerraformMetaArguments {
   */
   readonly verifyChain?: boolean | cdktf.IResolvable;
 }
-export class DataTlsCertificateCertificates extends cdktf.ComplexComputedList {
+export interface DataTlsCertificateCertificates {
+}
+
+export function dataTlsCertificateCertificatesToTerraform(struct?: DataTlsCertificateCertificates): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataTlsCertificateCertificatesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataTlsCertificateCertificates | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataTlsCertificateCertificates | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // is_ca - computed: true, optional: false, required: false
   public get isCa() {
@@ -69,6 +107,25 @@ export class DataTlsCertificateCertificates extends cdktf.ComplexComputedList {
   }
 }
 
+export class DataTlsCertificateCertificatesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataTlsCertificateCertificatesOutputReference {
+    return new DataTlsCertificateCertificatesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/tls/d/certificate tls_certificate}
 */
@@ -77,7 +134,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "tls_certificate";
+  public static readonly tfResourceType = "tls_certificate";
 
   // ===========
   // INITIALIZER
@@ -94,7 +151,9 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'tls_certificate',
       terraformGeneratorMetadata: {
-        providerName: 'tls'
+        providerName: 'tls',
+        providerVersion: '3.1.0',
+        providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -110,8 +169,9 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   // ==========
 
   // certificates - computed: true, optional: false, required: false
-  public certificates(index: string) {
-    return new DataTlsCertificateCertificates(this, 'certificates', index, false);
+  private _certificates = new DataTlsCertificateCertificatesList(this, "certificates", false);
+  public get certificates() {
+    return this._certificates;
   }
 
   // id - computed: true, optional: true, required: false

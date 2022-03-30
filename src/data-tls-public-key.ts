@@ -23,7 +23,7 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "tls_public_key";
+  public static readonly tfResourceType = "tls_public_key";
 
   // ===========
   // INITIALIZER
@@ -40,7 +40,9 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'tls_public_key',
       terraformGeneratorMetadata: {
-        providerName: 'tls'
+        providerName: 'tls',
+        providerVersion: '3.1.0',
+        providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
