@@ -140,7 +140,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "tls_self_signed_cert";
+  public static readonly tfResourceType = "tls_self_signed_cert";
 
   // ===========
   // INITIALIZER
@@ -157,7 +157,9 @@ export class SelfSignedCert extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'tls_self_signed_cert',
       terraformGeneratorMetadata: {
-        providerName: 'tls'
+        providerName: 'tls',
+        providerVersion: '3.1.0',
+        providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

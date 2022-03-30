@@ -35,7 +35,7 @@ export class PrivateKey extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "tls_private_key";
+  public static readonly tfResourceType = "tls_private_key";
 
   // ===========
   // INITIALIZER
@@ -52,7 +52,9 @@ export class PrivateKey extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'tls_private_key',
       terraformGeneratorMetadata: {
-        providerName: 'tls'
+        providerName: 'tls',
+        providerVersion: '3.1.0',
+        providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

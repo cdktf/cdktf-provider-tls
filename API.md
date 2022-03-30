@@ -247,18 +247,6 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
-##### `certificates` <a name="@cdktf/provider-tls.DataTlsCertificate.certificates"></a>
-
-```typescript
-public certificates(index: string)
-```
-
-###### `index`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.parameter.index"></a>
-
-- *Type:* `string`
-
----
-
 ##### `resetVerifyChain` <a name="@cdktf/provider-tls.DataTlsCertificate.resetVerifyChain"></a>
 
 ```typescript
@@ -267,6 +255,16 @@ public resetVerifyChain()
 
 
 #### Properties <a name="Properties"></a>
+
+##### `certificates`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.property.certificates"></a>
+
+```typescript
+public readonly certificates: DataTlsCertificateCertificatesList;
+```
+
+- *Type:* [`@cdktf/provider-tls.DataTlsCertificateCertificatesList`](#@cdktf/provider-tls.DataTlsCertificateCertificatesList)
+
+---
 
 ##### `id`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.property.id"></a>
 
@@ -1596,6 +1594,16 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 
 ---
 
+### DataTlsCertificateCertificates <a name="@cdktf/provider-tls.DataTlsCertificateCertificates"></a>
+
+#### Initializer <a name="[object Object].Initializer"></a>
+
+```typescript
+import { DataTlsCertificateCertificates } from '@cdktf/provider-tls'
+
+const dataTlsCertificateCertificates: DataTlsCertificateCertificates = { ... }
+```
+
 ### DataTlsCertificateConfig <a name="@cdktf/provider-tls.DataTlsCertificateConfig"></a>
 
 #### Initializer <a name="[object Object].Initializer"></a>
@@ -2350,37 +2358,98 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls#a
 
 ## Classes <a name="Classes"></a>
 
-### DataTlsCertificateCertificates <a name="@cdktf/provider-tls.DataTlsCertificateCertificates"></a>
+### DataTlsCertificateCertificatesList <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList"></a>
 
-#### Initializers <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.Initializer"></a>
+#### Initializers <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList.Initializer"></a>
 
 ```typescript
-import { DataTlsCertificateCertificates } from '@cdktf/provider-tls'
+import { DataTlsCertificateCertificatesList } from '@cdktf/provider-tls'
 
-new DataTlsCertificateCertificates(terraformResource: IInterpolatingParent, terraformAttribute: string, complexComputedListIndex: string, wrapsSet?: boolean)
+new DataTlsCertificateCertificatesList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
 ```
 
-##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList.parameter.terraformResource"></a>
 
 - *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
 
+The parent resource.
+
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList.parameter.terraformAttribute"></a>
 
 - *Type:* `string`
 
----
-
-##### `complexComputedListIndex`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.parameter.complexComputedListIndex"></a>
-
-- *Type:* `string`
+The attribute on the parent resource this class is referencing.
 
 ---
 
-##### `wrapsSet`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.parameter.wrapsSet"></a>
+##### `wrapsSet`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList.parameter.wrapsSet"></a>
 
 - *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `get` <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList.get"></a>
+
+```typescript
+public get(index: number)
+```
+
+###### `index`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList.parameter.index"></a>
+
+- *Type:* `number`
+
+the index of the item to return.
+
+---
+
+
+
+
+### DataTlsCertificateCertificatesOutputReference <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.Initializer"></a>
+
+```typescript
+import { DataTlsCertificateCertificatesOutputReference } from '@cdktf/provider-tls'
+
+new DataTlsCertificateCertificatesOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.parameter.complexObjectIndex"></a>
+
+- *Type:* `number`
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* `boolean`
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 
 ---
 
@@ -2388,7 +2457,7 @@ new DataTlsCertificateCertificates(terraformResource: IInterpolatingParent, terr
 
 #### Properties <a name="Properties"></a>
 
-##### `isCa`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.isCa"></a>
+##### `isCa`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.isCa"></a>
 
 ```typescript
 public readonly isCa: IResolvable;
@@ -2398,7 +2467,7 @@ public readonly isCa: IResolvable;
 
 ---
 
-##### `issuer`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.issuer"></a>
+##### `issuer`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.issuer"></a>
 
 ```typescript
 public readonly issuer: string;
@@ -2408,7 +2477,7 @@ public readonly issuer: string;
 
 ---
 
-##### `notAfter`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.notAfter"></a>
+##### `notAfter`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.notAfter"></a>
 
 ```typescript
 public readonly notAfter: string;
@@ -2418,7 +2487,7 @@ public readonly notAfter: string;
 
 ---
 
-##### `notBefore`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.notBefore"></a>
+##### `notBefore`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.notBefore"></a>
 
 ```typescript
 public readonly notBefore: string;
@@ -2428,7 +2497,7 @@ public readonly notBefore: string;
 
 ---
 
-##### `publicKeyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.publicKeyAlgorithm"></a>
+##### `publicKeyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.publicKeyAlgorithm"></a>
 
 ```typescript
 public readonly publicKeyAlgorithm: string;
@@ -2438,7 +2507,7 @@ public readonly publicKeyAlgorithm: string;
 
 ---
 
-##### `serialNumber`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.serialNumber"></a>
+##### `serialNumber`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.serialNumber"></a>
 
 ```typescript
 public readonly serialNumber: string;
@@ -2448,7 +2517,7 @@ public readonly serialNumber: string;
 
 ---
 
-##### `sha1Fingerprint`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.sha1Fingerprint"></a>
+##### `sha1Fingerprint`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.sha1Fingerprint"></a>
 
 ```typescript
 public readonly sha1Fingerprint: string;
@@ -2458,7 +2527,7 @@ public readonly sha1Fingerprint: string;
 
 ---
 
-##### `signatureAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.signatureAlgorithm"></a>
+##### `signatureAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.signatureAlgorithm"></a>
 
 ```typescript
 public readonly signatureAlgorithm: string;
@@ -2468,7 +2537,7 @@ public readonly signatureAlgorithm: string;
 
 ---
 
-##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.subject"></a>
+##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.subject"></a>
 
 ```typescript
 public readonly subject: string;
@@ -2478,13 +2547,23 @@ public readonly subject: string;
 
 ---
 
-##### `version`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificates.property.version"></a>
+##### `version`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.version"></a>
 
 ```typescript
 public readonly version: number;
 ```
 
 - *Type:* `number`
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: DataTlsCertificateCertificates;
+```
+
+- *Type:* [`@cdktf/provider-tls.DataTlsCertificateCertificates`](#@cdktf/provider-tls.DataTlsCertificateCertificates)
 
 ---
 

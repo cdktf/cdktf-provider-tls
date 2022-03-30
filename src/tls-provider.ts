@@ -23,7 +23,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "tls";
+  public static readonly tfResourceType = "tls";
 
   // ===========
   // INITIALIZER
@@ -41,6 +41,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'tls',
       terraformGeneratorMetadata: {
         providerName: 'tls',
+        providerVersion: '3.1.0',
         providerVersionConstraint: '~> 3.1'
       },
       terraformProviderSource: 'hashicorp/tls'
