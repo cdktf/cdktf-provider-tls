@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface LocallySignedCertConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Uses that are allowed for the certificate
+  * List of key usages allowed for the issued certificate. Values are defined in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280) and combine flags defined by both [Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.3) and [Extended Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12). Accepted values: `any_extended`, `cert_signing`, `client_auth`, `code_signing`, `content_commitment`, `crl_signing`, `data_encipherment`, `decipher_only`, `digital_signature`, `email_protection`, `encipher_only`, `ipsec_end_system`, `ipsec_tunnel`, `ipsec_user`, `key_agreement`, `key_encipherment`, `microsoft_commercial_code_signing`, `microsoft_kernel_code_signing`, `microsoft_server_gated_crypto`, `netscape_server_gated_crypto`, `ocsp_signing`, `server_auth`, `timestamping`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#allowed_uses LocallySignedCert#allowed_uses}
   */
   readonly allowedUses: string[];
   /**
-  * PEM-encoded CA certificate
+  * Certificate data of the Certificate Authority (CA) in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_cert_pem LocallySignedCert#ca_cert_pem}
   */
   readonly caCertPem: string;
   /**
-  * Name of the algorithm used to generate the certificate's private key
+  * Name of the algorithm used when generating the private key provided in `ca_private_key_pem`. **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_key_algorithm LocallySignedCert#ca_key_algorithm}
   */
-  readonly caKeyAlgorithm: string;
+  readonly caKeyAlgorithm?: string;
   /**
-  * PEM-encoded CA private key used to sign the certificate
+  * Private key of the Certificate Authority (CA) used to sign the certificate, in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_private_key_pem LocallySignedCert#ca_private_key_pem}
   */
   readonly caPrivateKeyPem: string;
   /**
-  * PEM-encoded certificate request
+  * Certificate request data in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#cert_request_pem LocallySignedCert#cert_request_pem}
   */
   readonly certRequestPem: string;
   /**
-  * Number of hours before the certificates expiry when a new certificate will be generated
+  * The resource will consider the certificate to have expired the given number of hours before its actual expiry time. This can be useful to deploy an updated certificate in advance of the expiration of the current certificate. However, the old certificate remains valid until its true expiration time, since this resource does not (and cannot) support certificate revocation. Also, this advance update can only be performed should the Terraform configuration be applied during the early renewal period. (default: `0`)
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#early_renewal_hours LocallySignedCert#early_renewal_hours}
   */
   readonly earlyRenewalHours?: number;
   /**
-  * Whether the generated certificate will be usable as a CA certificate
+  * Is the generated certificate representing a Certificate Authority (CA) (default: `false`).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#is_ca_certificate LocallySignedCert#is_ca_certificate}
   */
   readonly isCaCertificate?: boolean | cdktf.IResolvable;
   /**
-  * If true, the generated certificate will include a subject key identifier.
+  * Should the generated certificate include a subject key identifier (default: `false`).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#set_subject_key_id LocallySignedCert#set_subject_key_id}
   */
   readonly setSubjectKeyId?: boolean | cdktf.IResolvable;
   /**
-  * Number of hours that the certificate will remain valid for
+  * Number of hours, after initial issuing, that the certificate will remain valid for.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#validity_period_hours LocallySignedCert#validity_period_hours}
   */
@@ -89,7 +89,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
       terraformResourceType: 'tls_locally_signed_cert',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.1.0',
+        providerVersion: '3.2.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -138,13 +138,16 @@ export class LocallySignedCert extends cdktf.TerraformResource {
     return this._caCertPem;
   }
 
-  // ca_key_algorithm - computed: false, optional: false, required: true
+  // ca_key_algorithm - computed: true, optional: true, required: false
   private _caKeyAlgorithm?: string; 
   public get caKeyAlgorithm() {
     return this.getStringAttribute('ca_key_algorithm');
   }
   public set caKeyAlgorithm(value: string) {
     this._caKeyAlgorithm = value;
+  }
+  public resetCaKeyAlgorithm() {
+    this._caKeyAlgorithm = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get caKeyAlgorithmInput() {
@@ -198,7 +201,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
     return this._earlyRenewalHours;
   }
 
-  // id - computed: true, optional: true, required: false
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }

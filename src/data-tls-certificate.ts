@@ -8,10 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface DataTlsCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The URL of the website to get the certificates from.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#url DataTlsCertificate#url}
   */
   readonly url: string;
   /**
+  * Whether to verify the certificate chain while parsing it or not (default: `true`).
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#verify_chain DataTlsCertificate#verify_chain}
   */
   readonly verifyChain?: boolean | cdktf.IResolvable;
@@ -152,7 +156,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
       terraformResourceType: 'tls_certificate',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.1.0',
+        providerVersion: '3.2.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -174,7 +178,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
     return this._certificates;
   }
 
-  // id - computed: true, optional: true, required: false
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }

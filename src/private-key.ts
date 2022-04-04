@@ -8,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface PrivateKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Name of the algorithm to use to generate the private key
+  * Name of the algorithm to use when generating the private key. Currently-supported values are `RSA`, `ECDSA` and `ED25519`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#algorithm PrivateKey#algorithm}
   */
   readonly algorithm: string;
   /**
-  * ECDSA curve to use when generating a key
+  * When `algorithm` is `ECDSA`, the name of the elliptic curve to use. Currently-supported values are `P224`, `P256`, `P384` or `P521` (default: `P224`).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
   */
   readonly ecdsaCurve?: string;
   /**
-  * Number of bits to use when generating an RSA key
+  * When `algorithm` is `RSA`, the size of the generated RSA key, in bits (default: `2048`).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#rsa_bits PrivateKey#rsa_bits}
   */
@@ -53,7 +53,7 @@ export class PrivateKey extends cdktf.TerraformResource {
       terraformResourceType: 'tls_private_key',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.1.0',
+        providerVersion: '3.2.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -99,9 +99,14 @@ export class PrivateKey extends cdktf.TerraformResource {
     return this._ecdsaCurve;
   }
 
-  // id - computed: true, optional: true, required: false
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // private_key_openssh - computed: true, optional: false, required: false
+  public get privateKeyOpenssh() {
+    return this.getStringAttribute('private_key_openssh');
   }
 
   // private_key_pem - computed: true, optional: false, required: false
@@ -112,6 +117,11 @@ export class PrivateKey extends cdktf.TerraformResource {
   // public_key_fingerprint_md5 - computed: true, optional: false, required: false
   public get publicKeyFingerprintMd5() {
     return this.getStringAttribute('public_key_fingerprint_md5');
+  }
+
+  // public_key_fingerprint_sha256 - computed: true, optional: false, required: false
+  public get publicKeyFingerprintSha256() {
+    return this.getStringAttribute('public_key_fingerprint_sha256');
   }
 
   // public_key_openssh - computed: true, optional: false, required: false
