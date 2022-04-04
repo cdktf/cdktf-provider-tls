@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface CertRequestConfig extends cdktf.TerraformMetaArguments {
   /**
-  * List of DNS names to use as subjects of the certificate
+  * List of DNS names for which a certificate is being requested (i.e. certificate subjects).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#dns_names CertRequest#dns_names}
   */
   readonly dnsNames?: string[];
   /**
-  * List of IP addresses to use as subjects of the certificate
+  * List of IP addresses for which a certificate is being requested (i.e. certificate subjects).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#ip_addresses CertRequest#ip_addresses}
   */
   readonly ipAddresses?: string[];
   /**
-  * Name of the algorithm to use to generate the certificate's private key
+  * Name of the algorithm used when generating the private key provided in `private_key_pem`. **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#key_algorithm CertRequest#key_algorithm}
   */
-  readonly keyAlgorithm: string;
+  readonly keyAlgorithm?: string;
   /**
-  * PEM-encoded private key that the certificate will belong to
+  * Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#private_key_pem CertRequest#private_key_pem}
   */
   readonly privateKeyPem: string;
   /**
-  * List of URIs to use as subjects of the certificate
+  * List of URIs for which a certificate is being requested (i.e. certificate subjects).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#uris CertRequest#uris}
   */
@@ -46,38 +46,56 @@ export interface CertRequestConfig extends cdktf.TerraformMetaArguments {
 }
 export interface CertRequestSubject {
   /**
+  * Distinguished name: `CN`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#common_name CertRequest#common_name}
   */
   readonly commonName?: string;
   /**
+  * Distinguished name: `C`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#country CertRequest#country}
   */
   readonly country?: string;
   /**
+  * Distinguished name: `L`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#locality CertRequest#locality}
   */
   readonly locality?: string;
   /**
+  * Distinguished name: `O`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#organization CertRequest#organization}
   */
   readonly organization?: string;
   /**
+  * Distinguished name: `OU`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#organizational_unit CertRequest#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
+  * Distinguished name: `PC`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#postal_code CertRequest#postal_code}
   */
   readonly postalCode?: string;
   /**
+  * Distinguished name: `ST`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#province CertRequest#province}
   */
   readonly province?: string;
   /**
+  * Distinguished name: `SERIALNUMBER`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#serial_number CertRequest#serial_number}
   */
   readonly serialNumber?: string;
   /**
+  * Distinguished name: `STREET`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#street_address CertRequest#street_address}
   */
   readonly streetAddress?: string[];
@@ -128,7 +146,7 @@ export class CertRequest extends cdktf.TerraformResource {
       terraformResourceType: 'tls_cert_request',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.1.0',
+        providerVersion: '3.2.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -169,7 +187,7 @@ export class CertRequest extends cdktf.TerraformResource {
     return this._dnsNames;
   }
 
-  // id - computed: true, optional: true, required: false
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
@@ -190,13 +208,16 @@ export class CertRequest extends cdktf.TerraformResource {
     return this._ipAddresses;
   }
 
-  // key_algorithm - computed: false, optional: false, required: true
+  // key_algorithm - computed: true, optional: true, required: false
   private _keyAlgorithm?: string; 
   public get keyAlgorithm() {
     return this.getStringAttribute('key_algorithm');
   }
   public set keyAlgorithm(value: string) {
     this._keyAlgorithm = value;
+  }
+  public resetKeyAlgorithm() {
+    this._keyAlgorithm = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyAlgorithmInput() {

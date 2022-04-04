@@ -8,11 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataTlsPublicKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * PEM formatted string to use as the private key
+  * The private key (in  [OpenSSH PEM (RFC 4716)](https://datatracker.ietf.org/doc/html/rfc4716) format) to extract the public key from. Currently-supported algorithms for keys are `RSA`, `ECDSA` and `ED25519`. This is _mutually exclusive_ with `private_key_pem`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_openssh DataTlsPublicKey#private_key_openssh}
+  */
+  readonly privateKeyOpenssh?: string;
+  /**
+  * The private key (in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format) to extract the public key from. Currently-supported algorithms for keys are `RSA`, `ECDSA` and `ED25519`. This is _mutually exclusive_ with `private_key_openssh`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_pem DataTlsPublicKey#private_key_pem}
   */
-  readonly privateKeyPem: string;
+  readonly privateKeyPem?: string;
 }
 
 /**
@@ -34,14 +40,14 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTlsPublicKeyConfig
+  * @param options DataTlsPublicKeyConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTlsPublicKeyConfig) {
+  public constructor(scope: Construct, id: string, config: DataTlsPublicKeyConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'tls_public_key',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.1.0',
+        providerVersion: '3.2.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -49,6 +55,7 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._privateKeyOpenssh = config.privateKeyOpenssh;
     this._privateKeyPem = config.privateKeyPem;
   }
 
@@ -61,18 +68,37 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
     return this.getStringAttribute('algorithm');
   }
 
-  // id - computed: true, optional: true, required: false
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
 
-  // private_key_pem - computed: false, optional: false, required: true
+  // private_key_openssh - computed: false, optional: true, required: false
+  private _privateKeyOpenssh?: string; 
+  public get privateKeyOpenssh() {
+    return this.getStringAttribute('private_key_openssh');
+  }
+  public set privateKeyOpenssh(value: string) {
+    this._privateKeyOpenssh = value;
+  }
+  public resetPrivateKeyOpenssh() {
+    this._privateKeyOpenssh = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateKeyOpensshInput() {
+    return this._privateKeyOpenssh;
+  }
+
+  // private_key_pem - computed: false, optional: true, required: false
   private _privateKeyPem?: string; 
   public get privateKeyPem() {
     return this.getStringAttribute('private_key_pem');
   }
   public set privateKeyPem(value: string) {
     this._privateKeyPem = value;
+  }
+  public resetPrivateKeyPem() {
+    this._privateKeyPem = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyPemInput() {
@@ -82,6 +108,11 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
   // public_key_fingerprint_md5 - computed: true, optional: false, required: false
   public get publicKeyFingerprintMd5() {
     return this.getStringAttribute('public_key_fingerprint_md5');
+  }
+
+  // public_key_fingerprint_sha256 - computed: true, optional: false, required: false
+  public get publicKeyFingerprintSha256() {
+    return this.getStringAttribute('public_key_fingerprint_sha256');
   }
 
   // public_key_openssh - computed: true, optional: false, required: false
@@ -100,6 +131,7 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      private_key_openssh: cdktf.stringToTerraform(this._privateKeyOpenssh),
       private_key_pem: cdktf.stringToTerraform(this._privateKeyPem),
     };
   }
