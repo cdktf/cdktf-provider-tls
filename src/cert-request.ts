@@ -146,7 +146,7 @@ export class CertRequest extends cdktf.TerraformResource {
       terraformResourceType: 'tls_cert_request',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.2.0',
+        providerVersion: '3.2.1',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,

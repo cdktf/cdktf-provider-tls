@@ -2037,7 +2037,7 @@ public readonly setSubjectKeyId: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Should the generated certificate include a subject key identifier (default: `false`).
+Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#set_subject_key_id LocallySignedCert#set_subject_key_id}
 
@@ -2327,7 +2327,7 @@ public readonly setSubjectKeyId: boolean | IResolvable;
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
 
-Should the generated certificate include a subject key identifier (default: `false`).
+Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
 

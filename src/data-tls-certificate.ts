@@ -156,7 +156,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
       terraformResourceType: 'tls_certificate',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.2.0',
+        providerVersion: '3.2.1',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
