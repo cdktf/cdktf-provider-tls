@@ -50,7 +50,7 @@ export interface LocallySignedCertConfig extends cdktf.TerraformMetaArguments {
   */
   readonly isCaCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Should the generated certificate include a subject key identifier (default: `false`).
+  * Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#set_subject_key_id LocallySignedCert#set_subject_key_id}
   */
@@ -89,7 +89,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
       terraformResourceType: 'tls_locally_signed_cert',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.2.0',
+        providerVersion: '3.2.1',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,

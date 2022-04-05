@@ -50,7 +50,7 @@ export interface SelfSignedCertConfig extends cdktf.TerraformMetaArguments {
   */
   readonly privateKeyPem: string;
   /**
-  * Should the generated certificate include a subject key identifier (default: `false`).
+  * Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
   */
@@ -176,7 +176,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
       terraformResourceType: 'tls_self_signed_cert',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.2.0',
+        providerVersion: '3.2.1',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
