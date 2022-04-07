@@ -47,7 +47,7 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
       terraformResourceType: 'tls_public_key',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.2.1',
+        providerVersion: '3.3.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
