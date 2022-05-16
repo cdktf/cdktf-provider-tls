@@ -40,6 +40,18 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
+##### `putSubject` <a name="@cdktf/provider-tls.CertRequest.putSubject"></a>
+
+```typescript
+public putSubject(value: CertRequestSubject)
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.parameter.value"></a>
+
+- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)
+
+---
+
 ##### `resetDnsNames` <a name="@cdktf/provider-tls.CertRequest.resetDnsNames"></a>
 
 ```typescript
@@ -56,6 +68,12 @@ public resetIpAddresses()
 
 ```typescript
 public resetKeyAlgorithm()
+```
+
+##### `resetSubject` <a name="@cdktf/provider-tls.CertRequest.resetSubject"></a>
+
+```typescript
+public resetSubject()
 ```
 
 ##### `resetUris` <a name="@cdktf/provider-tls.CertRequest.resetUris"></a>
@@ -84,6 +102,16 @@ public readonly id: string;
 ```
 
 - *Type:* `string`
+
+---
+
+##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.subject"></a>
+
+```typescript
+public readonly subject: CertRequestSubjectOutputReference;
+```
+
+- *Type:* [`@cdktf/provider-tls.CertRequestSubjectOutputReference`](#@cdktf/provider-tls.CertRequestSubjectOutputReference)
 
 ---
 
@@ -130,10 +158,10 @@ public readonly privateKeyPemInput: string;
 ##### `subjectInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequest.property.subjectInput"></a>
 
 ```typescript
-public readonly subjectInput: CertRequestSubject[] | IResolvable;
+public readonly subjectInput: CertRequestSubject;
 ```
 
-- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
+- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)
 
 ---
 
@@ -187,16 +215,6 @@ public readonly privateKeyPem: string;
 
 ---
 
-##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.subject"></a>
-
-```typescript
-public readonly subject: CertRequestSubject[] | IResolvable;
-```
-
-- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
 ##### `uris`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.uris"></a>
 
 ```typescript
@@ -224,7 +242,7 @@ Represents a {@link https://www.terraform.io/docs/providers/tls/d/certificate tl
 ```typescript
 import { DataTlsCertificate } from '@cdktf/provider-tls'
 
-new DataTlsCertificate(scope: Construct, id: string, config: DataTlsCertificateConfig)
+new DataTlsCertificate(scope: Construct, id: string, config?: DataTlsCertificateConfig)
 ```
 
 ##### `scope`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.parameter.scope"></a>
@@ -245,13 +263,25 @@ Must be unique amongst siblings in the same scope
 
 ---
 
-##### `config`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.parameter.config"></a>
+##### `config`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.parameter.config"></a>
 
 - *Type:* [`@cdktf/provider-tls.DataTlsCertificateConfig`](#@cdktf/provider-tls.DataTlsCertificateConfig)
 
 ---
 
 #### Methods <a name="Methods"></a>
+
+##### `resetContent` <a name="@cdktf/provider-tls.DataTlsCertificate.resetContent"></a>
+
+```typescript
+public resetContent()
+```
+
+##### `resetUrl` <a name="@cdktf/provider-tls.DataTlsCertificate.resetUrl"></a>
+
+```typescript
+public resetUrl()
+```
 
 ##### `resetVerifyChain` <a name="@cdktf/provider-tls.DataTlsCertificate.resetVerifyChain"></a>
 
@@ -282,6 +312,16 @@ public readonly id: string;
 
 ---
 
+##### `contentInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.property.contentInput"></a>
+
+```typescript
+public readonly contentInput: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `urlInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.property.urlInput"></a>
 
 ```typescript
@@ -299,6 +339,16 @@ public readonly verifyChainInput: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `content`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificate.property.content"></a>
+
+```typescript
+public readonly content: string;
+```
+
+- *Type:* `string`
 
 ---
 
@@ -1023,6 +1073,18 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
+##### `putSubject` <a name="@cdktf/provider-tls.SelfSignedCert.putSubject"></a>
+
+```typescript
+public putSubject(value: SelfSignedCertSubject)
+```
+
+###### `value`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.parameter.value"></a>
+
+- *Type:* [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)
+
+---
+
 ##### `resetDnsNames` <a name="@cdktf/provider-tls.SelfSignedCert.resetDnsNames"></a>
 
 ```typescript
@@ -1053,10 +1115,22 @@ public resetIsCaCertificate()
 public resetKeyAlgorithm()
 ```
 
+##### `resetSetAuthorityKeyId` <a name="@cdktf/provider-tls.SelfSignedCert.resetSetAuthorityKeyId"></a>
+
+```typescript
+public resetSetAuthorityKeyId()
+```
+
 ##### `resetSetSubjectKeyId` <a name="@cdktf/provider-tls.SelfSignedCert.resetSetSubjectKeyId"></a>
 
 ```typescript
 public resetSetSubjectKeyId()
+```
+
+##### `resetSubject` <a name="@cdktf/provider-tls.SelfSignedCert.resetSubject"></a>
+
+```typescript
+public resetSubject()
 ```
 
 ##### `resetUris` <a name="@cdktf/provider-tls.SelfSignedCert.resetUris"></a>
@@ -1095,6 +1169,16 @@ public readonly readyForRenewal: IResolvable;
 ```
 
 - *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
+##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.subject"></a>
+
+```typescript
+public readonly subject: SelfSignedCertSubjectOutputReference;
+```
+
+- *Type:* [`@cdktf/provider-tls.SelfSignedCertSubjectOutputReference`](#@cdktf/provider-tls.SelfSignedCertSubjectOutputReference)
 
 ---
 
@@ -1188,6 +1272,16 @@ public readonly privateKeyPemInput: string;
 
 ---
 
+##### `setAuthorityKeyIdInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.setAuthorityKeyIdInput"></a>
+
+```typescript
+public readonly setAuthorityKeyIdInput: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
 ##### `setSubjectKeyIdInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.setSubjectKeyIdInput"></a>
 
 ```typescript
@@ -1201,10 +1295,10 @@ public readonly setSubjectKeyIdInput: boolean | IResolvable;
 ##### `subjectInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.subjectInput"></a>
 
 ```typescript
-public readonly subjectInput: IResolvable | SelfSignedCertSubject[];
+public readonly subjectInput: SelfSignedCertSubject;
 ```
 
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
+- *Type:* [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)
 
 ---
 
@@ -1298,6 +1392,16 @@ public readonly privateKeyPem: string;
 
 ---
 
+##### `setAuthorityKeyId`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.setAuthorityKeyId"></a>
+
+```typescript
+public readonly setAuthorityKeyId: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+---
+
 ##### `setSubjectKeyId`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.setSubjectKeyId"></a>
 
 ```typescript
@@ -1305,16 +1409,6 @@ public readonly setSubjectKeyId: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.subject"></a>
-
-```typescript
-public readonly subject: IResolvable | SelfSignedCertSubject[];
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
 
 ---
 
@@ -1487,20 +1581,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 
 ---
 
-##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.subject"></a>
-
-```typescript
-public readonly subject: CertRequestSubject[] | IResolvable;
-```
-
-- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)[] | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
-subject block.
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#subject CertRequest#subject}
-
----
-
 ##### `dnsNames`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.dnsNames"></a>
 
 ```typescript
@@ -1542,6 +1622,20 @@ Name of the algorithm used when generating the private key provided in `private_
 **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#key_algorithm CertRequest#key_algorithm}
+
+---
+
+##### `subject`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.subject"></a>
+
+```typescript
+public readonly subject: CertRequestSubject;
+```
+
+- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)
+
+subject block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#subject CertRequest#subject}
 
 ---
 
@@ -1755,7 +1849,21 @@ public readonly provider: TerraformProvider;
 
 ---
 
-##### `url`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.url"></a>
+##### `content`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.content"></a>
+
+```typescript
+public readonly content: string;
+```
+
+- *Type:* `string`
+
+The content of the certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#content DataTlsCertificate#content}
+
+---
+
+##### `url`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.url"></a>
 
 ```typescript
 public readonly url: string;
@@ -2219,20 +2327,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 
 ---
 
-##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.subject"></a>
-
-```typescript
-public readonly subject: IResolvable | SelfSignedCertSubject[];
-```
-
-- *Type:* [`cdktf.IResolvable`](#cdktf.IResolvable) | [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)[]
-
-subject block.
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#subject SelfSignedCert#subject}
-
----
-
 ##### `validityPeriodHours`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.validityPeriodHours"></a>
 
 ```typescript
@@ -2321,6 +2415,20 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 
 ---
 
+##### `setAuthorityKeyId`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.setAuthorityKeyId"></a>
+
+```typescript
+public readonly setAuthorityKeyId: boolean | IResolvable;
+```
+
+- *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
+
+Should the generated certificate include an [authority key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.1): for self-signed certificates this is the same value as the [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#set_authority_key_id SelfSignedCert#set_authority_key_id}
+
+---
+
 ##### `setSubjectKeyId`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.setSubjectKeyId"></a>
 
 ```typescript
@@ -2332,6 +2440,20 @@ public readonly setSubjectKeyId: boolean | IResolvable;
 Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
+
+---
+
+##### `subject`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.subject"></a>
+
+```typescript
+public readonly subject: SelfSignedCertSubject;
+```
+
+- *Type:* [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)
+
+subject block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#subject SelfSignedCert#subject}
 
 ---
 
@@ -2511,6 +2633,282 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls#a
 
 ## Classes <a name="Classes"></a>
 
+### CertRequestSubjectOutputReference <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.Initializer"></a>
+
+```typescript
+import { CertRequestSubjectOutputReference } from '@cdktf/provider-tls'
+
+new CertRequestSubjectOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `resetCommonName` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetCommonName"></a>
+
+```typescript
+public resetCommonName()
+```
+
+##### `resetCountry` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetCountry"></a>
+
+```typescript
+public resetCountry()
+```
+
+##### `resetLocality` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetLocality"></a>
+
+```typescript
+public resetLocality()
+```
+
+##### `resetOrganization` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetOrganization"></a>
+
+```typescript
+public resetOrganization()
+```
+
+##### `resetOrganizationalUnit` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetOrganizationalUnit"></a>
+
+```typescript
+public resetOrganizationalUnit()
+```
+
+##### `resetPostalCode` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetPostalCode"></a>
+
+```typescript
+public resetPostalCode()
+```
+
+##### `resetProvince` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetProvince"></a>
+
+```typescript
+public resetProvince()
+```
+
+##### `resetSerialNumber` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetSerialNumber"></a>
+
+```typescript
+public resetSerialNumber()
+```
+
+##### `resetStreetAddress` <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.resetStreetAddress"></a>
+
+```typescript
+public resetStreetAddress()
+```
+
+
+#### Properties <a name="Properties"></a>
+
+##### `commonNameInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.commonNameInput"></a>
+
+```typescript
+public readonly commonNameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `countryInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.countryInput"></a>
+
+```typescript
+public readonly countryInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `localityInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.localityInput"></a>
+
+```typescript
+public readonly localityInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `organizationalUnitInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.organizationalUnitInput"></a>
+
+```typescript
+public readonly organizationalUnitInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `organizationInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.organizationInput"></a>
+
+```typescript
+public readonly organizationInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `postalCodeInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.postalCodeInput"></a>
+
+```typescript
+public readonly postalCodeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `provinceInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.provinceInput"></a>
+
+```typescript
+public readonly provinceInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `serialNumberInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.serialNumberInput"></a>
+
+```typescript
+public readonly serialNumberInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `streetAddressInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.streetAddressInput"></a>
+
+```typescript
+public readonly streetAddressInput: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `commonName`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.commonName"></a>
+
+```typescript
+public readonly commonName: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `country`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.country"></a>
+
+```typescript
+public readonly country: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `locality`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.locality"></a>
+
+```typescript
+public readonly locality: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `organization`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.organization"></a>
+
+```typescript
+public readonly organization: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `organizationalUnit`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.organizationalUnit"></a>
+
+```typescript
+public readonly organizationalUnit: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `postalCode`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.postalCode"></a>
+
+```typescript
+public readonly postalCode: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `province`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.province"></a>
+
+```typescript
+public readonly province: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `serialNumber`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.serialNumber"></a>
+
+```typescript
+public readonly serialNumber: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `streetAddress`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.streetAddress"></a>
+
+```typescript
+public readonly streetAddress: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestSubjectOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: CertRequestSubject;
+```
+
+- *Type:* [`@cdktf/provider-tls.CertRequestSubject`](#@cdktf/provider-tls.CertRequestSubject)
+
+---
+
+
 ### DataTlsCertificateCertificatesList <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList"></a>
 
 #### Initializers <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesList.Initializer"></a>
@@ -2609,6 +3007,16 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 
 #### Properties <a name="Properties"></a>
+
+##### `certPem`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.certPem"></a>
+
+```typescript
+public readonly certPem: string;
+```
+
+- *Type:* `string`
+
+---
 
 ##### `isCa`<sup>Required</sup> <a name="@cdktf/provider-tls.DataTlsCertificateCertificatesOutputReference.property.isCa"></a>
 
@@ -2717,6 +3125,282 @@ public readonly internalValue: DataTlsCertificateCertificates;
 ```
 
 - *Type:* [`@cdktf/provider-tls.DataTlsCertificateCertificates`](#@cdktf/provider-tls.DataTlsCertificateCertificates)
+
+---
+
+
+### SelfSignedCertSubjectOutputReference <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference"></a>
+
+#### Initializers <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.Initializer"></a>
+
+```typescript
+import { SelfSignedCertSubjectOutputReference } from '@cdktf/provider-tls'
+
+new SelfSignedCertSubjectOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+##### `terraformResource`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.parameter.terraformResource"></a>
+
+- *Type:* [`cdktf.IInterpolatingParent`](#cdktf.IInterpolatingParent)
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.parameter.terraformAttribute"></a>
+
+- *Type:* `string`
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods"></a>
+
+##### `resetCommonName` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetCommonName"></a>
+
+```typescript
+public resetCommonName()
+```
+
+##### `resetCountry` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetCountry"></a>
+
+```typescript
+public resetCountry()
+```
+
+##### `resetLocality` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetLocality"></a>
+
+```typescript
+public resetLocality()
+```
+
+##### `resetOrganization` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetOrganization"></a>
+
+```typescript
+public resetOrganization()
+```
+
+##### `resetOrganizationalUnit` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetOrganizationalUnit"></a>
+
+```typescript
+public resetOrganizationalUnit()
+```
+
+##### `resetPostalCode` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetPostalCode"></a>
+
+```typescript
+public resetPostalCode()
+```
+
+##### `resetProvince` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetProvince"></a>
+
+```typescript
+public resetProvince()
+```
+
+##### `resetSerialNumber` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetSerialNumber"></a>
+
+```typescript
+public resetSerialNumber()
+```
+
+##### `resetStreetAddress` <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.resetStreetAddress"></a>
+
+```typescript
+public resetStreetAddress()
+```
+
+
+#### Properties <a name="Properties"></a>
+
+##### `commonNameInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.commonNameInput"></a>
+
+```typescript
+public readonly commonNameInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `countryInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.countryInput"></a>
+
+```typescript
+public readonly countryInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `localityInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.localityInput"></a>
+
+```typescript
+public readonly localityInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `organizationalUnitInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.organizationalUnitInput"></a>
+
+```typescript
+public readonly organizationalUnitInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `organizationInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.organizationInput"></a>
+
+```typescript
+public readonly organizationInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `postalCodeInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.postalCodeInput"></a>
+
+```typescript
+public readonly postalCodeInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `provinceInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.provinceInput"></a>
+
+```typescript
+public readonly provinceInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `serialNumberInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.serialNumberInput"></a>
+
+```typescript
+public readonly serialNumberInput: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `streetAddressInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.streetAddressInput"></a>
+
+```typescript
+public readonly streetAddressInput: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `commonName`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.commonName"></a>
+
+```typescript
+public readonly commonName: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `country`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.country"></a>
+
+```typescript
+public readonly country: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `locality`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.locality"></a>
+
+```typescript
+public readonly locality: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `organization`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.organization"></a>
+
+```typescript
+public readonly organization: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `organizationalUnit`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.organizationalUnit"></a>
+
+```typescript
+public readonly organizationalUnit: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `postalCode`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.postalCode"></a>
+
+```typescript
+public readonly postalCode: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `province`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.province"></a>
+
+```typescript
+public readonly province: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `serialNumber`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.serialNumber"></a>
+
+```typescript
+public readonly serialNumber: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `streetAddress`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.streetAddress"></a>
+
+```typescript
+public readonly streetAddress: string[];
+```
+
+- *Type:* `string`[]
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertSubjectOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: SelfSignedCertSubject;
+```
+
+- *Type:* [`@cdktf/provider-tls.SelfSignedCertSubject`](#@cdktf/provider-tls.SelfSignedCertSubject)
 
 ---
 
