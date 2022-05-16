@@ -8,11 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataTlsCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The content of the certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#content DataTlsCertificate#content}
+  */
+  readonly content?: string;
+  /**
   * URL of the endpoint to get the certificates from. Accepted schemes are: `https`, `tls`. For scheme `https://` it will use the HTTP protocol and apply the `proxy` configuration of the provider, if set. For scheme `tls://` it will instead use a secure TCP socket.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#url DataTlsCertificate#url}
   */
-  readonly url: string;
+  readonly url?: string;
   /**
   * Whether to verify the certificate chain while parsing it or not (default: `true`).
   * 
@@ -58,6 +64,11 @@ export class DataTlsCertificateCertificatesOutputReference extends cdktf.Complex
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // cert_pem - computed: true, optional: false, required: false
+  public get certPem() {
+    return this.getStringAttribute('cert_pem');
   }
 
   // is_ca - computed: true, optional: false, required: false
@@ -149,14 +160,14 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DataTlsCertificateConfig
+  * @param options DataTlsCertificateConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: DataTlsCertificateConfig) {
+  public constructor(scope: Construct, id: string, config: DataTlsCertificateConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'tls_certificate',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.3.0',
+        providerVersion: '3.4.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -164,6 +175,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._content = config.content;
     this._url = config.url;
     this._verifyChain = config.verifyChain;
   }
@@ -178,18 +190,37 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
     return this._certificates;
   }
 
+  // content - computed: false, optional: true, required: false
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  public resetContent() {
+    this._content = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content;
+  }
+
   // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
 
-  // url - computed: false, optional: false, required: true
+  // url - computed: false, optional: true, required: false
   private _url?: string; 
   public get url() {
     return this.getStringAttribute('url');
   }
   public set url(value: string) {
     this._url = value;
+  }
+  public resetUrl() {
+    this._url = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
@@ -218,6 +249,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      content: cdktf.stringToTerraform(this._content),
       url: cdktf.stringToTerraform(this._url),
       verify_chain: cdktf.booleanToTerraform(this._verifyChain),
     };

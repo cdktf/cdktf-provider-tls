@@ -42,7 +42,7 @@ export interface CertRequestConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#subject CertRequest#subject}
   */
-  readonly subject: CertRequestSubject[] | cdktf.IResolvable;
+  readonly subject?: CertRequestSubject;
 }
 export interface CertRequestSubject {
   /**
@@ -101,7 +101,7 @@ export interface CertRequestSubject {
   readonly streetAddress?: string[];
 }
 
-export function certRequestSubjectToTerraform(struct?: CertRequestSubject | cdktf.IResolvable): any {
+export function certRequestSubjectToTerraform(struct?: CertRequestSubjectOutputReference | CertRequestSubject): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -119,6 +119,230 @@ export function certRequestSubjectToTerraform(struct?: CertRequestSubject | cdkt
   }
 }
 
+export class CertRequestSubjectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CertRequestSubject | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._commonName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.commonName = this._commonName;
+    }
+    if (this._country !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.country = this._country;
+    }
+    if (this._locality !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.locality = this._locality;
+    }
+    if (this._organization !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.organization = this._organization;
+    }
+    if (this._organizationalUnit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.organizationalUnit = this._organizationalUnit;
+    }
+    if (this._postalCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postalCode = this._postalCode;
+    }
+    if (this._province !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.province = this._province;
+    }
+    if (this._serialNumber !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serialNumber = this._serialNumber;
+    }
+    if (this._streetAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.streetAddress = this._streetAddress;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CertRequestSubject | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._commonName = undefined;
+      this._country = undefined;
+      this._locality = undefined;
+      this._organization = undefined;
+      this._organizationalUnit = undefined;
+      this._postalCode = undefined;
+      this._province = undefined;
+      this._serialNumber = undefined;
+      this._streetAddress = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._commonName = value.commonName;
+      this._country = value.country;
+      this._locality = value.locality;
+      this._organization = value.organization;
+      this._organizationalUnit = value.organizationalUnit;
+      this._postalCode = value.postalCode;
+      this._province = value.province;
+      this._serialNumber = value.serialNumber;
+      this._streetAddress = value.streetAddress;
+    }
+  }
+
+  // common_name - computed: false, optional: true, required: false
+  private _commonName?: string; 
+  public get commonName() {
+    return this.getStringAttribute('common_name');
+  }
+  public set commonName(value: string) {
+    this._commonName = value;
+  }
+  public resetCommonName() {
+    this._commonName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commonNameInput() {
+    return this._commonName;
+  }
+
+  // country - computed: false, optional: true, required: false
+  private _country?: string; 
+  public get country() {
+    return this.getStringAttribute('country');
+  }
+  public set country(value: string) {
+    this._country = value;
+  }
+  public resetCountry() {
+    this._country = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryInput() {
+    return this._country;
+  }
+
+  // locality - computed: false, optional: true, required: false
+  private _locality?: string; 
+  public get locality() {
+    return this.getStringAttribute('locality');
+  }
+  public set locality(value: string) {
+    this._locality = value;
+  }
+  public resetLocality() {
+    this._locality = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localityInput() {
+    return this._locality;
+  }
+
+  // organization - computed: false, optional: true, required: false
+  private _organization?: string; 
+  public get organization() {
+    return this.getStringAttribute('organization');
+  }
+  public set organization(value: string) {
+    this._organization = value;
+  }
+  public resetOrganization() {
+    this._organization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationInput() {
+    return this._organization;
+  }
+
+  // organizational_unit - computed: false, optional: true, required: false
+  private _organizationalUnit?: string; 
+  public get organizationalUnit() {
+    return this.getStringAttribute('organizational_unit');
+  }
+  public set organizationalUnit(value: string) {
+    this._organizationalUnit = value;
+  }
+  public resetOrganizationalUnit() {
+    this._organizationalUnit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationalUnitInput() {
+    return this._organizationalUnit;
+  }
+
+  // postal_code - computed: false, optional: true, required: false
+  private _postalCode?: string; 
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+  public set postalCode(value: string) {
+    this._postalCode = value;
+  }
+  public resetPostalCode() {
+    this._postalCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postalCodeInput() {
+    return this._postalCode;
+  }
+
+  // province - computed: false, optional: true, required: false
+  private _province?: string; 
+  public get province() {
+    return this.getStringAttribute('province');
+  }
+  public set province(value: string) {
+    this._province = value;
+  }
+  public resetProvince() {
+    this._province = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provinceInput() {
+    return this._province;
+  }
+
+  // serial_number - computed: false, optional: true, required: false
+  private _serialNumber?: string; 
+  public get serialNumber() {
+    return this.getStringAttribute('serial_number');
+  }
+  public set serialNumber(value: string) {
+    this._serialNumber = value;
+  }
+  public resetSerialNumber() {
+    this._serialNumber = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serialNumberInput() {
+    return this._serialNumber;
+  }
+
+  // street_address - computed: false, optional: true, required: false
+  private _streetAddress?: string[]; 
+  public get streetAddress() {
+    return this.getListAttribute('street_address');
+  }
+  public set streetAddress(value: string[]) {
+    this._streetAddress = value;
+  }
+  public resetStreetAddress() {
+    this._streetAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streetAddressInput() {
+    return this._streetAddress;
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/tls/r/cert_request tls_cert_request}
@@ -146,7 +370,7 @@ export class CertRequest extends cdktf.TerraformResource {
       terraformResourceType: 'tls_cert_request',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.3.0',
+        providerVersion: '3.4.0',
         providerVersionConstraint: '~> 3.1'
       },
       provider: config.provider,
@@ -159,7 +383,7 @@ export class CertRequest extends cdktf.TerraformResource {
     this._keyAlgorithm = config.keyAlgorithm;
     this._privateKeyPem = config.privateKeyPem;
     this._uris = config.uris;
-    this._subject = config.subject;
+    this._subject.internalValue = config.subject;
   }
 
   // ==========
@@ -253,18 +477,20 @@ export class CertRequest extends cdktf.TerraformResource {
     return this._uris;
   }
 
-  // subject - computed: false, optional: false, required: true
-  private _subject?: CertRequestSubject[] | cdktf.IResolvable; 
+  // subject - computed: false, optional: true, required: false
+  private _subject = new CertRequestSubjectOutputReference(this, "subject");
   public get subject() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subject');
+    return this._subject;
   }
-  public set subject(value: CertRequestSubject[] | cdktf.IResolvable) {
-    this._subject = value;
+  public putSubject(value: CertRequestSubject) {
+    this._subject.internalValue = value;
+  }
+  public resetSubject() {
+    this._subject.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get subjectInput() {
-    return this._subject;
+    return this._subject.internalValue;
   }
 
   // =========
@@ -278,7 +504,7 @@ export class CertRequest extends cdktf.TerraformResource {
       key_algorithm: cdktf.stringToTerraform(this._keyAlgorithm),
       private_key_pem: cdktf.stringToTerraform(this._privateKeyPem),
       uris: cdktf.listMapper(cdktf.stringToTerraform)(this._uris),
-      subject: cdktf.listMapper(certRequestSubjectToTerraform)(this._subject),
+      subject: certRequestSubjectToTerraform(this._subject.internalValue),
     };
   }
 }
