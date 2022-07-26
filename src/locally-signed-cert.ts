@@ -20,12 +20,6 @@ export interface LocallySignedCertConfig extends cdktf.TerraformMetaArguments {
   */
   readonly caCertPem: string;
   /**
-  * Name of the algorithm used when generating the private key provided in `ca_private_key_pem`. **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_key_algorithm LocallySignedCert#ca_key_algorithm}
-  */
-  readonly caKeyAlgorithm?: string;
-  /**
   * Private key of the Certificate Authority (CA) used to sign the certificate, in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_private_key_pem LocallySignedCert#ca_private_key_pem}
@@ -89,8 +83,8 @@ export class LocallySignedCert extends cdktf.TerraformResource {
       terraformResourceType: 'tls_locally_signed_cert',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.4.0',
-        providerVersionConstraint: '~> 3.1'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -99,7 +93,6 @@ export class LocallySignedCert extends cdktf.TerraformResource {
     });
     this._allowedUses = config.allowedUses;
     this._caCertPem = config.caCertPem;
-    this._caKeyAlgorithm = config.caKeyAlgorithm;
     this._caPrivateKeyPem = config.caPrivateKeyPem;
     this._certRequestPem = config.certRequestPem;
     this._earlyRenewalHours = config.earlyRenewalHours;
@@ -138,20 +131,9 @@ export class LocallySignedCert extends cdktf.TerraformResource {
     return this._caCertPem;
   }
 
-  // ca_key_algorithm - computed: true, optional: true, required: false
-  private _caKeyAlgorithm?: string; 
+  // ca_key_algorithm - computed: true, optional: false, required: false
   public get caKeyAlgorithm() {
     return this.getStringAttribute('ca_key_algorithm');
-  }
-  public set caKeyAlgorithm(value: string) {
-    this._caKeyAlgorithm = value;
-  }
-  public resetCaKeyAlgorithm() {
-    this._caKeyAlgorithm = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get caKeyAlgorithmInput() {
-    return this._caKeyAlgorithm;
   }
 
   // ca_private_key_pem - computed: false, optional: false, required: true
@@ -185,7 +167,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
     return this._certRequestPem;
   }
 
-  // early_renewal_hours - computed: false, optional: true, required: false
+  // early_renewal_hours - computed: true, optional: true, required: false
   private _earlyRenewalHours?: number; 
   public get earlyRenewalHours() {
     return this.getNumberAttribute('early_renewal_hours');
@@ -206,7 +188,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // is_ca_certificate - computed: false, optional: true, required: false
+  // is_ca_certificate - computed: true, optional: true, required: false
   private _isCaCertificate?: boolean | cdktf.IResolvable; 
   public get isCaCertificate() {
     return this.getBooleanAttribute('is_ca_certificate');
@@ -227,7 +209,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
     return this.getBooleanAttribute('ready_for_renewal');
   }
 
-  // set_subject_key_id - computed: false, optional: true, required: false
+  // set_subject_key_id - computed: true, optional: true, required: false
   private _setSubjectKeyId?: boolean | cdktf.IResolvable; 
   public get setSubjectKeyId() {
     return this.getBooleanAttribute('set_subject_key_id');
@@ -274,7 +256,6 @@ export class LocallySignedCert extends cdktf.TerraformResource {
     return {
       allowed_uses: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedUses),
       ca_cert_pem: cdktf.stringToTerraform(this._caCertPem),
-      ca_key_algorithm: cdktf.stringToTerraform(this._caKeyAlgorithm),
       ca_private_key_pem: cdktf.stringToTerraform(this._caPrivateKeyPem),
       cert_request_pem: cdktf.stringToTerraform(this._certRequestPem),
       early_renewal_hours: cdktf.numberToTerraform(this._earlyRenewalHours),

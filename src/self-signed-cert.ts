@@ -38,12 +38,6 @@ export interface SelfSignedCertConfig extends cdktf.TerraformMetaArguments {
   */
   readonly isCaCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Name of the algorithm used when generating the private key provided in `private_key_pem`. **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#key_algorithm SelfSignedCert#key_algorithm}
-  */
-  readonly keyAlgorithm?: string;
-  /**
   * Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
@@ -406,8 +400,8 @@ export class SelfSignedCert extends cdktf.TerraformResource {
       terraformResourceType: 'tls_self_signed_cert',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.4.0',
-        providerVersionConstraint: '~> 3.1'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -419,7 +413,6 @@ export class SelfSignedCert extends cdktf.TerraformResource {
     this._earlyRenewalHours = config.earlyRenewalHours;
     this._ipAddresses = config.ipAddresses;
     this._isCaCertificate = config.isCaCertificate;
-    this._keyAlgorithm = config.keyAlgorithm;
     this._privateKeyPem = config.privateKeyPem;
     this._setAuthorityKeyId = config.setAuthorityKeyId;
     this._setSubjectKeyId = config.setSubjectKeyId;
@@ -466,7 +459,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
     return this._dnsNames;
   }
 
-  // early_renewal_hours - computed: false, optional: true, required: false
+  // early_renewal_hours - computed: true, optional: true, required: false
   private _earlyRenewalHours?: number; 
   public get earlyRenewalHours() {
     return this.getNumberAttribute('early_renewal_hours');
@@ -503,7 +496,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
     return this._ipAddresses;
   }
 
-  // is_ca_certificate - computed: false, optional: true, required: false
+  // is_ca_certificate - computed: true, optional: true, required: false
   private _isCaCertificate?: boolean | cdktf.IResolvable; 
   public get isCaCertificate() {
     return this.getBooleanAttribute('is_ca_certificate');
@@ -519,20 +512,9 @@ export class SelfSignedCert extends cdktf.TerraformResource {
     return this._isCaCertificate;
   }
 
-  // key_algorithm - computed: true, optional: true, required: false
-  private _keyAlgorithm?: string; 
+  // key_algorithm - computed: true, optional: false, required: false
   public get keyAlgorithm() {
     return this.getStringAttribute('key_algorithm');
-  }
-  public set keyAlgorithm(value: string) {
-    this._keyAlgorithm = value;
-  }
-  public resetKeyAlgorithm() {
-    this._keyAlgorithm = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get keyAlgorithmInput() {
-    return this._keyAlgorithm;
   }
 
   // private_key_pem - computed: false, optional: false, required: true
@@ -553,7 +535,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
     return this.getBooleanAttribute('ready_for_renewal');
   }
 
-  // set_authority_key_id - computed: false, optional: true, required: false
+  // set_authority_key_id - computed: true, optional: true, required: false
   private _setAuthorityKeyId?: boolean | cdktf.IResolvable; 
   public get setAuthorityKeyId() {
     return this.getBooleanAttribute('set_authority_key_id');
@@ -569,7 +551,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
     return this._setAuthorityKeyId;
   }
 
-  // set_subject_key_id - computed: false, optional: true, required: false
+  // set_subject_key_id - computed: true, optional: true, required: false
   private _setSubjectKeyId?: boolean | cdktf.IResolvable; 
   public get setSubjectKeyId() {
     return this.getBooleanAttribute('set_subject_key_id');
@@ -651,7 +633,6 @@ export class SelfSignedCert extends cdktf.TerraformResource {
       early_renewal_hours: cdktf.numberToTerraform(this._earlyRenewalHours),
       ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._ipAddresses),
       is_ca_certificate: cdktf.booleanToTerraform(this._isCaCertificate),
-      key_algorithm: cdktf.stringToTerraform(this._keyAlgorithm),
       private_key_pem: cdktf.stringToTerraform(this._privateKeyPem),
       set_authority_key_id: cdktf.booleanToTerraform(this._setAuthorityKeyId),
       set_subject_key_id: cdktf.booleanToTerraform(this._setSubjectKeyId),

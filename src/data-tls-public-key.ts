@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataTlsPublicKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * The private key (in  [OpenSSH PEM (RFC 4716)](https://datatracker.ietf.org/doc/html/rfc4716) format) to extract the public key from. Currently-supported algorithms for keys are `RSA`, `ECDSA` and `ED25519`. This is _mutually exclusive_ with `private_key_pem`.
+  * The private key (in  [OpenSSH PEM (RFC 4716)](https://datatracker.ietf.org/doc/html/rfc4716) format) to extract the public key from. This is _mutually exclusive_ with `private_key_pem`. Currently-supported algorithms for keys are: `RSA`, `ECDSA`, `ED25519`. 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_openssh DataTlsPublicKey#private_key_openssh}
   */
   readonly privateKeyOpenssh?: string;
   /**
-  * The private key (in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format) to extract the public key from. Currently-supported algorithms for keys are `RSA`, `ECDSA` and `ED25519`. This is _mutually exclusive_ with `private_key_openssh`.
+  * The private key (in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format) to extract the public key from. This is _mutually exclusive_ with `private_key_openssh`. Currently-supported algorithms for keys are: `RSA`, `ECDSA`, `ED25519`. 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_pem DataTlsPublicKey#private_key_pem}
   */
@@ -47,8 +47,8 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
       terraformResourceType: 'tls_public_key',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.4.0',
-        providerVersionConstraint: '~> 3.1'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
