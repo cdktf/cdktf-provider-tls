@@ -64,12 +64,6 @@ public resetDnsNames()
 public resetIpAddresses()
 ```
 
-##### `resetKeyAlgorithm` <a name="@cdktf/provider-tls.CertRequest.resetKeyAlgorithm"></a>
-
-```typescript
-public resetKeyAlgorithm()
-```
-
 ##### `resetSubject` <a name="@cdktf/provider-tls.CertRequest.resetSubject"></a>
 
 ```typescript
@@ -105,6 +99,16 @@ public readonly id: string;
 
 ---
 
+##### `keyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.keyAlgorithm"></a>
+
+```typescript
+public readonly keyAlgorithm: string;
+```
+
+- *Type:* `string`
+
+---
+
 ##### `subject`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.subject"></a>
 
 ```typescript
@@ -132,16 +136,6 @@ public readonly ipAddressesInput: string[];
 ```
 
 - *Type:* `string`[]
-
----
-
-##### `keyAlgorithmInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequest.property.keyAlgorithmInput"></a>
-
-```typescript
-public readonly keyAlgorithmInput: string;
-```
-
-- *Type:* `string`
 
 ---
 
@@ -192,16 +186,6 @@ public readonly ipAddresses: string[];
 ```
 
 - *Type:* `string`[]
-
----
-
-##### `keyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.CertRequest.property.keyAlgorithm"></a>
-
-```typescript
-public readonly keyAlgorithm: string;
-```
-
-- *Type:* `string`
 
 ---
 
@@ -579,12 +563,6 @@ Must be unique amongst siblings in the same scope
 
 #### Methods <a name="Methods"></a>
 
-##### `resetCaKeyAlgorithm` <a name="@cdktf/provider-tls.LocallySignedCert.resetCaKeyAlgorithm"></a>
-
-```typescript
-public resetCaKeyAlgorithm()
-```
-
 ##### `resetEarlyRenewalHours` <a name="@cdktf/provider-tls.LocallySignedCert.resetEarlyRenewalHours"></a>
 
 ```typescript
@@ -605,6 +583,16 @@ public resetSetSubjectKeyId()
 
 
 #### Properties <a name="Properties"></a>
+
+##### `caKeyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.caKeyAlgorithm"></a>
+
+```typescript
+public readonly caKeyAlgorithm: string;
+```
+
+- *Type:* `string`
+
+---
 
 ##### `certPem`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.certPem"></a>
 
@@ -670,16 +658,6 @@ public readonly allowedUsesInput: string[];
 
 ```typescript
 public readonly caCertPemInput: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `caKeyAlgorithmInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.caKeyAlgorithmInput"></a>
-
-```typescript
-public readonly caKeyAlgorithmInput: string;
 ```
 
 - *Type:* `string`
@@ -760,16 +738,6 @@ public readonly allowedUses: string[];
 
 ```typescript
 public readonly caCertPem: string;
-```
-
-- *Type:* `string`
-
----
-
-##### `caKeyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.LocallySignedCert.property.caKeyAlgorithm"></a>
-
-```typescript
-public readonly caKeyAlgorithm: string;
 ```
 
 - *Type:* `string`
@@ -921,6 +889,16 @@ public readonly privateKeyOpenssh: string;
 
 ```typescript
 public readonly privateKeyPem: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `privateKeyPemPkcs8`<sup>Required</sup> <a name="@cdktf/provider-tls.PrivateKey.property.privateKeyPemPkcs8"></a>
+
+```typescript
+public readonly privateKeyPemPkcs8: string;
 ```
 
 - *Type:* `string`
@@ -1109,12 +1087,6 @@ public resetIpAddresses()
 public resetIsCaCertificate()
 ```
 
-##### `resetKeyAlgorithm` <a name="@cdktf/provider-tls.SelfSignedCert.resetKeyAlgorithm"></a>
-
-```typescript
-public resetKeyAlgorithm()
-```
-
 ##### `resetSetAuthorityKeyId` <a name="@cdktf/provider-tls.SelfSignedCert.resetSetAuthorityKeyId"></a>
 
 ```typescript
@@ -1156,6 +1128,16 @@ public readonly certPem: string;
 
 ```typescript
 public readonly id: string;
+```
+
+- *Type:* `string`
+
+---
+
+##### `keyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.keyAlgorithm"></a>
+
+```typescript
+public readonly keyAlgorithm: string;
 ```
 
 - *Type:* `string`
@@ -1249,16 +1231,6 @@ public readonly isCaCertificateInput: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `keyAlgorithmInput`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.keyAlgorithmInput"></a>
-
-```typescript
-public readonly keyAlgorithmInput: string;
-```
-
-- *Type:* `string`
 
 ---
 
@@ -1369,16 +1341,6 @@ public readonly isCaCertificate: boolean | IResolvable;
 ```
 
 - *Type:* `boolean` | [`cdktf.IResolvable`](#cdktf.IResolvable)
-
----
-
-##### `keyAlgorithm`<sup>Required</sup> <a name="@cdktf/provider-tls.SelfSignedCert.property.keyAlgorithm"></a>
-
-```typescript
-public readonly keyAlgorithm: string;
-```
-
-- *Type:* `string`
 
 ---
 
@@ -1606,22 +1568,6 @@ public readonly ipAddresses: string[];
 List of IP addresses for which a certificate is being requested (i.e. certificate subjects).
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#ip_addresses CertRequest#ip_addresses}
-
----
-
-##### `keyAlgorithm`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.keyAlgorithm"></a>
-
-```typescript
-public readonly keyAlgorithm: string;
-```
-
-- *Type:* `string`
-
-Name of the algorithm used when generating the private key provided in `private_key_pem`.
-
-**NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#key_algorithm CertRequest#key_algorithm}
 
 ---
 
@@ -1951,7 +1897,7 @@ public readonly privateKeyOpenssh: string;
 
 - *Type:* `string`
 
-The private key (in  [OpenSSH PEM (RFC 4716)](https://datatracker.ietf.org/doc/html/rfc4716) format) to extract the public key from. Currently-supported algorithms for keys are `RSA`, `ECDSA` and `ED25519`. This is _mutually exclusive_ with `private_key_pem`.
+The private key (in  [OpenSSH PEM (RFC 4716)](https://datatracker.ietf.org/doc/html/rfc4716) format) to extract the public key from. This is _mutually exclusive_ with `private_key_pem`. Currently-supported algorithms for keys are: `RSA`, `ECDSA`, `ED25519`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_openssh DataTlsPublicKey#private_key_openssh}
 
@@ -1965,7 +1911,7 @@ public readonly privateKeyPem: string;
 
 - *Type:* `string`
 
-The private key (in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format) to extract the public key from. Currently-supported algorithms for keys are `RSA`, `ECDSA` and `ED25519`. This is _mutually exclusive_ with `private_key_openssh`.
+The private key (in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format) to extract the public key from. This is _mutually exclusive_ with `private_key_openssh`. Currently-supported algorithms for keys are: `RSA`, `ECDSA`, `ED25519`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_pem DataTlsPublicKey#private_key_pem}
 
@@ -2093,22 +2039,6 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 
 ---
 
-##### `caKeyAlgorithm`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCertConfig.property.caKeyAlgorithm"></a>
-
-```typescript
-public readonly caKeyAlgorithm: string;
-```
-
-- *Type:* `string`
-
-Name of the algorithm used when generating the private key provided in `ca_private_key_pem`.
-
-**NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_key_algorithm LocallySignedCert#ca_key_algorithm}
-
----
-
 ##### `earlyRenewalHours`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCertConfig.property.earlyRenewalHours"></a>
 
 ```typescript
@@ -2211,7 +2141,7 @@ public readonly algorithm: string;
 
 - *Type:* `string`
 
-Name of the algorithm to use when generating the private key. Currently-supported values are `RSA`, `ECDSA` and `ED25519`.
+Name of the algorithm to use when generating the private key. Currently-supported values are: `RSA`, `ECDSA`, `ED25519`.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#algorithm PrivateKey#algorithm}
 
@@ -2227,7 +2157,7 @@ public readonly ecdsaCurve: string;
 
 When `algorithm` is `ECDSA`, the name of the elliptic curve to use.
 
-Currently-supported values are `P224`, `P256`, `P384` or `P521` (default: `P224`).
+Currently-supported values are: `P224`, `P256`, `P384`, `P521`. (default: `P224`).
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
 
@@ -2396,22 +2326,6 @@ public readonly isCaCertificate: boolean | IResolvable;
 Is the generated certificate representing a Certificate Authority (CA) (default: `false`).
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
-
----
-
-##### `keyAlgorithm`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.keyAlgorithm"></a>
-
-```typescript
-public readonly keyAlgorithm: string;
-```
-
-- *Type:* `string`
-
-Name of the algorithm used when generating the private key provided in `private_key_pem`.
-
-**NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#key_algorithm SelfSignedCert#key_algorithm}
 
 ---
 

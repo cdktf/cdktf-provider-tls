@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface PrivateKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Name of the algorithm to use when generating the private key. Currently-supported values are `RSA`, `ECDSA` and `ED25519`.
+  * Name of the algorithm to use when generating the private key. Currently-supported values are: `RSA`, `ECDSA`, `ED25519`. 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#algorithm PrivateKey#algorithm}
   */
   readonly algorithm: string;
   /**
-  * When `algorithm` is `ECDSA`, the name of the elliptic curve to use. Currently-supported values are `P224`, `P256`, `P384` or `P521` (default: `P224`).
+  * When `algorithm` is `ECDSA`, the name of the elliptic curve to use. Currently-supported values are: `P224`, `P256`, `P384`, `P521`. (default: `P224`).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
   */
@@ -53,8 +53,8 @@ export class PrivateKey extends cdktf.TerraformResource {
       terraformResourceType: 'tls_private_key',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.4.0',
-        providerVersionConstraint: '~> 3.1'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -83,7 +83,7 @@ export class PrivateKey extends cdktf.TerraformResource {
     return this._algorithm;
   }
 
-  // ecdsa_curve - computed: false, optional: true, required: false
+  // ecdsa_curve - computed: true, optional: true, required: false
   private _ecdsaCurve?: string; 
   public get ecdsaCurve() {
     return this.getStringAttribute('ecdsa_curve');
@@ -114,6 +114,11 @@ export class PrivateKey extends cdktf.TerraformResource {
     return this.getStringAttribute('private_key_pem');
   }
 
+  // private_key_pem_pkcs8 - computed: true, optional: false, required: false
+  public get privateKeyPemPkcs8() {
+    return this.getStringAttribute('private_key_pem_pkcs8');
+  }
+
   // public_key_fingerprint_md5 - computed: true, optional: false, required: false
   public get publicKeyFingerprintMd5() {
     return this.getStringAttribute('public_key_fingerprint_md5');
@@ -134,7 +139,7 @@ export class PrivateKey extends cdktf.TerraformResource {
     return this.getStringAttribute('public_key_pem');
   }
 
-  // rsa_bits - computed: false, optional: true, required: false
+  // rsa_bits - computed: true, optional: true, required: false
   private _rsaBits?: number; 
   public get rsaBits() {
     return this.getNumberAttribute('rsa_bits');

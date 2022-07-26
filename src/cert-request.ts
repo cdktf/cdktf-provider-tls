@@ -20,12 +20,6 @@ export interface CertRequestConfig extends cdktf.TerraformMetaArguments {
   */
   readonly ipAddresses?: string[];
   /**
-  * Name of the algorithm used when generating the private key provided in `private_key_pem`. **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key. 
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#key_algorithm CertRequest#key_algorithm}
-  */
-  readonly keyAlgorithm?: string;
-  /**
   * Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#private_key_pem CertRequest#private_key_pem}
@@ -370,8 +364,8 @@ export class CertRequest extends cdktf.TerraformResource {
       terraformResourceType: 'tls_cert_request',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '3.4.0',
-        providerVersionConstraint: '~> 3.1'
+        providerVersion: '4.0.1',
+        providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -380,7 +374,6 @@ export class CertRequest extends cdktf.TerraformResource {
     });
     this._dnsNames = config.dnsNames;
     this._ipAddresses = config.ipAddresses;
-    this._keyAlgorithm = config.keyAlgorithm;
     this._privateKeyPem = config.privateKeyPem;
     this._uris = config.uris;
     this._subject.internalValue = config.subject;
@@ -432,20 +425,9 @@ export class CertRequest extends cdktf.TerraformResource {
     return this._ipAddresses;
   }
 
-  // key_algorithm - computed: true, optional: true, required: false
-  private _keyAlgorithm?: string; 
+  // key_algorithm - computed: true, optional: false, required: false
   public get keyAlgorithm() {
     return this.getStringAttribute('key_algorithm');
-  }
-  public set keyAlgorithm(value: string) {
-    this._keyAlgorithm = value;
-  }
-  public resetKeyAlgorithm() {
-    this._keyAlgorithm = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get keyAlgorithmInput() {
-    return this._keyAlgorithm;
   }
 
   // private_key_pem - computed: false, optional: false, required: true
@@ -501,7 +483,6 @@ export class CertRequest extends cdktf.TerraformResource {
     return {
       dns_names: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsNames),
       ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._ipAddresses),
-      key_algorithm: cdktf.stringToTerraform(this._keyAlgorithm),
       private_key_pem: cdktf.stringToTerraform(this._privateKeyPem),
       uris: cdktf.listMapper(cdktf.stringToTerraform)(this._uris),
       subject: certRequestSubjectToTerraform(this._subject.internalValue),
