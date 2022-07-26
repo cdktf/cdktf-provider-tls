@@ -145,7 +145,7 @@ export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubjectO
     postal_code: cdktf.stringToTerraform(struct!.postalCode),
     province: cdktf.stringToTerraform(struct!.province),
     serial_number: cdktf.stringToTerraform(struct!.serialNumber),
-    street_address: cdktf.listMapper(cdktf.stringToTerraform)(struct!.streetAddress),
+    street_address: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.streetAddress),
   }
 }
 
@@ -406,7 +406,10 @@ export class SelfSignedCert extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowedUses = config.allowedUses;
     this._dnsNames = config.dnsNames;
@@ -628,15 +631,15 @@ export class SelfSignedCert extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allowed_uses: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedUses),
-      dns_names: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsNames),
+      allowed_uses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedUses),
+      dns_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dnsNames),
       early_renewal_hours: cdktf.numberToTerraform(this._earlyRenewalHours),
-      ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._ipAddresses),
+      ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ipAddresses),
       is_ca_certificate: cdktf.booleanToTerraform(this._isCaCertificate),
       private_key_pem: cdktf.stringToTerraform(this._privateKeyPem),
       set_authority_key_id: cdktf.booleanToTerraform(this._setAuthorityKeyId),
       set_subject_key_id: cdktf.booleanToTerraform(this._setSubjectKeyId),
-      uris: cdktf.listMapper(cdktf.stringToTerraform)(this._uris),
+      uris: cdktf.listMapper(cdktf.stringToTerraform, false)(this._uris),
       validity_period_hours: cdktf.numberToTerraform(this._validityPeriodHours),
       subject: selfSignedCertSubjectToTerraform(this._subject.internalValue),
     };

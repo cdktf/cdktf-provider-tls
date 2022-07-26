@@ -109,7 +109,7 @@ export function certRequestSubjectToTerraform(struct?: CertRequestSubjectOutputR
     postal_code: cdktf.stringToTerraform(struct!.postalCode),
     province: cdktf.stringToTerraform(struct!.province),
     serial_number: cdktf.stringToTerraform(struct!.serialNumber),
-    street_address: cdktf.listMapper(cdktf.stringToTerraform)(struct!.streetAddress),
+    street_address: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.streetAddress),
   }
 }
 
@@ -370,7 +370,10 @@ export class CertRequest extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dnsNames = config.dnsNames;
     this._ipAddresses = config.ipAddresses;
@@ -481,10 +484,10 @@ export class CertRequest extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dns_names: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsNames),
-      ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._ipAddresses),
+      dns_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dnsNames),
+      ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ipAddresses),
       private_key_pem: cdktf.stringToTerraform(this._privateKeyPem),
-      uris: cdktf.listMapper(cdktf.stringToTerraform)(this._uris),
+      uris: cdktf.listMapper(cdktf.stringToTerraform, false)(this._uris),
       subject: certRequestSubjectToTerraform(this._subject.internalValue),
     };
   }
