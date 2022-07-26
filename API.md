@@ -1489,6 +1489,16 @@ import { CertRequestConfig } from '@cdktf/provider-tls'
 const certRequestConfig: CertRequestConfig = { ... }
 ```
 
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.connection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+
+---
+
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.count"></a>
 
 ```typescript
@@ -1509,6 +1519,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.lifecycle"></a>
 
 ```typescript
@@ -1526,6 +1546,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-tls.CertRequestConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
@@ -1755,6 +1785,16 @@ import { DataTlsCertificateConfig } from '@cdktf/provider-tls'
 const dataTlsCertificateConfig: DataTlsCertificateConfig = { ... }
 ```
 
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.connection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+
+---
+
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.count"></a>
 
 ```typescript
@@ -1775,6 +1815,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.lifecycle"></a>
 
 ```typescript
@@ -1792,6 +1842,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsCertificateConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
@@ -1849,6 +1909,16 @@ import { DataTlsPublicKeyConfig } from '@cdktf/provider-tls'
 const dataTlsPublicKeyConfig: DataTlsPublicKeyConfig = { ... }
 ```
 
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsPublicKeyConfig.property.connection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+
+---
+
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsPublicKeyConfig.property.count"></a>
 
 ```typescript
@@ -1869,6 +1939,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsPublicKeyConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsPublicKeyConfig.property.lifecycle"></a>
 
 ```typescript
@@ -1886,6 +1966,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-tls.DataTlsPublicKeyConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
@@ -1927,6 +2017,16 @@ import { LocallySignedCertConfig } from '@cdktf/provider-tls'
 const locallySignedCertConfig: LocallySignedCertConfig = { ... }
 ```
 
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCertConfig.property.connection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+
+---
+
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCertConfig.property.count"></a>
 
 ```typescript
@@ -1947,6 +2047,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCertConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCertConfig.property.lifecycle"></a>
 
 ```typescript
@@ -1964,6 +2074,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-tls.LocallySignedCertConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
@@ -2093,6 +2213,16 @@ import { PrivateKeyConfig } from '@cdktf/provider-tls'
 const privateKeyConfig: PrivateKeyConfig = { ... }
 ```
 
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-tls.PrivateKeyConfig.property.connection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+
+---
+
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.PrivateKeyConfig.property.count"></a>
 
 ```typescript
@@ -2113,6 +2243,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-tls.PrivateKeyConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-tls.PrivateKeyConfig.property.lifecycle"></a>
 
 ```typescript
@@ -2130,6 +2270,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-tls.PrivateKeyConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 
@@ -2187,6 +2337,16 @@ import { SelfSignedCertConfig } from '@cdktf/provider-tls'
 const selfSignedCertConfig: SelfSignedCertConfig = { ... }
 ```
 
+##### `connection`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.connection"></a>
+
+```typescript
+public readonly connection: ISSHProvisionerConnection | IWinrmProvisionerConnection;
+```
+
+- *Type:* [`cdktf.ISSHProvisionerConnection`](#cdktf.ISSHProvisionerConnection) | [`cdktf.IWinrmProvisionerConnection`](#cdktf.IWinrmProvisionerConnection)
+
+---
+
 ##### `count`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.count"></a>
 
 ```typescript
@@ -2207,6 +2367,16 @@ public readonly dependsOn: ITerraformDependable[];
 
 ---
 
+##### `forEach`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* [`cdktf.ITerraformIterator`](#cdktf.ITerraformIterator)
+
+---
+
 ##### `lifecycle`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.lifecycle"></a>
 
 ```typescript
@@ -2224,6 +2394,16 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* [`cdktf.TerraformProvider`](#cdktf.TerraformProvider)
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="@cdktf/provider-tls.SelfSignedCertConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: IFileProvisioner | ILocalExecProvisioner | IRemoteExecProvisioner[];
+```
+
+- *Type:* [`cdktf.IFileProvisioner`](#cdktf.IFileProvisioner) | [`cdktf.ILocalExecProvisioner`](#cdktf.ILocalExecProvisioner) | [`cdktf.IRemoteExecProvisioner`](#cdktf.IRemoteExecProvisioner)[]
 
 ---
 

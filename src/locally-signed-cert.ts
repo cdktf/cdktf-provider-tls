@@ -89,7 +89,10 @@ export class LocallySignedCert extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowedUses = config.allowedUses;
     this._caCertPem = config.caCertPem;
@@ -254,7 +257,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allowed_uses: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedUses),
+      allowed_uses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedUses),
       ca_cert_pem: cdktf.stringToTerraform(this._caCertPem),
       ca_private_key_pem: cdktf.stringToTerraform(this._caPrivateKeyPem),
       cert_request_pem: cdktf.stringToTerraform(this._certRequestPem),
