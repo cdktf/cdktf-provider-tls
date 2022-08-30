@@ -53,7 +53,7 @@ export class PrivateKey extends cdktf.TerraformResource {
       terraformResourceType: 'tls_private_key',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '4.0.1',
+        providerVersion: '4.0.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
