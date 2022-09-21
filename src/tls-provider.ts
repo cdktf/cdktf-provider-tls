@@ -41,7 +41,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'tls',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '4.0.2',
+        providerVersion: '4.0.3',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'hashicorp/tls'
