@@ -83,7 +83,7 @@ export class LocallySignedCert extends cdktf.TerraformResource {
       terraformResourceType: 'tls_locally_signed_cert',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '4.0.2',
+        providerVersion: '4.0.3',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
