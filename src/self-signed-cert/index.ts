@@ -400,7 +400,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
       terraformResourceType: 'tls_self_signed_cert',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '4.0.3',
+        providerVersion: '4.0.4',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
