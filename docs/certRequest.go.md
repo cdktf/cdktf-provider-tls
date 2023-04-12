@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/tls/r/cert_request t
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.certRequest.CertRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/certrequest"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v6/certrequest"
 
 certrequest.NewCertRequest(scope Construct, id *string, config CertRequestConfig) CertRequest
 ```
@@ -307,7 +307,7 @@ func ResetUris()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-tls.certRequest.CertRequest.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/certrequest"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v6/certrequest"
 
 certrequest.CertRequest_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-tls.certRequest.CertRequest.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/certrequest"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v6/certrequest"
 
 certrequest.CertRequest_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ certrequest.CertRequest_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-tls.certRequest.CertRequest.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/certrequest"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v6/certrequest"
 
 certrequest.CertRequest_IsTerraformResource(x interface{}) *bool
 ```
@@ -695,7 +695,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.certRequest.CertRequestConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/certrequest"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v6/certrequest"
 
 &certrequest.CertRequestConfig {
 	Connection: interface{},
@@ -708,7 +708,7 @@ import "github.com/cdktf/cdktf-provider-tls-go/tls/certrequest"
 	PrivateKeyPem: *string,
 	DnsNames: *[]*string,
 	IpAddresses: *[]*string,
-	Subject: github.com/cdktf/cdktf-provider-tls-go/tls.certRequest.CertRequestSubject,
+	Subject: github.com/cdktf/cdktf-provider-tls-go/tls/v6.certRequest.CertRequestSubject,
 	Uris: *[]*string,
 }
 ```
@@ -877,7 +877,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.certRequest.CertRequestSubject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/certrequest"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v6/certrequest"
 
 &certrequest.CertRequestSubject {
 	CommonName: *string,
@@ -1041,7 +1041,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/certrequest"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v6/certrequest"
 
 certrequest.NewCertRequestSubjectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertRequestSubjectOutputReference
 ```
