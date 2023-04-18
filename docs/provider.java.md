@@ -1,6 +1,6 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`tls`](https://www.terraform.io/docs/providers/tls).
+Refer to the Terraform Registory for docs: [`tls`](https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs).
 
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-tls.provider"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`tls`](https://www.terraform.io/docs
 
 ### TlsProvider <a name="TlsProvider" id="@cdktf/provider-tls.provider.TlsProvider"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/tls tls}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.provider.TlsProvider.Initializer"></a>
 
@@ -17,6 +17,7 @@ import com.hashicorp.cdktf.providers.tls.provider.TlsProvider;
 
 TlsProvider.Builder.create(Construct scope, java.lang.String id)
 //  .alias(java.lang.String)
+//  .proxy(TlsProviderProxy)
     .build();
 ```
 
@@ -25,6 +26,7 @@ TlsProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy">proxy</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | proxy block. |
 
 ---
 
@@ -52,7 +54,17 @@ Must be unique amongst siblings in the same scope
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls#alias TlsProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#alias TlsProvider#alias}
+
+---
+
+##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy"></a>
+
+- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+
+proxy block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#proxy TlsProvider#proxy}
 
 ---
 
@@ -67,6 +79,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls#a
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.resetAlias">resetAlias</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.resetProxy">resetProxy</a></code> | *No description.* |
 
 ---
 
@@ -138,6 +151,12 @@ Adds this resource to the terraform JSON output.
 
 ```java
 public void resetAlias()
+```
+
+##### `resetProxy` <a name="resetProxy" id="@cdktf/provider-tls.provider.TlsProvider.resetProxy"></a>
+
+```java
+public void resetProxy()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -224,6 +243,8 @@ TlsProvider.isTerraformProvider(java.lang.Object x)
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.terraformProviderSource">terraformProviderSource</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.alias">alias</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.aliasInput">aliasInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">proxyInput</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">proxy</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | *No description.* |
 
 ---
 
@@ -329,6 +350,26 @@ public java.lang.String getAliasInput();
 
 ---
 
+##### `proxyInput`<sup>Optional</sup> <a name="proxyInput" id="@cdktf/provider-tls.provider.TlsProvider.property.proxyInput"></a>
+
+```java
+public TlsProviderProxy getProxyInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+
+---
+
+##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProvider.property.proxy"></a>
+
+```java
+public TlsProviderProxy getProxy();
+```
+
+- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+
+---
+
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -358,6 +399,7 @@ import com.hashicorp.cdktf.providers.tls.provider.TlsProviderConfig;
 
 TlsProviderConfig.builder()
 //  .alias(java.lang.String)
+//  .proxy(TlsProviderProxy)
     .build();
 ```
 
@@ -366,6 +408,7 @@ TlsProviderConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">proxy</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | proxy block. |
 
 ---
 
@@ -379,7 +422,106 @@ public java.lang.String getAlias();
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls#alias TlsProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#alias TlsProvider#alias}
+
+---
+
+##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy"></a>
+
+```java
+public TlsProviderProxy getProxy();
+```
+
+- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+
+proxy block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#proxy TlsProvider#proxy}
+
+---
+
+### TlsProviderProxy <a name="TlsProviderProxy" id="@cdktf/provider-tls.provider.TlsProviderProxy"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-tls.provider.TlsProviderProxy.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.tls.provider.TlsProviderProxy;
+
+TlsProviderProxy.builder()
+//  .fromEnv(java.lang.Boolean)
+//  .fromEnv(IResolvable)
+//  .password(java.lang.String)
+//  .url(java.lang.String)
+//  .username(java.lang.String)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv">fromEnv</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When `true` the provider will discover the proxy configuration from environment variables. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.password">password</a></code> | <code>java.lang.String</code> | Password used for Basic authentication against the Proxy. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.url">url</a></code> | <code>java.lang.String</code> | URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.username">username</a></code> | <code>java.lang.String</code> | Username (or Token) used for Basic authentication against the Proxy. |
+
+---
+
+##### `fromEnv`<sup>Optional</sup> <a name="fromEnv" id="@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv"></a>
+
+```java
+public java.lang.Object getFromEnv();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+When `true` the provider will discover the proxy configuration from environment variables.
+
+This is based upon [`http.ProxyFromEnvironment`](https://pkg.go.dev/net/http#ProxyFromEnvironment) and it supports the same environment variables (default: `true`).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#from_env TlsProvider#from_env}
+
+---
+
+##### `password`<sup>Optional</sup> <a name="password" id="@cdktf/provider-tls.provider.TlsProviderProxy.property.password"></a>
+
+```java
+public java.lang.String getPassword();
+```
+
+- *Type:* java.lang.String
+
+Password used for Basic authentication against the Proxy.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#password TlsProvider#password}
+
+---
+
+##### `url`<sup>Optional</sup> <a name="url" id="@cdktf/provider-tls.provider.TlsProviderProxy.property.url"></a>
+
+```java
+public java.lang.String getUrl();
+```
+
+- *Type:* java.lang.String
+
+URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#url TlsProvider#url}
+
+---
+
+##### `username`<sup>Optional</sup> <a name="username" id="@cdktf/provider-tls.provider.TlsProviderProxy.property.username"></a>
+
+```java
+public java.lang.String getUsername();
+```
+
+- *Type:* java.lang.String
+
+Username (or Token) used for Basic authentication against the Proxy.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#username TlsProvider#username}
 
 ---
 

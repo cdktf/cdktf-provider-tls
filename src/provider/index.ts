@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/tls
+// https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,13 +10,59 @@ export interface TlsProviderConfig {
   /**
   * Alias name
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls#alias TlsProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#alias TlsProvider#alias}
   */
   readonly alias?: string;
+  /**
+  * proxy block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#proxy TlsProvider#proxy}
+  */
+  readonly proxy?: TlsProviderProxy;
+}
+export interface TlsProviderProxy {
+  /**
+  * When `true` the provider will discover the proxy configuration from environment variables. This is based upon [`http.ProxyFromEnvironment`](https://pkg.go.dev/net/http#ProxyFromEnvironment) and it supports the same environment variables (default: `true`).
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#from_env TlsProvider#from_env}
+  */
+  readonly fromEnv?: boolean | cdktf.IResolvable;
+  /**
+  * Password used for Basic authentication against the Proxy.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#password TlsProvider#password}
+  */
+  readonly password?: string;
+  /**
+  * URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`. 
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#url TlsProvider#url}
+  */
+  readonly url?: string;
+  /**
+  * Username (or Token) used for Basic authentication against the Proxy.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#username TlsProvider#username}
+  */
+  readonly username?: string;
 }
 
+export function tlsProviderProxyToTerraform(struct?: TlsProviderProxy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    from_env: cdktf.booleanToTerraform(struct!.fromEnv),
+    password: cdktf.stringToTerraform(struct!.password),
+    url: cdktf.stringToTerraform(struct!.url),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
+
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/tls tls}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls}
 */
 export class TlsProvider extends cdktf.TerraformProvider {
 
@@ -30,7 +76,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/tls tls} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -47,6 +93,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
       terraformProviderSource: 'hashicorp/tls'
     });
     this._alias = config.alias;
+    this._proxy = config.proxy;
   }
 
   // ==========
@@ -69,6 +116,22 @@ export class TlsProvider extends cdktf.TerraformProvider {
     return this._alias;
   }
 
+  // proxy - computed: false, optional: true, required: false
+  private _proxy?: TlsProviderProxy; 
+  public get proxy() {
+    return this._proxy;
+  }
+  public set proxy(value: TlsProviderProxy | undefined) {
+    this._proxy = value;
+  }
+  public resetProxy() {
+    this._proxy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyInput() {
+    return this._proxy;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -76,6 +139,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       alias: cdktf.stringToTerraform(this._alias),
+      proxy: tlsProviderProxyToTerraform(this._proxy),
     };
   }
 }

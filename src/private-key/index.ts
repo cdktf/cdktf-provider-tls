@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/tls/r/private_key
+// https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,25 +10,25 @@ export interface PrivateKeyConfig extends cdktf.TerraformMetaArguments {
   /**
   * Name of the algorithm to use when generating the private key. Currently-supported values are: `RSA`, `ECDSA`, `ED25519`. 
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#algorithm PrivateKey#algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key#algorithm PrivateKey#algorithm}
   */
   readonly algorithm: string;
   /**
   * When `algorithm` is `ECDSA`, the name of the elliptic curve to use. Currently-supported values are: `P224`, `P256`, `P384`, `P521`. (default: `P224`).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
   */
   readonly ecdsaCurve?: string;
   /**
   * When `algorithm` is `RSA`, the size of the generated RSA key, in bits (default: `2048`).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#rsa_bits PrivateKey#rsa_bits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key#rsa_bits PrivateKey#rsa_bits}
   */
   readonly rsaBits?: number;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/tls/r/private_key tls_private_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key tls_private_key}
 */
 export class PrivateKey extends cdktf.TerraformResource {
 
@@ -42,7 +42,7 @@ export class PrivateKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/tls/r/private_key tls_private_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key tls_private_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
