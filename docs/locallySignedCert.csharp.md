@@ -1,3 +1,7 @@
+# `tls_locally_signed_cert`
+
+Refer to the Terraform Registory for docs: [`tls_locally_signed_cert`](https://www.terraform.io/docs/providers/tls/r/locally_signed_cert).
+
 # `locallySignedCert` Submodule <a name="`locallySignedCert` Submodule" id="@cdktf/provider-tls.locallySignedCert"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

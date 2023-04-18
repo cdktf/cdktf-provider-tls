@@ -1,3 +1,7 @@
+# `tls_cert_request`
+
+Refer to the Terraform Registory for docs: [`tls_cert_request`](https://www.terraform.io/docs/providers/tls/r/cert_request).
+
 # `certRequest` Submodule <a name="`certRequest` Submodule" id="@cdktf/provider-tls.certRequest"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
