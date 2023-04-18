@@ -1,3 +1,7 @@
+# `data_tls_public_key`
+
+Refer to the Terraform Registory for docs: [`data_tls_public_key`](https://www.terraform.io/docs/providers/tls/d/public_key).
+
 # `dataTlsPublicKey` Submodule <a name="`dataTlsPublicKey` Submodule" id="@cdktf/provider-tls.dataTlsPublicKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
