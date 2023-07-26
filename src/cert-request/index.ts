@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request
 // generated from terraform resource schema
 
@@ -14,31 +9,31 @@ import * as cdktf from 'cdktf';
 export interface CertRequestConfig extends cdktf.TerraformMetaArguments {
   /**
   * List of DNS names for which a certificate is being requested (i.e. certificate subjects).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#dns_names CertRequest#dns_names}
   */
   readonly dnsNames?: string[];
   /**
   * List of IP addresses for which a certificate is being requested (i.e. certificate subjects).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#ip_addresses CertRequest#ip_addresses}
   */
   readonly ipAddresses?: string[];
   /**
   * Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#private_key_pem CertRequest#private_key_pem}
   */
   readonly privateKeyPem: string;
   /**
   * List of URIs for which a certificate is being requested (i.e. certificate subjects).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#uris CertRequest#uris}
   */
   readonly uris?: string[];
   /**
   * subject block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#subject CertRequest#subject}
   */
   readonly subject?: CertRequestSubject;
@@ -46,55 +41,55 @@ export interface CertRequestConfig extends cdktf.TerraformMetaArguments {
 export interface CertRequestSubject {
   /**
   * Distinguished name: `CN`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#common_name CertRequest#common_name}
   */
   readonly commonName?: string;
   /**
   * Distinguished name: `C`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#country CertRequest#country}
   */
   readonly country?: string;
   /**
   * Distinguished name: `L`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#locality CertRequest#locality}
   */
   readonly locality?: string;
   /**
   * Distinguished name: `O`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#organization CertRequest#organization}
   */
   readonly organization?: string;
   /**
   * Distinguished name: `OU`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#organizational_unit CertRequest#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
   * Distinguished name: `PC`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#postal_code CertRequest#postal_code}
   */
   readonly postalCode?: string;
   /**
   * Distinguished name: `ST`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#province CertRequest#province}
   */
   readonly province?: string;
   /**
   * Distinguished name: `SERIALNUMBER`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#serial_number CertRequest#serial_number}
   */
   readonly serialNumber?: string;
   /**
   * Distinguished name: `STREET`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#street_address CertRequest#street_address}
   */
   readonly streetAddress?: string[];

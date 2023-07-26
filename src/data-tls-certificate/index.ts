@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface DataTlsCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
   * The content of the certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate#content DataTlsCertificate#content}
   */
   readonly content?: string;
   /**
   * URL of the endpoint to get the certificates from. Accepted schemes are: `https`, `tls`. For scheme `https://` it will use the HTTP protocol and apply the `proxy` configuration of the provider, if set. For scheme `tls://` it will instead use a secure TCP socket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate#url DataTlsCertificate#url}
   */
   readonly url?: string;
   /**
   * Whether to verify the certificate chain while parsing it or not (default: `true`).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate#verify_chain DataTlsCertificate#verify_chain}
   */
   readonly verifyChain?: boolean | cdktf.IResolvable;
