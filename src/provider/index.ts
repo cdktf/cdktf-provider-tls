@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface TlsProviderConfig {
   /**
   * Alias name
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#alias TlsProvider#alias}
   */
   readonly alias?: string;
   /**
   * proxy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#proxy TlsProvider#proxy}
   */
   readonly proxy?: TlsProviderProxy;
@@ -28,25 +28,25 @@ export interface TlsProviderConfig {
 export interface TlsProviderProxy {
   /**
   * When `true` the provider will discover the proxy configuration from environment variables. This is based upon [`http.ProxyFromEnvironment`](https://pkg.go.dev/net/http#ProxyFromEnvironment) and it supports the same environment variables (default: `true`).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#from_env TlsProvider#from_env}
   */
   readonly fromEnv?: boolean | cdktf.IResolvable;
   /**
   * Password used for Basic authentication against the Proxy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#password TlsProvider#password}
   */
   readonly password?: string;
   /**
   * URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`. 
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#url TlsProvider#url}
   */
   readonly url?: string;
   /**
   * Username (or Token) used for Basic authentication against the Proxy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#username TlsProvider#username}
   */
   readonly username?: string;
