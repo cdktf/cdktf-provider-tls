@@ -156,6 +156,20 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "tls_certificate";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataTlsCertificate resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataTlsCertificate to import
+  * @param importFromId The id of the existing DataTlsCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataTlsCertificate to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "tls_certificate", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
