@@ -1,7 +1,9 @@
 
-# Terraform CDK tls Provider ~> 4.0
+# Terraform CDK tls Provider tracks ~> 4.0
 
 This repo builds and publishes the Terraform tls Provider bindings for [CDK for Terraform](https://cdk.tf).
+
+Is based directly on tls 4.0.4
 
 ## Available Packages
 
@@ -61,7 +63,7 @@ This project is explicitly not tracking the Terraform tls Provider version 1:1. 
 These are the upstream dependencies:
 
 - [Terraform CDK](https://cdk.tf)
-- [Terraform tls Provider](https://registry.terraform.io/providers/hashicorp/tls/4.0.0)
+- [Terraform tls Provider](https://registry.terraform.io/providers/hashicorp/tls/4.0.4)
     - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-tls/releases)
 - [Terraform Engine](https://terraform.io)
 
