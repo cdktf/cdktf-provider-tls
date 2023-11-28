@@ -1,7 +1,3 @@
-# `tls_self_signed_cert`
-
-Refer to the Terraform Registory for docs: [`tls_self_signed_cert`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert).
-
 # `selfSignedCert` Submodule <a name="`selfSignedCert` Submodule" id="@cdktf/provider-tls.selfSignedCert"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_tls_certificate`
-
-Refer to the Terraform Registory for docs: [`data_tls_certificate`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/certificate).
-
 # `dataTlsCertificate` Submodule <a name="`dataTlsCertificate` Submodule" id="@cdktf/provider-tls.dataTlsCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

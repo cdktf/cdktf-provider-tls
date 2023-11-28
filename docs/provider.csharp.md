@@ -1,7 +1,3 @@
-# `provider`
-
-Refer to the Terraform Registory for docs: [`tls`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs).
-
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-tls.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
