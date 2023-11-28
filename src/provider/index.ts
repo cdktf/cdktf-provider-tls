@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs
+// https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,44 +15,44 @@ export interface TlsProviderConfig {
   /**
   * Alias name
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#alias TlsProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#alias TlsProvider#alias}
   */
   readonly alias?: string;
   /**
   * proxy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#proxy TlsProvider#proxy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#proxy TlsProvider#proxy}
   */
-  readonly proxy?: TlsProviderProxy;
+  readonly proxy?: TlsProviderProxy[] | cdktf.IResolvable;
 }
 export interface TlsProviderProxy {
   /**
   * When `true` the provider will discover the proxy configuration from environment variables. This is based upon [`http.ProxyFromEnvironment`](https://pkg.go.dev/net/http#ProxyFromEnvironment) and it supports the same environment variables (default: `true`).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#from_env TlsProvider#from_env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#from_env TlsProvider#from_env}
   */
   readonly fromEnv?: boolean | cdktf.IResolvable;
   /**
   * Password used for Basic authentication against the Proxy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#password TlsProvider#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#password TlsProvider#password}
   */
   readonly password?: string;
   /**
   * URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`. 
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#url TlsProvider#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#url TlsProvider#url}
   */
   readonly url?: string;
   /**
   * Username (or Token) used for Basic authentication against the Proxy.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#username TlsProvider#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#username TlsProvider#username}
   */
   readonly username?: string;
 }
 
-export function tlsProviderProxyToTerraform(struct?: TlsProviderProxy): any {
+export function tlsProviderProxyToTerraform(struct?: TlsProviderProxy | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -67,7 +67,7 @@ export function tlsProviderProxyToTerraform(struct?: TlsProviderProxy): any {
 
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls}
 */
 export class TlsProvider extends cdktf.TerraformProvider {
 
@@ -83,7 +83,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
   * Generates CDKTF code for importing a TlsProvider resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the TlsProvider to import
-  * @param importFromId The id of the existing TlsProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing TlsProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the TlsProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -95,7 +95,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -106,7 +106,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'tls',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '4.0.4',
+        providerVersion: '4.0.5',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'hashicorp/tls'
@@ -136,11 +136,11 @@ export class TlsProvider extends cdktf.TerraformProvider {
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy?: TlsProviderProxy; 
+  private _proxy?: TlsProviderProxy[] | cdktf.IResolvable; 
   public get proxy() {
     return this._proxy;
   }
-  public set proxy(value: TlsProviderProxy | undefined) {
+  public set proxy(value: TlsProviderProxy[] | cdktf.IResolvable | undefined) {
     this._proxy = value;
   }
   public resetProxy() {
@@ -158,7 +158,7 @@ export class TlsProvider extends cdktf.TerraformProvider {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       alias: cdktf.stringToTerraform(this._alias),
-      proxy: tlsProviderProxyToTerraform(this._proxy),
+      proxy: cdktf.listMapper(tlsProviderProxyToTerraform, true)(this._proxy),
     };
   }
 }
