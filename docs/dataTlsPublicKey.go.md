@@ -1,7 +1,3 @@
-# `data_tls_public_key`
-
-Refer to the Terraform Registory for docs: [`data_tls_public_key`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/public_key).
-
 # `dataTlsPublicKey` Submodule <a name="`dataTlsPublicKey` Submodule" id="@cdktf/provider-tls.dataTlsPublicKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.dataTlsPublicKey.DataTlsPublicKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/datatlspublickey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/datatlspublickey"
 
 datatlspublickey.NewDataTlsPublicKey(scope Construct, id *string, config DataTlsPublicKeyConfig) DataTlsPublicKey
 ```
@@ -285,7 +281,7 @@ func ResetPrivateKeyPem()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-tls.dataTlsPublicKey.DataTlsPublicKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/datatlspublickey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/datatlspublickey"
 
 datatlspublickey.DataTlsPublicKey_IsConstruct(x interface{}) *bool
 ```
@@ -317,7 +313,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-tls.dataTlsPublicKey.DataTlsPublicKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/datatlspublickey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/datatlspublickey"
 
 datatlspublickey.DataTlsPublicKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -331,7 +327,7 @@ datatlspublickey.DataTlsPublicKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-tls.dataTlsPublicKey.DataTlsPublicKey.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/datatlspublickey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/datatlspublickey"
 
 datatlspublickey.DataTlsPublicKey_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,7 +341,7 @@ datatlspublickey.DataTlsPublicKey_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-tls.dataTlsPublicKey.DataTlsPublicKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/datatlspublickey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/datatlspublickey"
 
 datatlspublickey.DataTlsPublicKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -662,7 +658,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.dataTlsPublicKey.DataTlsPublicKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/datatlspublickey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/datatlspublickey"
 
 &datatlspublickey.DataTlsPublicKeyConfig {
 	Connection: interface{},

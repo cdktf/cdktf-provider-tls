@@ -1,7 +1,3 @@
-# `tls_self_signed_cert`
-
-Refer to the Terraform Registory for docs: [`tls_self_signed_cert`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert).
-
 # `selfSignedCert` Submodule <a name="`selfSignedCert` Submodule" id="@cdktf/provider-tls.selfSignedCert"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 selfsignedcert.NewSelfSignedCert(scope Construct, id *string, config SelfSignedCertConfig) SelfSignedCert
 ```
@@ -401,7 +397,7 @@ func ResetUris()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 selfsignedcert.SelfSignedCert_IsConstruct(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 selfsignedcert.SelfSignedCert_IsTerraformElement(x interface{}) *bool
 ```
@@ -447,7 +443,7 @@ selfsignedcert.SelfSignedCert_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 selfsignedcert.SelfSignedCert_IsTerraformResource(x interface{}) *bool
 ```
@@ -461,7 +457,7 @@ selfsignedcert.SelfSignedCert_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 selfsignedcert.SelfSignedCert_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -998,7 +994,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 &selfsignedcert.SelfSignedCertConfig {
 	Connection: interface{},
@@ -1280,7 +1276,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 &selfsignedcert.SelfSignedCertSubject {
 	CommonName: *string,
@@ -1444,7 +1440,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 selfsignedcert.NewSelfSignedCertSubjectList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SelfSignedCertSubjectList
 ```
@@ -1587,7 +1583,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/selfsignedcert"
 
 selfsignedcert.NewSelfSignedCertSubjectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SelfSignedCertSubjectOutputReference
 ```
