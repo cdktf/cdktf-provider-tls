@@ -1,6 +1,6 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`tls`](https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs).
+Refer to the Terraform Registory for docs: [`tls`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs).
 
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-tls.provider"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`tls`](https://registry.terraform.io
 
 ### TlsProvider <a name="TlsProvider" id="@cdktf/provider-tls.provider.TlsProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.provider.TlsProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
 
 provider.NewTlsProvider(scope Construct, id *string, config TlsProviderConfig) TlsProvider
 ```
@@ -155,7 +155,7 @@ func ResetProxy()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-tls.provider.TlsProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
 
 provider.TlsProvider_IsConstruct(x interface{}) *bool
 ```
@@ -187,7 +187,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-tls.provider.TlsProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
 
 provider.TlsProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -201,7 +201,7 @@ provider.TlsProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-tls.provider.TlsProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
 
 provider.TlsProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -215,7 +215,7 @@ provider.TlsProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-tls.provider.TlsProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
 
 provider.TlsProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -244,7 +244,7 @@ The construct id used in the generated config for the TlsProvider to import.
 
 The id of the existing TlsProvider that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -270,8 +270,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.terraformProviderSource">TerraformProviderSource</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.alias">Alias</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.aliasInput">AliasInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">ProxyInput</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">Proxy</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">ProxyInput</a></code> | <code>interface{}</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">Proxy</a></code> | <code>interface{}</code> | *No description.* |
 
 ---
 
@@ -380,20 +380,20 @@ func AliasInput() *string
 ##### `ProxyInput`<sup>Optional</sup> <a name="ProxyInput" id="@cdktf/provider-tls.provider.TlsProvider.property.proxyInput"></a>
 
 ```go
-func ProxyInput() TlsProviderProxy
+func ProxyInput() interface{}
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+- *Type:* interface{}
 
 ---
 
 ##### `Proxy`<sup>Optional</sup> <a name="Proxy" id="@cdktf/provider-tls.provider.TlsProvider.property.proxy"></a>
 
 ```go
-func Proxy() TlsProviderProxy
+func Proxy() interface{}
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+- *Type:* interface{}
 
 ---
 
@@ -422,11 +422,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.provider.TlsProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
 
 &provider.TlsProviderConfig {
 	Alias: *string,
-	Proxy: github.com/cdktf/cdktf-provider-tls-go/tls/v9.provider.TlsProviderProxy,
+	Proxy: interface{},
 }
 ```
 
@@ -435,7 +435,7 @@ import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.alias">Alias</a></code> | <code>*string</code> | Alias name. |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">Proxy</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | proxy block. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">Proxy</a></code> | <code>interface{}</code> | proxy block. |
 
 ---
 
@@ -449,21 +449,21 @@ Alias *string
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#alias TlsProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#alias TlsProvider#alias}
 
 ---
 
 ##### `Proxy`<sup>Optional</sup> <a name="Proxy" id="@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy"></a>
 
 ```go
-Proxy TlsProviderProxy
+Proxy interface{}
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+- *Type:* interface{}
 
 proxy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#proxy TlsProvider#proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#proxy TlsProvider#proxy}
 
 ---
 
@@ -472,7 +472,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.provider.TlsProviderProxy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
 
 &provider.TlsProviderProxy {
 	FromEnv: interface{},
@@ -505,7 +505,7 @@ When `true` the provider will discover the proxy configuration from environment 
 
 This is based upon [`http.ProxyFromEnvironment`](https://pkg.go.dev/net/http#ProxyFromEnvironment) and it supports the same environment variables (default: `true`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#from_env TlsProvider#from_env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#from_env TlsProvider#from_env}
 
 ---
 
@@ -519,7 +519,7 @@ Password *string
 
 Password used for Basic authentication against the Proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#password TlsProvider#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#password TlsProvider#password}
 
 ---
 
@@ -533,7 +533,7 @@ Url *string
 
 URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#url TlsProvider#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#url TlsProvider#url}
 
 ---
 
@@ -547,7 +547,7 @@ Username *string
 
 Username (or Token) used for Basic authentication against the Proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#username TlsProvider#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#username TlsProvider#username}
 
 ---
 

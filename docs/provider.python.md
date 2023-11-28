@@ -1,6 +1,6 @@
 # `provider`
 
-Refer to the Terraform Registory for docs: [`tls`](https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs).
+Refer to the Terraform Registory for docs: [`tls`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs).
 
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-tls.provider"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`tls`](https://registry.terraform.io
 
 ### TlsProvider <a name="TlsProvider" id="@cdktf/provider-tls.provider.TlsProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.provider.TlsProvider.Initializer"></a>
 
@@ -19,7 +19,7 @@ provider.TlsProvider(
   scope: Construct,
   id: str,
   alias: str = None,
-  proxy: TlsProviderProxy = None
+  proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]] = None
 )
 ```
 
@@ -28,7 +28,7 @@ provider.TlsProvider(
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.alias">alias</a></code> | <code>str</code> | Alias name. |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy">proxy</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | proxy block. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy">proxy</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]</code> | proxy block. |
 
 ---
 
@@ -56,17 +56,17 @@ Must be unique amongst siblings in the same scope
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#alias TlsProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#alias TlsProvider#alias}
 
 ---
 
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy"></a>
 
-- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]
 
 proxy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#proxy TlsProvider#proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#proxy TlsProvider#proxy}
 
 ---
 
@@ -280,7 +280,7 @@ The construct id used in the generated config for the TlsProvider to import.
 
 The id of the existing TlsProvider that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -306,8 +306,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.terraformProviderSource">terraform_provider_source</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.alias">alias</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.aliasInput">alias_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">proxy_input</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">proxy</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">proxy_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">proxy</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]</code> | *No description.* |
 
 ---
 
@@ -416,20 +416,20 @@ alias_input: str
 ##### `proxy_input`<sup>Optional</sup> <a name="proxy_input" id="@cdktf/provider-tls.provider.TlsProvider.property.proxyInput"></a>
 
 ```python
-proxy_input: TlsProviderProxy
+proxy_input: typing.Union[IResolvable, typing.List[TlsProviderProxy]]
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]
 
 ---
 
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProvider.property.proxy"></a>
 
 ```python
-proxy: TlsProviderProxy
+proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]]
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]
 
 ---
 
@@ -462,7 +462,7 @@ from cdktf_cdktf_provider_tls import provider
 
 provider.TlsProviderConfig(
   alias: str = None,
-  proxy: TlsProviderProxy = None
+  proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]] = None
 )
 ```
 
@@ -471,7 +471,7 @@ provider.TlsProviderConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.alias">alias</a></code> | <code>str</code> | Alias name. |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">proxy</a></code> | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a></code> | proxy block. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">proxy</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]</code> | proxy block. |
 
 ---
 
@@ -485,21 +485,21 @@ alias: str
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#alias TlsProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#alias TlsProvider#alias}
 
 ---
 
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy"></a>
 
 ```python
-proxy: TlsProviderProxy
+proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]]
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]
 
 proxy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#proxy TlsProvider#proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#proxy TlsProvider#proxy}
 
 ---
 
@@ -541,7 +541,7 @@ When `true` the provider will discover the proxy configuration from environment 
 
 This is based upon [`http.ProxyFromEnvironment`](https://pkg.go.dev/net/http#ProxyFromEnvironment) and it supports the same environment variables (default: `true`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#from_env TlsProvider#from_env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#from_env TlsProvider#from_env}
 
 ---
 
@@ -555,7 +555,7 @@ password: str
 
 Password used for Basic authentication against the Proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#password TlsProvider#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#password TlsProvider#password}
 
 ---
 
@@ -569,7 +569,7 @@ url: str
 
 URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#url TlsProvider#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#url TlsProvider#url}
 
 ---
 
@@ -583,7 +583,7 @@ username: str
 
 Username (or Token) used for Basic authentication against the Proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs#username TlsProvider#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#username TlsProvider#username}
 
 ---
 

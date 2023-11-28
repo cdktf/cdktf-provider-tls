@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert
+// https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,128 +10,128 @@ export interface SelfSignedCertConfig extends cdktf.TerraformMetaArguments {
   /**
   * List of key usages allowed for the issued certificate. Values are defined in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280) and combine flags defined by both [Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.3) and [Extended Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12). Accepted values: `any_extended`, `cert_signing`, `client_auth`, `code_signing`, `content_commitment`, `crl_signing`, `data_encipherment`, `decipher_only`, `digital_signature`, `email_protection`, `encipher_only`, `ipsec_end_system`, `ipsec_tunnel`, `ipsec_user`, `key_agreement`, `key_encipherment`, `microsoft_commercial_code_signing`, `microsoft_kernel_code_signing`, `microsoft_server_gated_crypto`, `netscape_server_gated_crypto`, `ocsp_signing`, `server_auth`, `timestamping`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#allowed_uses SelfSignedCert#allowed_uses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#allowed_uses SelfSignedCert#allowed_uses}
   */
   readonly allowedUses: string[];
   /**
   * List of DNS names for which a certificate is being requested (i.e. certificate subjects).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#dns_names SelfSignedCert#dns_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#dns_names SelfSignedCert#dns_names}
   */
   readonly dnsNames?: string[];
   /**
   * The resource will consider the certificate to have expired the given number of hours before its actual expiry time. This can be useful to deploy an updated certificate in advance of the expiration of the current certificate. However, the old certificate remains valid until its true expiration time, since this resource does not (and cannot) support certificate revocation. Also, this advance update can only be performed should the Terraform configuration be applied during the early renewal period. (default: `0`)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#early_renewal_hours SelfSignedCert#early_renewal_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#early_renewal_hours SelfSignedCert#early_renewal_hours}
   */
   readonly earlyRenewalHours?: number;
   /**
   * List of IP addresses for which a certificate is being requested (i.e. certificate subjects).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#ip_addresses SelfSignedCert#ip_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#ip_addresses SelfSignedCert#ip_addresses}
   */
   readonly ipAddresses?: string[];
   /**
   * Is the generated certificate representing a Certificate Authority (CA) (default: `false`).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
   */
   readonly isCaCertificate?: boolean | cdktf.IResolvable;
   /**
-  * Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
+  * Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. 
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
   */
   readonly privateKeyPem: string;
   /**
   * Should the generated certificate include an [authority key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.1): for self-signed certificates this is the same value as the [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#set_authority_key_id SelfSignedCert#set_authority_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#set_authority_key_id SelfSignedCert#set_authority_key_id}
   */
   readonly setAuthorityKeyId?: boolean | cdktf.IResolvable;
   /**
   * Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
   */
   readonly setSubjectKeyId?: boolean | cdktf.IResolvable;
   /**
   * List of URIs for which a certificate is being requested (i.e. certificate subjects).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#uris SelfSignedCert#uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#uris SelfSignedCert#uris}
   */
   readonly uris?: string[];
   /**
   * Number of hours, after initial issuing, that the certificate will remain valid for.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#validity_period_hours SelfSignedCert#validity_period_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#validity_period_hours SelfSignedCert#validity_period_hours}
   */
   readonly validityPeriodHours: number;
   /**
   * subject block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#subject SelfSignedCert#subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#subject SelfSignedCert#subject}
   */
-  readonly subject?: SelfSignedCertSubject;
+  readonly subject?: SelfSignedCertSubject[] | cdktf.IResolvable;
 }
 export interface SelfSignedCertSubject {
   /**
   * Distinguished name: `CN`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#common_name SelfSignedCert#common_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#common_name SelfSignedCert#common_name}
   */
   readonly commonName?: string;
   /**
   * Distinguished name: `C`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#country SelfSignedCert#country}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#country SelfSignedCert#country}
   */
   readonly country?: string;
   /**
   * Distinguished name: `L`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#locality SelfSignedCert#locality}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#locality SelfSignedCert#locality}
   */
   readonly locality?: string;
   /**
   * Distinguished name: `O`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#organization SelfSignedCert#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#organization SelfSignedCert#organization}
   */
   readonly organization?: string;
   /**
   * Distinguished name: `OU`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#organizational_unit SelfSignedCert#organizational_unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#organizational_unit SelfSignedCert#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
   * Distinguished name: `PC`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#postal_code SelfSignedCert#postal_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#postal_code SelfSignedCert#postal_code}
   */
   readonly postalCode?: string;
   /**
   * Distinguished name: `ST`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#province SelfSignedCert#province}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#province SelfSignedCert#province}
   */
   readonly province?: string;
   /**
   * Distinguished name: `SERIALNUMBER`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#serial_number SelfSignedCert#serial_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#serial_number SelfSignedCert#serial_number}
   */
   readonly serialNumber?: string;
   /**
   * Distinguished name: `STREET`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#street_address SelfSignedCert#street_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#street_address SelfSignedCert#street_address}
   */
   readonly streetAddress?: string[];
 }
 
-export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubjectOutputReference | SelfSignedCertSubject): any {
+export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubject | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -156,16 +151,22 @@ export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubjectO
 
 export class SelfSignedCertSubjectOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): SelfSignedCertSubject | undefined {
+  public get internalValue(): SelfSignedCertSubject | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._commonName !== undefined) {
@@ -207,9 +208,10 @@ export class SelfSignedCertSubjectOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SelfSignedCertSubject | undefined) {
+  public set internalValue(value: SelfSignedCertSubject | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._commonName = undefined;
       this._country = undefined;
       this._locality = undefined;
@@ -220,8 +222,13 @@ export class SelfSignedCertSubjectOutputReference extends cdktf.ComplexObject {
       this._serialNumber = undefined;
       this._streetAddress = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._commonName = value.commonName;
       this._country = value.country;
       this._locality = value.locality;
@@ -379,8 +386,28 @@ export class SelfSignedCertSubjectOutputReference extends cdktf.ComplexObject {
   }
 }
 
+export class SelfSignedCertSubjectList extends cdktf.ComplexList {
+  public internalValue? : SelfSignedCertSubject[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SelfSignedCertSubjectOutputReference {
+    return new SelfSignedCertSubjectOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert tls_self_signed_cert}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert tls_self_signed_cert}
 */
 export class SelfSignedCert extends cdktf.TerraformResource {
 
@@ -396,7 +423,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SelfSignedCert resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SelfSignedCert to import
-  * @param importFromId The id of the existing SelfSignedCert that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SelfSignedCert that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SelfSignedCert to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -408,7 +435,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert tls_self_signed_cert} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert tls_self_signed_cert} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -419,7 +446,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
       terraformResourceType: 'tls_self_signed_cert',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '4.0.4',
+        providerVersion: '4.0.5',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -629,11 +656,11 @@ export class SelfSignedCert extends cdktf.TerraformResource {
   }
 
   // subject - computed: false, optional: true, required: false
-  private _subject = new SelfSignedCertSubjectOutputReference(this, "subject");
+  private _subject = new SelfSignedCertSubjectList(this, "subject", false);
   public get subject() {
     return this._subject;
   }
-  public putSubject(value: SelfSignedCertSubject) {
+  public putSubject(value: SelfSignedCertSubject[] | cdktf.IResolvable) {
     this._subject.internalValue = value;
   }
   public resetSubject() {
@@ -660,7 +687,7 @@ export class SelfSignedCert extends cdktf.TerraformResource {
       set_subject_key_id: cdktf.booleanToTerraform(this._setSubjectKeyId),
       uris: cdktf.listMapper(cdktf.stringToTerraform, false)(this._uris),
       validity_period_hours: cdktf.numberToTerraform(this._validityPeriodHours),
-      subject: selfSignedCertSubjectToTerraform(this._subject.internalValue),
+      subject: cdktf.listMapper(selfSignedCertSubjectToTerraform, true)(this._subject.internalValue),
     };
   }
 }

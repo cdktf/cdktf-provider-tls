@@ -1,6 +1,6 @@
 # `tls_private_key`
 
-Refer to the Terraform Registory for docs: [`tls_private_key`](https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key).
+Refer to the Terraform Registory for docs: [`tls_private_key`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key).
 
 # `privateKey` Submodule <a name="`privateKey` Submodule" id="@cdktf/provider-tls.privateKey"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`tls_private_key`](https://registry.
 
 ### PrivateKey <a name="PrivateKey" id="@cdktf/provider-tls.privateKey.PrivateKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key tls_private_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key tls_private_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.privateKey.PrivateKey.Initializer"></a>
 
@@ -435,7 +435,7 @@ The construct id used in the generated config for the PrivateKey to import.
 
 The id of the existing PrivateKey that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -902,7 +902,7 @@ public string Algorithm { get; set; }
 
 Name of the algorithm to use when generating the private key. Currently-supported values are: `RSA`, `ECDSA`, `ED25519`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key#algorithm PrivateKey#algorithm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key#algorithm PrivateKey#algorithm}
 
 ---
 
@@ -918,7 +918,7 @@ When `algorithm` is `ECDSA`, the name of the elliptic curve to use.
 
 Currently-supported values are: `P224`, `P256`, `P384`, `P521`. (default: `P224`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
 
 ---
 
@@ -932,7 +932,7 @@ public double RsaBits { get; set; }
 
 When `algorithm` is `RSA`, the size of the generated RSA key, in bits (default: `2048`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key#rsa_bits PrivateKey#rsa_bits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key#rsa_bits PrivateKey#rsa_bits}
 
 ---
 

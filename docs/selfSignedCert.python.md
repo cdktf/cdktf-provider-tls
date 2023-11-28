@@ -1,6 +1,6 @@
 # `tls_self_signed_cert`
 
-Refer to the Terraform Registory for docs: [`tls_self_signed_cert`](https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert).
+Refer to the Terraform Registory for docs: [`tls_self_signed_cert`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert).
 
 # `selfSignedCert` Submodule <a name="`selfSignedCert` Submodule" id="@cdktf/provider-tls.selfSignedCert"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`tls_self_signed_cert`](https://regi
 
 ### SelfSignedCert <a name="SelfSignedCert" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert tls_self_signed_cert}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert tls_self_signed_cert}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer"></a>
 
@@ -34,7 +34,7 @@ selfSignedCert.SelfSignedCert(
   is_ca_certificate: typing.Union[bool, IResolvable] = None,
   set_authority_key_id: typing.Union[bool, IResolvable] = None,
   set_subject_key_id: typing.Union[bool, IResolvable] = None,
-  subject: SelfSignedCertSubject = None,
+  subject: typing.Union[IResolvable, typing.List[SelfSignedCertSubject]] = None,
   uris: typing.List[str] = None
 )
 ```
@@ -51,7 +51,7 @@ selfSignedCert.SelfSignedCert(
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.allowedUses">allowed_uses</a></code> | <code>typing.List[str]</code> | List of key usages allowed for the issued certificate. |
-| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.privateKeyPem">private_key_pem</a></code> | <code>str</code> | Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.privateKeyPem">private_key_pem</a></code> | <code>str</code> | Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.validityPeriodHours">validity_period_hours</a></code> | <code>typing.Union[int, float]</code> | Number of hours, after initial issuing, that the certificate will remain valid for. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.dnsNames">dns_names</a></code> | <code>typing.List[str]</code> | List of DNS names for which a certificate is being requested (i.e. certificate subjects). |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.earlyRenewalHours">early_renewal_hours</a></code> | <code>typing.Union[int, float]</code> | The resource will consider the certificate to have expired the given number of hours before its actual expiry time. |
@@ -59,7 +59,7 @@ selfSignedCert.SelfSignedCert(
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.isCaCertificate">is_ca_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is the generated certificate representing a Certificate Authority (CA) (default: `false`). |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.setAuthorityKeyId">set_authority_key_id</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the generated certificate include an [authority key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.1): for self-signed certificates this is the same value as the [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`). |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.setSubjectKeyId">set_subject_key_id</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`). |
-| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.subject">subject</a></code> | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a></code> | subject block. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.subject">subject</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]</code> | subject block. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.uris">uris</a></code> | <code>typing.List[str]</code> | List of URIs for which a certificate is being requested (i.e. certificate subjects). |
 
 ---
@@ -132,7 +132,7 @@ List of key usages allowed for the issued certificate.
 
 Values are defined in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280) and combine flags defined by both [Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.3) and [Extended Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12). Accepted values: `any_extended`, `cert_signing`, `client_auth`, `code_signing`, `content_commitment`, `crl_signing`, `data_encipherment`, `decipher_only`, `digital_signature`, `email_protection`, `encipher_only`, `ipsec_end_system`, `ipsec_tunnel`, `ipsec_user`, `key_agreement`, `key_encipherment`, `microsoft_commercial_code_signing`, `microsoft_kernel_code_signing`, `microsoft_server_gated_crypto`, `netscape_server_gated_crypto`, `ocsp_signing`, `server_auth`, `timestamping`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#allowed_uses SelfSignedCert#allowed_uses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#allowed_uses SelfSignedCert#allowed_uses}
 
 ---
 
@@ -140,9 +140,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
+Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Number of hours, after initial issuing, that the certificate will remain valid for.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#validity_period_hours SelfSignedCert#validity_period_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#validity_period_hours SelfSignedCert#validity_period_hours}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 List of DNS names for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#dns_names SelfSignedCert#dns_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#dns_names SelfSignedCert#dns_names}
 
 ---
 
@@ -174,7 +174,7 @@ The resource will consider the certificate to have expired the given number of h
 
 This can be useful to deploy an updated certificate in advance of the expiration of the current certificate. However, the old certificate remains valid until its true expiration time, since this resource does not (and cannot) support certificate revocation. Also, this advance update can only be performed should the Terraform configuration be applied during the early renewal period. (default: `0`)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#early_renewal_hours SelfSignedCert#early_renewal_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#early_renewal_hours SelfSignedCert#early_renewal_hours}
 
 ---
 
@@ -184,7 +184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 List of IP addresses for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#ip_addresses SelfSignedCert#ip_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#ip_addresses SelfSignedCert#ip_addresses}
 
 ---
 
@@ -194,7 +194,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Is the generated certificate representing a Certificate Authority (CA) (default: `false`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
 
 ---
 
@@ -204,7 +204,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should the generated certificate include an [authority key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.1): for self-signed certificates this is the same value as the [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#set_authority_key_id SelfSignedCert#set_authority_key_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#set_authority_key_id SelfSignedCert#set_authority_key_id}
 
 ---
 
@@ -214,17 +214,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
 
 ---
 
 ##### `subject`<sup>Optional</sup> <a name="subject" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer.parameter.subject"></a>
 
-- *Type:* <a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]
 
 subject block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#subject SelfSignedCert#subject}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#subject SelfSignedCert#subject}
 
 ---
 
@@ -234,7 +234,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 List of URIs for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#uris SelfSignedCert#uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#uris SelfSignedCert#uris}
 
 ---
 
@@ -552,105 +552,13 @@ Optional The index corresponding to the key the resource is to appear in the for
 
 ```python
 def put_subject(
-  common_name: str = None,
-  country: str = None,
-  locality: str = None,
-  organization: str = None,
-  organizational_unit: str = None,
-  postal_code: str = None,
-  province: str = None,
-  serial_number: str = None,
-  street_address: typing.List[str] = None
+  value: typing.Union[IResolvable, typing.List[SelfSignedCertSubject]]
 ) -> None
 ```
 
-###### `common_name`<sup>Optional</sup> <a name="common_name" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.commonName"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.value"></a>
 
-- *Type:* str
-
-Distinguished name: `CN`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#common_name SelfSignedCert#common_name}
-
----
-
-###### `country`<sup>Optional</sup> <a name="country" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.country"></a>
-
-- *Type:* str
-
-Distinguished name: `C`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#country SelfSignedCert#country}
-
----
-
-###### `locality`<sup>Optional</sup> <a name="locality" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.locality"></a>
-
-- *Type:* str
-
-Distinguished name: `L`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#locality SelfSignedCert#locality}
-
----
-
-###### `organization`<sup>Optional</sup> <a name="organization" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.organization"></a>
-
-- *Type:* str
-
-Distinguished name: `O`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#organization SelfSignedCert#organization}
-
----
-
-###### `organizational_unit`<sup>Optional</sup> <a name="organizational_unit" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.organizationalUnit"></a>
-
-- *Type:* str
-
-Distinguished name: `OU`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#organizational_unit SelfSignedCert#organizational_unit}
-
----
-
-###### `postal_code`<sup>Optional</sup> <a name="postal_code" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.postalCode"></a>
-
-- *Type:* str
-
-Distinguished name: `PC`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#postal_code SelfSignedCert#postal_code}
-
----
-
-###### `province`<sup>Optional</sup> <a name="province" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.province"></a>
-
-- *Type:* str
-
-Distinguished name: `ST`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#province SelfSignedCert#province}
-
----
-
-###### `serial_number`<sup>Optional</sup> <a name="serial_number" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.serialNumber"></a>
-
-- *Type:* str
-
-Distinguished name: `SERIALNUMBER`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#serial_number SelfSignedCert#serial_number}
-
----
-
-###### `street_address`<sup>Optional</sup> <a name="street_address" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.putSubject.parameter.streetAddress"></a>
-
-- *Type:* typing.List[str]
-
-Distinguished name: `STREET`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#street_address SelfSignedCert#street_address}
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]
 
 ---
 
@@ -816,7 +724,7 @@ The construct id used in the generated config for the SelfSignedCert to import.
 
 The id of the existing SelfSignedCert that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -850,7 +758,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.keyAlgorithm">key_algorithm</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.readyForRenewal">ready_for_renewal</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.subject">subject</a></code> | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference">SelfSignedCertSubjectOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.subject">subject</a></code> | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList">SelfSignedCertSubjectList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.validityEndTime">validity_end_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.validityStartTime">validity_start_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.allowedUsesInput">allowed_uses_input</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -861,7 +769,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.privateKeyPemInput">private_key_pem_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.setAuthorityKeyIdInput">set_authority_key_id_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.setSubjectKeyIdInput">set_subject_key_id_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.subjectInput">subject_input</a></code> | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.subjectInput">subject_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.urisInput">uris_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.validityPeriodHoursInput">validity_period_hours_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.allowedUses">allowed_uses</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -1062,10 +970,10 @@ ready_for_renewal: IResolvable
 ##### `subject`<sup>Required</sup> <a name="subject" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.subject"></a>
 
 ```python
-subject: SelfSignedCertSubjectOutputReference
+subject: SelfSignedCertSubjectList
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference">SelfSignedCertSubjectOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList">SelfSignedCertSubjectList</a>
 
 ---
 
@@ -1172,10 +1080,10 @@ set_subject_key_id_input: typing.Union[bool, IResolvable]
 ##### `subject_input`<sup>Optional</sup> <a name="subject_input" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.property.subjectInput"></a>
 
 ```python
-subject_input: SelfSignedCertSubject
+subject_input: typing.Union[IResolvable, typing.List[SelfSignedCertSubject]]
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]
 
 ---
 
@@ -1343,7 +1251,7 @@ selfSignedCert.SelfSignedCertConfig(
   is_ca_certificate: typing.Union[bool, IResolvable] = None,
   set_authority_key_id: typing.Union[bool, IResolvable] = None,
   set_subject_key_id: typing.Union[bool, IResolvable] = None,
-  subject: SelfSignedCertSubject = None,
+  subject: typing.Union[IResolvable, typing.List[SelfSignedCertSubject]] = None,
   uris: typing.List[str] = None
 )
 ```
@@ -1360,7 +1268,7 @@ selfSignedCert.SelfSignedCertConfig(
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.allowedUses">allowed_uses</a></code> | <code>typing.List[str]</code> | List of key usages allowed for the issued certificate. |
-| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.privateKeyPem">private_key_pem</a></code> | <code>str</code> | Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.privateKeyPem">private_key_pem</a></code> | <code>str</code> | Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.validityPeriodHours">validity_period_hours</a></code> | <code>typing.Union[int, float]</code> | Number of hours, after initial issuing, that the certificate will remain valid for. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.dnsNames">dns_names</a></code> | <code>typing.List[str]</code> | List of DNS names for which a certificate is being requested (i.e. certificate subjects). |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.earlyRenewalHours">early_renewal_hours</a></code> | <code>typing.Union[int, float]</code> | The resource will consider the certificate to have expired the given number of hours before its actual expiry time. |
@@ -1368,7 +1276,7 @@ selfSignedCert.SelfSignedCertConfig(
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.isCaCertificate">is_ca_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is the generated certificate representing a Certificate Authority (CA) (default: `false`). |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.setAuthorityKeyId">set_authority_key_id</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the generated certificate include an [authority key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.1): for self-signed certificates this is the same value as the [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`). |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.setSubjectKeyId">set_subject_key_id</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`). |
-| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.subject">subject</a></code> | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a></code> | subject block. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.subject">subject</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]</code> | subject block. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.uris">uris</a></code> | <code>typing.List[str]</code> | List of URIs for which a certificate is being requested (i.e. certificate subjects). |
 
 ---
@@ -1455,7 +1363,7 @@ List of key usages allowed for the issued certificate.
 
 Values are defined in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280) and combine flags defined by both [Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.3) and [Extended Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12). Accepted values: `any_extended`, `cert_signing`, `client_auth`, `code_signing`, `content_commitment`, `crl_signing`, `data_encipherment`, `decipher_only`, `digital_signature`, `email_protection`, `encipher_only`, `ipsec_end_system`, `ipsec_tunnel`, `ipsec_user`, `key_agreement`, `key_encipherment`, `microsoft_commercial_code_signing`, `microsoft_kernel_code_signing`, `microsoft_server_gated_crypto`, `netscape_server_gated_crypto`, `ocsp_signing`, `server_auth`, `timestamping`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#allowed_uses SelfSignedCert#allowed_uses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#allowed_uses SelfSignedCert#allowed_uses}
 
 ---
 
@@ -1467,9 +1375,9 @@ private_key_pem: str
 
 - *Type:* str
 
-Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
+Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#private_key_pem SelfSignedCert#private_key_pem}
 
 ---
 
@@ -1483,7 +1391,7 @@ validity_period_hours: typing.Union[int, float]
 
 Number of hours, after initial issuing, that the certificate will remain valid for.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#validity_period_hours SelfSignedCert#validity_period_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#validity_period_hours SelfSignedCert#validity_period_hours}
 
 ---
 
@@ -1497,7 +1405,7 @@ dns_names: typing.List[str]
 
 List of DNS names for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#dns_names SelfSignedCert#dns_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#dns_names SelfSignedCert#dns_names}
 
 ---
 
@@ -1513,7 +1421,7 @@ The resource will consider the certificate to have expired the given number of h
 
 This can be useful to deploy an updated certificate in advance of the expiration of the current certificate. However, the old certificate remains valid until its true expiration time, since this resource does not (and cannot) support certificate revocation. Also, this advance update can only be performed should the Terraform configuration be applied during the early renewal period. (default: `0`)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#early_renewal_hours SelfSignedCert#early_renewal_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#early_renewal_hours SelfSignedCert#early_renewal_hours}
 
 ---
 
@@ -1527,7 +1435,7 @@ ip_addresses: typing.List[str]
 
 List of IP addresses for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#ip_addresses SelfSignedCert#ip_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#ip_addresses SelfSignedCert#ip_addresses}
 
 ---
 
@@ -1541,7 +1449,7 @@ is_ca_certificate: typing.Union[bool, IResolvable]
 
 Is the generated certificate representing a Certificate Authority (CA) (default: `false`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
 
 ---
 
@@ -1555,7 +1463,7 @@ set_authority_key_id: typing.Union[bool, IResolvable]
 
 Should the generated certificate include an [authority key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.1): for self-signed certificates this is the same value as the [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#set_authority_key_id SelfSignedCert#set_authority_key_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#set_authority_key_id SelfSignedCert#set_authority_key_id}
 
 ---
 
@@ -1569,21 +1477,21 @@ set_subject_key_id: typing.Union[bool, IResolvable]
 
 Should the generated certificate include a [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#set_subject_key_id SelfSignedCert#set_subject_key_id}
 
 ---
 
 ##### `subject`<sup>Optional</sup> <a name="subject" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.property.subject"></a>
 
 ```python
-subject: SelfSignedCertSubject
+subject: typing.Union[IResolvable, typing.List[SelfSignedCertSubject]]
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]
 
 subject block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#subject SelfSignedCert#subject}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#subject SelfSignedCert#subject}
 
 ---
 
@@ -1597,7 +1505,7 @@ uris: typing.List[str]
 
 List of URIs for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#uris SelfSignedCert#uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#uris SelfSignedCert#uris}
 
 ---
 
@@ -1647,7 +1555,7 @@ common_name: str
 
 Distinguished name: `CN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#common_name SelfSignedCert#common_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#common_name SelfSignedCert#common_name}
 
 ---
 
@@ -1661,7 +1569,7 @@ country: str
 
 Distinguished name: `C`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#country SelfSignedCert#country}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#country SelfSignedCert#country}
 
 ---
 
@@ -1675,7 +1583,7 @@ locality: str
 
 Distinguished name: `L`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#locality SelfSignedCert#locality}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#locality SelfSignedCert#locality}
 
 ---
 
@@ -1689,7 +1597,7 @@ organization: str
 
 Distinguished name: `O`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#organization SelfSignedCert#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#organization SelfSignedCert#organization}
 
 ---
 
@@ -1703,7 +1611,7 @@ organizational_unit: str
 
 Distinguished name: `OU`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#organizational_unit SelfSignedCert#organizational_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#organizational_unit SelfSignedCert#organizational_unit}
 
 ---
 
@@ -1717,7 +1625,7 @@ postal_code: str
 
 Distinguished name: `PC`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#postal_code SelfSignedCert#postal_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#postal_code SelfSignedCert#postal_code}
 
 ---
 
@@ -1731,7 +1639,7 @@ province: str
 
 Distinguished name: `ST`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#province SelfSignedCert#province}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#province SelfSignedCert#province}
 
 ---
 
@@ -1745,7 +1653,7 @@ serial_number: str
 
 Distinguished name: `SERIALNUMBER`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#serial_number SelfSignedCert#serial_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#serial_number SelfSignedCert#serial_number}
 
 ---
 
@@ -1759,11 +1667,162 @@ street_address: typing.List[str]
 
 Distinguished name: `STREET`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert#street_address SelfSignedCert#street_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert#street_address SelfSignedCert#street_address}
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### SelfSignedCertSubjectList <a name="SelfSignedCertSubjectList" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_tls import self_signed_cert
+
+selfSignedCert.SelfSignedCertSubjectList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.get">get</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> SelfSignedCertSubjectOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.property.internalValue"></a>
+
+```python
+internal_value: typing.Union[IResolvable, typing.List[SelfSignedCertSubject]]
+```
+
+- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]]
+
+---
+
 
 ### SelfSignedCertSubjectOutputReference <a name="SelfSignedCertSubjectOutputReference" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference"></a>
 
@@ -1774,7 +1833,9 @@ from cdktf_cdktf_provider_tls import self_signed_cert
 
 selfSignedCert.SelfSignedCertSubjectOutputReference(
   terraform_resource: IInterpolatingParent,
-  terraform_attribute: str
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
 )
 ```
 
@@ -1782,6 +1843,8 @@ selfSignedCert.SelfSignedCertSubjectOutputReference(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
@@ -1798,6 +1861,22 @@ The parent resource.
 - *Type:* str
 
 The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 
 ---
 
@@ -2081,7 +2160,7 @@ def reset_street_address() -> None
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.property.province">province</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.property.serialNumber">serial_number</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.property.streetAddress">street_address</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]</code> | *No description.* |
 
 ---
 
@@ -2292,10 +2371,10 @@ street_address: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: SelfSignedCertSubject
+internal_value: typing.Union[IResolvable, SelfSignedCertSubject]
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject">SelfSignedCertSubject</a>]
 
 ---
 

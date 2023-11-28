@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate
+// https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,19 +10,19 @@ export interface DataTlsCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
   * The content of the certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate#content DataTlsCertificate#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/certificate#content DataTlsCertificate#content}
   */
   readonly content?: string;
   /**
   * URL of the endpoint to get the certificates from. Accepted schemes are: `https`, `tls`. For scheme `https://` it will use the HTTP protocol and apply the `proxy` configuration of the provider, if set. For scheme `tls://` it will instead use a secure TCP socket.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate#url DataTlsCertificate#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/certificate#url DataTlsCertificate#url}
   */
   readonly url?: string;
   /**
   * Whether to verify the certificate chain while parsing it or not (default: `true`).
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate#verify_chain DataTlsCertificate#verify_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/certificate#verify_chain DataTlsCertificate#verify_chain}
   */
   readonly verifyChain?: boolean | cdktf.IResolvable;
 }
@@ -147,7 +142,7 @@ export class DataTlsCertificateCertificatesList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate tls_certificate}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/certificate tls_certificate}
 */
 export class DataTlsCertificate extends cdktf.TerraformDataSource {
 
@@ -163,7 +158,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataTlsCertificate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataTlsCertificate to import
-  * @param importFromId The id of the existing DataTlsCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataTlsCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/certificate#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataTlsCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -175,7 +170,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate tls_certificate} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/certificate tls_certificate} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -186,7 +181,7 @@ export class DataTlsCertificate extends cdktf.TerraformDataSource {
       terraformResourceType: 'tls_certificate',
       terraformGeneratorMetadata: {
         providerName: 'tls',
-        providerVersion: '4.0.4',
+        providerVersion: '4.0.5',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

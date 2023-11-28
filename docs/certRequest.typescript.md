@@ -1,6 +1,6 @@
 # `tls_cert_request`
 
-Refer to the Terraform Registory for docs: [`tls_cert_request`](https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request).
+Refer to the Terraform Registory for docs: [`tls_cert_request`](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request).
 
 # `certRequest` Submodule <a name="`certRequest` Submodule" id="@cdktf/provider-tls.certRequest"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`tls_cert_request`](https://registry
 
 ### CertRequest <a name="CertRequest" id="@cdktf/provider-tls.certRequest.CertRequest"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request tls_cert_request}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request tls_cert_request}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.certRequest.CertRequest.Initializer"></a>
 
@@ -326,12 +326,12 @@ Optional The index corresponding to the key the resource is to appear in the for
 ##### `putSubject` <a name="putSubject" id="@cdktf/provider-tls.certRequest.CertRequest.putSubject"></a>
 
 ```typescript
-public putSubject(value: CertRequestSubject): void
+public putSubject(value: IResolvable | CertRequestSubject[]): void
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-tls.certRequest.CertRequest.putSubject.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>[]
 
 ---
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the CertRequest to import.
 
 The id of the existing CertRequest that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -495,11 +495,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.certRequestPem">certRequestPem</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.keyAlgorithm">keyAlgorithm</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.subject">subject</a></code> | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference">CertRequestSubjectOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.subject">subject</a></code> | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList">CertRequestSubjectList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.dnsNamesInput">dnsNamesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.ipAddressesInput">ipAddressesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.privateKeyPemInput">privateKeyPemInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.subjectInput">subjectInput</a></code> | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.subjectInput">subjectInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.urisInput">urisInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.dnsNames">dnsNames</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequest.property.ipAddresses">ipAddresses</a></code> | <code>string[]</code> | *No description.* |
@@ -683,10 +683,10 @@ public readonly keyAlgorithm: string;
 ##### `subject`<sup>Required</sup> <a name="subject" id="@cdktf/provider-tls.certRequest.CertRequest.property.subject"></a>
 
 ```typescript
-public readonly subject: CertRequestSubjectOutputReference;
+public readonly subject: CertRequestSubjectList;
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference">CertRequestSubjectOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList">CertRequestSubjectList</a>
 
 ---
 
@@ -723,10 +723,10 @@ public readonly privateKeyPemInput: string;
 ##### `subjectInput`<sup>Optional</sup> <a name="subjectInput" id="@cdktf/provider-tls.certRequest.CertRequest.property.subjectInput"></a>
 
 ```typescript
-public readonly subjectInput: CertRequestSubject;
+public readonly subjectInput: IResolvable | CertRequestSubject[];
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>[]
 
 ---
 
@@ -821,10 +821,10 @@ const certRequestConfig: certRequest.CertRequestConfig = { ... }
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.privateKeyPem">privateKeyPem</a></code> | <code>string</code> | Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.privateKeyPem">privateKeyPem</a></code> | <code>string</code> | Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.dnsNames">dnsNames</a></code> | <code>string[]</code> | List of DNS names for which a certificate is being requested (i.e. certificate subjects). |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.ipAddresses">ipAddresses</a></code> | <code>string[]</code> | List of IP addresses for which a certificate is being requested (i.e. certificate subjects). |
-| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.subject">subject</a></code> | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a></code> | subject block. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.subject">subject</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>[]</code> | subject block. |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestConfig.property.uris">uris</a></code> | <code>string[]</code> | List of URIs for which a certificate is being requested (i.e. certificate subjects). |
 
 ---
@@ -907,9 +907,9 @@ public readonly privateKeyPem: string;
 
 - *Type:* string
 
-Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
+Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#private_key_pem CertRequest#private_key_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#private_key_pem CertRequest#private_key_pem}
 
 ---
 
@@ -923,7 +923,7 @@ public readonly dnsNames: string[];
 
 List of DNS names for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#dns_names CertRequest#dns_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#dns_names CertRequest#dns_names}
 
 ---
 
@@ -937,21 +937,21 @@ public readonly ipAddresses: string[];
 
 List of IP addresses for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#ip_addresses CertRequest#ip_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#ip_addresses CertRequest#ip_addresses}
 
 ---
 
 ##### `subject`<sup>Optional</sup> <a name="subject" id="@cdktf/provider-tls.certRequest.CertRequestConfig.property.subject"></a>
 
 ```typescript
-public readonly subject: CertRequestSubject;
+public readonly subject: IResolvable | CertRequestSubject[];
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>[]
 
 subject block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#subject CertRequest#subject}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#subject CertRequest#subject}
 
 ---
 
@@ -965,7 +965,7 @@ public readonly uris: string[];
 
 List of URIs for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#uris CertRequest#uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#uris CertRequest#uris}
 
 ---
 
@@ -1005,7 +1005,7 @@ public readonly commonName: string;
 
 Distinguished name: `CN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#common_name CertRequest#common_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#common_name CertRequest#common_name}
 
 ---
 
@@ -1019,7 +1019,7 @@ public readonly country: string;
 
 Distinguished name: `C`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#country CertRequest#country}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#country CertRequest#country}
 
 ---
 
@@ -1033,7 +1033,7 @@ public readonly locality: string;
 
 Distinguished name: `L`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#locality CertRequest#locality}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#locality CertRequest#locality}
 
 ---
 
@@ -1047,7 +1047,7 @@ public readonly organization: string;
 
 Distinguished name: `O`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#organization CertRequest#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#organization CertRequest#organization}
 
 ---
 
@@ -1061,7 +1061,7 @@ public readonly organizationalUnit: string;
 
 Distinguished name: `OU`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#organizational_unit CertRequest#organizational_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#organizational_unit CertRequest#organizational_unit}
 
 ---
 
@@ -1075,7 +1075,7 @@ public readonly postalCode: string;
 
 Distinguished name: `PC`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#postal_code CertRequest#postal_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#postal_code CertRequest#postal_code}
 
 ---
 
@@ -1089,7 +1089,7 @@ public readonly province: string;
 
 Distinguished name: `ST`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#province CertRequest#province}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#province CertRequest#province}
 
 ---
 
@@ -1103,7 +1103,7 @@ public readonly serialNumber: string;
 
 Distinguished name: `SERIALNUMBER`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#serial_number CertRequest#serial_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#serial_number CertRequest#serial_number}
 
 ---
 
@@ -1117,11 +1117,154 @@ public readonly streetAddress: string[];
 
 Distinguished name: `STREET`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request#street_address CertRequest#street_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request#street_address CertRequest#street_address}
 
 ---
 
 ## Classes <a name="Classes" id="Classes"></a>
+
+### CertRequestSubjectList <a name="CertRequestSubjectList" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.Initializer"></a>
+
+```typescript
+import { certRequest } from '@cdktf/provider-tls'
+
+new certRequest.CertRequestSubjectList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.get">get</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.get"></a>
+
+```typescript
+public get(index: number): CertRequestSubjectOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.get.parameter.index"></a>
+
+- *Type:* number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectList.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>[]</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-tls.certRequest.CertRequestSubjectList.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | CertRequestSubject[];
+```
+
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>[]
+
+---
+
 
 ### CertRequestSubjectOutputReference <a name="CertRequestSubjectOutputReference" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference"></a>
 
@@ -1130,13 +1273,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```typescript
 import { certRequest } from '@cdktf/provider-tls'
 
-new certRequest.CertRequestSubjectOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+new certRequest.CertRequestSubjectOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
@@ -1153,6 +1298,22 @@ The parent resource.
 - *Type:* string
 
 The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 
 ---
 
@@ -1414,7 +1575,7 @@ public resetStreetAddress(): void
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.province">province</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.serialNumber">serialNumber</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.streetAddress">streetAddress</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a> \| cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1625,10 +1786,10 @@ public readonly streetAddress: string[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: CertRequestSubject;
+public readonly internalValue: CertRequestSubject | IResolvable;
 ```
 
-- *Type:* <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a>
+- *Type:* <a href="#@cdktf/provider-tls.certRequest.CertRequestSubject">CertRequestSubject</a> | cdktf.IResolvable
 
 ---
 
