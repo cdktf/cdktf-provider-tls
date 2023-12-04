@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.provider.TlsProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
 
 provider.NewTlsProvider(scope Construct, id *string, config TlsProviderConfig) TlsProvider
 ```
@@ -151,7 +151,7 @@ func ResetProxy()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-tls.provider.TlsProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
 
 provider.TlsProvider_IsConstruct(x interface{}) *bool
 ```
@@ -183,7 +183,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-tls.provider.TlsProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
 
 provider.TlsProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -197,7 +197,7 @@ provider.TlsProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/provider-tls.provider.TlsProvider.isTerraformProvider"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
 
 provider.TlsProvider_IsTerraformProvider(x interface{}) *bool
 ```
@@ -211,7 +211,7 @@ provider.TlsProvider_IsTerraformProvider(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-tls.provider.TlsProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
 
 provider.TlsProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -418,7 +418,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.provider.TlsProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
 
 &provider.TlsProviderConfig {
 	Alias: *string,
@@ -468,7 +468,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.provider.TlsProviderProxy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/provider"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider"
 
 &provider.TlsProviderProxy {
 	FromEnv: interface{},
