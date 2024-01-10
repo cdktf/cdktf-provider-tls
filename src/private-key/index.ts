@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key
 // generated from terraform resource schema
 
@@ -187,5 +182,31 @@ export class PrivateKey extends cdktf.TerraformResource {
       ecdsa_curve: cdktf.stringToTerraform(this._ecdsaCurve),
       rsa_bits: cdktf.numberToTerraform(this._rsaBits),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      algorithm: {
+        value: cdktf.stringToHclTerraform(this._algorithm),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ecdsa_curve: {
+        value: cdktf.stringToHclTerraform(this._ecdsaCurve),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rsa_bits: {
+        value: cdktf.numberToHclTerraform(this._rsaBits),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

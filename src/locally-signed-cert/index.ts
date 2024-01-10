@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/locally_signed_cert
 // generated from terraform resource schema
 
@@ -285,5 +280,61 @@ export class LocallySignedCert extends cdktf.TerraformResource {
       set_subject_key_id: cdktf.booleanToTerraform(this._setSubjectKeyId),
       validity_period_hours: cdktf.numberToTerraform(this._validityPeriodHours),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allowed_uses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._allowedUses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      ca_cert_pem: {
+        value: cdktf.stringToHclTerraform(this._caCertPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ca_private_key_pem: {
+        value: cdktf.stringToHclTerraform(this._caPrivateKeyPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cert_request_pem: {
+        value: cdktf.stringToHclTerraform(this._certRequestPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      early_renewal_hours: {
+        value: cdktf.numberToHclTerraform(this._earlyRenewalHours),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      is_ca_certificate: {
+        value: cdktf.booleanToHclTerraform(this._isCaCertificate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      set_subject_key_id: {
+        value: cdktf.booleanToHclTerraform(this._setSubjectKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      validity_period_hours: {
+        value: cdktf.numberToHclTerraform(this._validityPeriodHours),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

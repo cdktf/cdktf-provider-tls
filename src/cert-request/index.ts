@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request
 // generated from terraform resource schema
 
@@ -116,6 +111,73 @@ export function certRequestSubjectToTerraform(struct?: CertRequestSubject | cdkt
     serial_number: cdktf.stringToTerraform(struct!.serialNumber),
     street_address: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.streetAddress),
   }
+}
+
+
+export function certRequestSubjectToHclTerraform(struct?: CertRequestSubject | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    common_name: {
+      value: cdktf.stringToHclTerraform(struct!.commonName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country: {
+      value: cdktf.stringToHclTerraform(struct!.country),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    locality: {
+      value: cdktf.stringToHclTerraform(struct!.locality),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organization: {
+      value: cdktf.stringToHclTerraform(struct!.organization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organizational_unit: {
+      value: cdktf.stringToHclTerraform(struct!.organizationalUnit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    postal_code: {
+      value: cdktf.stringToHclTerraform(struct!.postalCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    province: {
+      value: cdktf.stringToHclTerraform(struct!.province),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    serial_number: {
+      value: cdktf.stringToHclTerraform(struct!.serialNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    street_address: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.streetAddress),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CertRequestSubjectOutputReference extends cdktf.ComplexObject {
@@ -541,5 +603,43 @@ export class CertRequest extends cdktf.TerraformResource {
       uris: cdktf.listMapper(cdktf.stringToTerraform, false)(this._uris),
       subject: cdktf.listMapper(certRequestSubjectToTerraform, true)(this._subject.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dns_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._dnsNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      ip_addresses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._ipAddresses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      private_key_pem: {
+        value: cdktf.stringToHclTerraform(this._privateKeyPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      uris: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._uris),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      subject: {
+        value: cdktf.listMapperHcl(certRequestSubjectToHclTerraform, true)(this._subject.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CertRequestSubjectList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

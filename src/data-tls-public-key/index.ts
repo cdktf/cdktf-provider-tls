@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/data-sources/public_key
 // generated from terraform resource schema
 
@@ -156,5 +151,25 @@ export class DataTlsPublicKey extends cdktf.TerraformDataSource {
       private_key_openssh: cdktf.stringToTerraform(this._privateKeyOpenssh),
       private_key_pem: cdktf.stringToTerraform(this._privateKeyPem),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      private_key_openssh: {
+        value: cdktf.stringToHclTerraform(this._privateKeyOpenssh),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_key_pem: {
+        value: cdktf.stringToHclTerraform(this._privateKeyPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
