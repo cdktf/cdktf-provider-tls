@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.privateKey.PrivateKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/privatekey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/privatekey"
 
 privatekey.NewPrivateKey(scope Construct, id *string, config PrivateKeyConfig) PrivateKey
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-tls.privateKey.PrivateKey.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.privateKey.PrivateKey.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-tls.privateKey.PrivateKey.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-tls.privateKey.PrivateKey.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.privateKey.PrivateKey.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.privateKey.PrivateKey.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-tls.privateKey.PrivateKey.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -126,6 +127,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-tls.privateKey.PrivateKey.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-tls.privateKey.PrivateKey.toMetadata"></a>
 
@@ -385,7 +392,7 @@ func ResetRsaBits()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-tls.privateKey.PrivateKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/privatekey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/privatekey"
 
 privatekey.PrivateKey_IsConstruct(x interface{}) *bool
 ```
@@ -417,7 +424,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-tls.privateKey.PrivateKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/privatekey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/privatekey"
 
 privatekey.PrivateKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -431,7 +438,7 @@ privatekey.PrivateKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-tls.privateKey.PrivateKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/privatekey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/privatekey"
 
 privatekey.PrivateKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -445,7 +452,7 @@ privatekey.PrivateKey_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-tls.privateKey.PrivateKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/privatekey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/privatekey"
 
 privatekey.PrivateKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -828,7 +835,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.privateKey.PrivateKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/privatekey"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/privatekey"
 
 &privatekey.PrivateKeyConfig {
 	Connection: interface{},

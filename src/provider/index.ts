@@ -66,6 +66,43 @@ export function tlsProviderProxyToTerraform(struct?: TlsProviderProxy | cdktf.IR
 }
 
 
+export function tlsProviderProxyToHclTerraform(struct?: TlsProviderProxy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    from_env: {
+      value: cdktf.booleanToHclTerraform(struct!.fromEnv),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+
 /**
 * Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls}
 */
@@ -160,5 +197,25 @@ export class TlsProvider extends cdktf.TerraformProvider {
       alias: cdktf.stringToTerraform(this._alias),
       proxy: cdktf.listMapper(tlsProviderProxyToTerraform, true)(this._proxy),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      alias: {
+        value: cdktf.stringToHclTerraform(this._alias),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      proxy: {
+        value: cdktf.listMapperHcl(tlsProviderProxyToHclTerraform, true)(this._proxy),
+        isBlock: true,
+        type: "list",
+        storageClassType: "TlsProviderProxyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

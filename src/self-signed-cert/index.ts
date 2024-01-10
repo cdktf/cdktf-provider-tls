@@ -154,6 +154,73 @@ export function selfSignedCertSubjectToTerraform(struct?: SelfSignedCertSubject 
   }
 }
 
+
+export function selfSignedCertSubjectToHclTerraform(struct?: SelfSignedCertSubject | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    common_name: {
+      value: cdktf.stringToHclTerraform(struct!.commonName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    country: {
+      value: cdktf.stringToHclTerraform(struct!.country),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    locality: {
+      value: cdktf.stringToHclTerraform(struct!.locality),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organization: {
+      value: cdktf.stringToHclTerraform(struct!.organization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organizational_unit: {
+      value: cdktf.stringToHclTerraform(struct!.organizationalUnit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    postal_code: {
+      value: cdktf.stringToHclTerraform(struct!.postalCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    province: {
+      value: cdktf.stringToHclTerraform(struct!.province),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    serial_number: {
+      value: cdktf.stringToHclTerraform(struct!.serialNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    street_address: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.streetAddress),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SelfSignedCertSubjectOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -694,5 +761,79 @@ export class SelfSignedCert extends cdktf.TerraformResource {
       validity_period_hours: cdktf.numberToTerraform(this._validityPeriodHours),
       subject: cdktf.listMapper(selfSignedCertSubjectToTerraform, true)(this._subject.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allowed_uses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._allowedUses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      dns_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._dnsNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      early_renewal_hours: {
+        value: cdktf.numberToHclTerraform(this._earlyRenewalHours),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      ip_addresses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._ipAddresses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      is_ca_certificate: {
+        value: cdktf.booleanToHclTerraform(this._isCaCertificate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      private_key_pem: {
+        value: cdktf.stringToHclTerraform(this._privateKeyPem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      set_authority_key_id: {
+        value: cdktf.booleanToHclTerraform(this._setAuthorityKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      set_subject_key_id: {
+        value: cdktf.booleanToHclTerraform(this._setSubjectKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      uris: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._uris),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      validity_period_hours: {
+        value: cdktf.numberToHclTerraform(this._validityPeriodHours),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      subject: {
+        value: cdktf.listMapperHcl(selfSignedCertSubjectToHclTerraform, true)(this._subject.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SelfSignedCertSubjectList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -188,4 +188,30 @@ export class PrivateKey extends cdktf.TerraformResource {
       rsa_bits: cdktf.numberToTerraform(this._rsaBits),
     };
   }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      algorithm: {
+        value: cdktf.stringToHclTerraform(this._algorithm),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ecdsa_curve: {
+        value: cdktf.stringToHclTerraform(this._ecdsaCurve),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rsa_bits: {
+        value: cdktf.numberToHclTerraform(this._rsaBits),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
+  }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 selfsignedcert.NewSelfSignedCert(scope Construct, id *string, config SelfSignedCertConfig) SelfSignedCert
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCert.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -133,6 +134,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.toMetadata"></a>
 
@@ -440,7 +447,7 @@ func ResetUris()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 selfsignedcert.SelfSignedCert_IsConstruct(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 selfsignedcert.SelfSignedCert_IsTerraformElement(x interface{}) *bool
 ```
@@ -486,7 +493,7 @@ selfsignedcert.SelfSignedCert_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 selfsignedcert.SelfSignedCert_IsTerraformResource(x interface{}) *bool
 ```
@@ -500,7 +507,7 @@ selfsignedcert.SelfSignedCert_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCert.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 selfsignedcert.SelfSignedCert_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1037,7 +1044,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 &selfsignedcert.SelfSignedCertConfig {
 	Connection: interface{},
@@ -1319,7 +1326,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 &selfsignedcert.SelfSignedCertSubject {
 	CommonName: *string,
@@ -1483,7 +1490,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 selfsignedcert.NewSelfSignedCertSubjectList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SelfSignedCertSubjectList
 ```
@@ -1524,10 +1531,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1626,7 +1650,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-tls-go/tls/v9/selfsignedcert"
+import "github.com/cdktf/cdktf-provider-tls-go/tls/v10/selfsignedcert"
 
 selfsignedcert.NewSelfSignedCertSubjectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SelfSignedCertSubjectOutputReference
 ```
