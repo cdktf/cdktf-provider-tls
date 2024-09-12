@@ -4,7 +4,7 @@
 
 ### TlsProvider <a name="TlsProvider" id="@cdktf/provider-tls.provider.TlsProvider"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs tls}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.provider.TlsProvider.Initializer"></a>
 
@@ -52,7 +52,7 @@ Must be unique amongst siblings in the same scope
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#alias TlsProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#alias TlsProvider#alias}
 
 ---
 
@@ -62,7 +62,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 proxy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#proxy TlsProvider#proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#proxy TlsProvider#proxy}
 
 ---
 
@@ -283,7 +283,7 @@ The construct id used in the generated config for the TlsProvider to import.
 
 The id of the existing TlsProvider that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -488,7 +488,7 @@ alias: str
 
 Alias name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#alias TlsProvider#alias}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#alias TlsProvider#alias}
 
 ---
 
@@ -502,7 +502,7 @@ proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]]
 
 proxy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#proxy TlsProvider#proxy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#proxy TlsProvider#proxy}
 
 ---
 
@@ -544,7 +544,7 @@ When `true` the provider will discover the proxy configuration from environment 
 
 This is based upon [`http.ProxyFromEnvironment`](https://pkg.go.dev/net/http#ProxyFromEnvironment) and it supports the same environment variables (default: `true`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#from_env TlsProvider#from_env}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#from_env TlsProvider#from_env}
 
 ---
 
@@ -558,7 +558,7 @@ password: str
 
 Password used for Basic authentication against the Proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#password TlsProvider#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#password TlsProvider#password}
 
 ---
 
@@ -572,7 +572,7 @@ url: str
 
 URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#url TlsProvider#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#url TlsProvider#url}
 
 ---
 
@@ -586,7 +586,7 @@ username: str
 
 Username (or Token) used for Basic authentication against the Proxy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs#username TlsProvider#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs#username TlsProvider#username}
 
 ---
 
