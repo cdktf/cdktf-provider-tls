@@ -4,7 +4,7 @@
 
 ### CertRequest <a name="CertRequest" id="@cdktf/provider-tls.certRequest.CertRequest"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request tls_cert_request}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request tls_cert_request}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-tls.certRequest.CertRequest.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the CertRequest to import.
 
 The id of the existing CertRequest that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -968,7 +968,7 @@ public string PrivateKeyPem { get; set; }
 
 Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#private_key_pem CertRequest#private_key_pem}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#private_key_pem CertRequest#private_key_pem}
 
 ---
 
@@ -982,7 +982,7 @@ public string[] DnsNames { get; set; }
 
 List of DNS names for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#dns_names CertRequest#dns_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#dns_names CertRequest#dns_names}
 
 ---
 
@@ -996,7 +996,7 @@ public string[] IpAddresses { get; set; }
 
 List of IP addresses for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#ip_addresses CertRequest#ip_addresses}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#ip_addresses CertRequest#ip_addresses}
 
 ---
 
@@ -1010,7 +1010,7 @@ public object Subject { get; set; }
 
 subject block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#subject CertRequest#subject}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#subject CertRequest#subject}
 
 ---
 
@@ -1024,7 +1024,7 @@ public string[] Uris { get; set; }
 
 List of URIs for which a certificate is being requested (i.e. certificate subjects).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#uris CertRequest#uris}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#uris CertRequest#uris}
 
 ---
 
@@ -1038,6 +1038,7 @@ using HashiCorp.Cdktf.Providers.Tls;
 new CertRequestSubject {
     string CommonName = null,
     string Country = null,
+    string EmailAddress = null,
     string Locality = null,
     string Organization = null,
     string OrganizationalUnit = null,
@@ -1054,6 +1055,7 @@ new CertRequestSubject {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject.property.commonName">CommonName</a></code> | <code>string</code> | Distinguished name: `CN`. |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject.property.country">Country</a></code> | <code>string</code> | Distinguished name: `C`. |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject.property.emailAddress">EmailAddress</a></code> | <code>string</code> | ASN.1 Object Identifier (OID): `1.2.840.113549.1.9.1`. |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject.property.locality">Locality</a></code> | <code>string</code> | Distinguished name: `L`. |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject.property.organization">Organization</a></code> | <code>string</code> | Distinguished name: `O`. |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubject.property.organizationalUnit">OrganizationalUnit</a></code> | <code>string</code> | Distinguished name: `OU`. |
@@ -1074,7 +1076,7 @@ public string CommonName { get; set; }
 
 Distinguished name: `CN`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#common_name CertRequest#common_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#common_name CertRequest#common_name}
 
 ---
 
@@ -1088,7 +1090,21 @@ public string Country { get; set; }
 
 Distinguished name: `C`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#country CertRequest#country}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#country CertRequest#country}
+
+---
+
+##### `EmailAddress`<sup>Optional</sup> <a name="EmailAddress" id="@cdktf/provider-tls.certRequest.CertRequestSubject.property.emailAddress"></a>
+
+```csharp
+public string EmailAddress { get; set; }
+```
+
+- *Type:* string
+
+ASN.1 Object Identifier (OID): `1.2.840.113549.1.9.1`.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#email_address CertRequest#email_address}
 
 ---
 
@@ -1102,7 +1118,7 @@ public string Locality { get; set; }
 
 Distinguished name: `L`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#locality CertRequest#locality}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#locality CertRequest#locality}
 
 ---
 
@@ -1116,7 +1132,7 @@ public string Organization { get; set; }
 
 Distinguished name: `O`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#organization CertRequest#organization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#organization CertRequest#organization}
 
 ---
 
@@ -1130,7 +1146,7 @@ public string OrganizationalUnit { get; set; }
 
 Distinguished name: `OU`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#organizational_unit CertRequest#organizational_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#organizational_unit CertRequest#organizational_unit}
 
 ---
 
@@ -1144,7 +1160,7 @@ public string PostalCode { get; set; }
 
 Distinguished name: `PC`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#postal_code CertRequest#postal_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#postal_code CertRequest#postal_code}
 
 ---
 
@@ -1158,7 +1174,7 @@ public string Province { get; set; }
 
 Distinguished name: `ST`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#province CertRequest#province}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#province CertRequest#province}
 
 ---
 
@@ -1172,7 +1188,7 @@ public string SerialNumber { get; set; }
 
 Distinguished name: `SERIALNUMBER`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#serial_number CertRequest#serial_number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#serial_number CertRequest#serial_number}
 
 ---
 
@@ -1186,7 +1202,7 @@ public string[] StreetAddress { get; set; }
 
 Distinguished name: `STREET`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request#street_address CertRequest#street_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/cert_request#street_address CertRequest#street_address}
 
 ---
 
@@ -1422,6 +1438,7 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.resetCommonName">ResetCommonName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.resetCountry">ResetCountry</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.resetEmailAddress">ResetEmailAddress</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.resetLocality">ResetLocality</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.resetOrganization">ResetOrganization</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.resetOrganizationalUnit">ResetOrganizationalUnit</a></code> | *No description.* |
@@ -1594,6 +1611,12 @@ private void ResetCommonName()
 private void ResetCountry()
 ```
 
+##### `ResetEmailAddress` <a name="ResetEmailAddress" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.resetEmailAddress"></a>
+
+```csharp
+private void ResetEmailAddress()
+```
+
 ##### `ResetLocality` <a name="ResetLocality" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.resetLocality"></a>
 
 ```csharp
@@ -1645,6 +1668,7 @@ private void ResetStreetAddress()
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.commonNameInput">CommonNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.countryInput">CountryInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.emailAddressInput">EmailAddressInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.localityInput">LocalityInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.organizationalUnitInput">OrganizationalUnitInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.organizationInput">OrganizationInput</a></code> | <code>string</code> | *No description.* |
@@ -1654,6 +1678,7 @@ private void ResetStreetAddress()
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.streetAddressInput">StreetAddressInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.commonName">CommonName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.country">Country</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.emailAddress">EmailAddress</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.locality">Locality</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.organization">Organization</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.organizationalUnit">OrganizationalUnit</a></code> | <code>string</code> | *No description.* |
@@ -1703,6 +1728,16 @@ public string CommonNameInput { get; }
 
 ```csharp
 public string CountryInput { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `EmailAddressInput`<sup>Optional</sup> <a name="EmailAddressInput" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.emailAddressInput"></a>
+
+```csharp
+public string EmailAddressInput { get; }
 ```
 
 - *Type:* string
@@ -1793,6 +1828,16 @@ public string CommonName { get; }
 
 ```csharp
 public string Country { get; }
+```
+
+- *Type:* string
+
+---
+
+##### `EmailAddress`<sup>Required</sup> <a name="EmailAddress" id="@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference.property.emailAddress"></a>
+
+```csharp
+public string EmailAddress { get; }
 ```
 
 - *Type:* string
