@@ -13,8 +13,7 @@ import com.hashicorp.cdktf.providers.tls.provider.TlsProvider;
 
 TlsProvider.Builder.create(Construct scope, java.lang.String id)
 //  .alias(java.lang.String)
-//  .proxy(IResolvable)
-//  .proxy(java.util.List<TlsProviderProxy>)
+//  .proxy(IResolvable|java.util.List<TlsProviderProxy>)
     .build();
 ```
 
@@ -23,7 +22,7 @@ TlsProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy">proxy</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>></code> | proxy block. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy">proxy</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>></code> | proxy block. |
 
 ---
 
@@ -57,7 +56,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>>
 
 proxy block.
 
@@ -292,8 +291,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.terraformProviderSource">terraformProviderSource</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.alias">alias</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.aliasInput">aliasInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">proxyInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>></code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">proxy</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">proxyInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">proxy</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>></code> | *No description.* |
 
 ---
 
@@ -402,20 +401,20 @@ public java.lang.String getAliasInput();
 ##### `proxyInput`<sup>Optional</sup> <a name="proxyInput" id="@cdktf/provider-tls.provider.TlsProvider.property.proxyInput"></a>
 
 ```java
-public java.lang.Object getProxyInput();
+public IResolvable|java.util.List<TlsProviderProxy> getProxyInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>>
 
 ---
 
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProvider.property.proxy"></a>
 
 ```java
-public java.lang.Object getProxy();
+public IResolvable|java.util.List<TlsProviderProxy> getProxy();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>>
 
 ---
 
@@ -448,8 +447,7 @@ import com.hashicorp.cdktf.providers.tls.provider.TlsProviderConfig;
 
 TlsProviderConfig.builder()
 //  .alias(java.lang.String)
-//  .proxy(IResolvable)
-//  .proxy(java.util.List<TlsProviderProxy>)
+//  .proxy(IResolvable|java.util.List<TlsProviderProxy>)
     .build();
 ```
 
@@ -458,7 +456,7 @@ TlsProviderConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.alias">alias</a></code> | <code>java.lang.String</code> | Alias name. |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">proxy</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>></code> | proxy block. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">proxy</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>></code> | proxy block. |
 
 ---
 
@@ -479,10 +477,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy"></a>
 
 ```java
-public java.lang.Object getProxy();
+public IResolvable|java.util.List<TlsProviderProxy> getProxy();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>>
 
 proxy block.
 
@@ -498,8 +496,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.tls.provider.TlsProviderProxy;
 
 TlsProviderProxy.builder()
-//  .fromEnv(java.lang.Boolean)
-//  .fromEnv(IResolvable)
+//  .fromEnv(java.lang.Boolean|IResolvable)
 //  .password(java.lang.String)
 //  .url(java.lang.String)
 //  .username(java.lang.String)
@@ -510,7 +507,7 @@ TlsProviderProxy.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv">fromEnv</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When `true` the provider will discover the proxy configuration from environment variables. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv">fromEnv</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When `true` the provider will discover the proxy configuration from environment variables. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.password">password</a></code> | <code>java.lang.String</code> | Password used for Basic authentication against the Proxy. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.url">url</a></code> | <code>java.lang.String</code> | URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.username">username</a></code> | <code>java.lang.String</code> | Username (or Token) used for Basic authentication against the Proxy. |
@@ -520,10 +517,10 @@ TlsProviderProxy.builder()
 ##### `fromEnv`<sup>Optional</sup> <a name="fromEnv" id="@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv"></a>
 
 ```java
-public java.lang.Object getFromEnv();
+public java.lang.Boolean|IResolvable getFromEnv();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When `true` the provider will discover the proxy configuration from environment variables.
 

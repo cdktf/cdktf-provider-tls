@@ -273,8 +273,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.terraformProviderSource">TerraformProviderSource</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.alias">Alias</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.aliasInput">AliasInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">ProxyInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">Proxy</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">ProxyInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">Proxy</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>[]</code> | *No description.* |
 
 ---
 
@@ -383,20 +383,20 @@ public string AliasInput { get; }
 ##### `ProxyInput`<sup>Optional</sup> <a name="ProxyInput" id="@cdktf/provider-tls.provider.TlsProvider.property.proxyInput"></a>
 
 ```csharp
-public object ProxyInput { get; }
+public IResolvable|TlsProviderProxy[] ProxyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>[]
 
 ---
 
 ##### `Proxy`<sup>Optional</sup> <a name="Proxy" id="@cdktf/provider-tls.provider.TlsProvider.property.proxy"></a>
 
 ```csharp
-public object Proxy { get; }
+public IResolvable|TlsProviderProxy[] Proxy { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>[]
 
 ---
 
@@ -429,7 +429,7 @@ using HashiCorp.Cdktf.Providers.Tls;
 
 new TlsProviderConfig {
     string Alias = null,
-    object Proxy = null
+    IResolvable|TlsProviderProxy[] Proxy = null
 };
 ```
 
@@ -438,7 +438,7 @@ new TlsProviderConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.alias">Alias</a></code> | <code>string</code> | Alias name. |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">Proxy</a></code> | <code>object</code> | proxy block. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">Proxy</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>[]</code> | proxy block. |
 
 ---
 
@@ -459,10 +459,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Proxy`<sup>Optional</sup> <a name="Proxy" id="@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy"></a>
 
 ```csharp
-public object Proxy { get; set; }
+public IResolvable|TlsProviderProxy[] Proxy { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>[]
 
 proxy block.
 
@@ -478,7 +478,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Tls;
 
 new TlsProviderProxy {
-    object FromEnv = null,
+    bool|IResolvable FromEnv = null,
     string Password = null,
     string Url = null,
     string Username = null
@@ -489,7 +489,7 @@ new TlsProviderProxy {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv">FromEnv</a></code> | <code>object</code> | When `true` the provider will discover the proxy configuration from environment variables. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv">FromEnv</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | When `true` the provider will discover the proxy configuration from environment variables. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.password">Password</a></code> | <code>string</code> | Password used for Basic authentication against the Proxy. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.url">Url</a></code> | <code>string</code> | URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.username">Username</a></code> | <code>string</code> | Username (or Token) used for Basic authentication against the Proxy. |
@@ -499,10 +499,10 @@ new TlsProviderProxy {
 ##### `FromEnv`<sup>Optional</sup> <a name="FromEnv" id="@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv"></a>
 
 ```csharp
-public object FromEnv { get; set; }
+public bool|IResolvable FromEnv { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 When `true` the provider will discover the proxy configuration from environment variables.
 

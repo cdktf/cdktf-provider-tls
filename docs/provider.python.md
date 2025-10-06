@@ -15,7 +15,7 @@ provider.TlsProvider(
   scope: Construct,
   id: str,
   alias: str = None,
-  proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]] = None
+  proxy: IResolvable | typing.List[TlsProviderProxy] = None
 )
 ```
 
@@ -24,7 +24,7 @@ provider.TlsProvider(
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.alias">alias</a></code> | <code>str</code> | Alias name. |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy">proxy</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]</code> | proxy block. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy">proxy</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]</code> | proxy block. |
 
 ---
 
@@ -58,7 +58,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProvider.Initializer.parameter.proxy"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]
 
 proxy block.
 
@@ -309,8 +309,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.terraformProviderSource">terraform_provider_source</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.alias">alias</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.aliasInput">alias_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">proxy_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">proxy</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxyInput">proxy_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProvider.property.proxy">proxy</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]</code> | *No description.* |
 
 ---
 
@@ -419,20 +419,20 @@ alias_input: str
 ##### `proxy_input`<sup>Optional</sup> <a name="proxy_input" id="@cdktf/provider-tls.provider.TlsProvider.property.proxyInput"></a>
 
 ```python
-proxy_input: typing.Union[IResolvable, typing.List[TlsProviderProxy]]
+proxy_input: IResolvable | typing.List[TlsProviderProxy]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]
 
 ---
 
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProvider.property.proxy"></a>
 
 ```python
-proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]]
+proxy: IResolvable | typing.List[TlsProviderProxy]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]
 
 ---
 
@@ -465,7 +465,7 @@ from cdktf_cdktf_provider_tls import provider
 
 provider.TlsProviderConfig(
   alias: str = None,
-  proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]] = None
+  proxy: IResolvable | typing.List[TlsProviderProxy] = None
 )
 ```
 
@@ -474,7 +474,7 @@ provider.TlsProviderConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.alias">alias</a></code> | <code>str</code> | Alias name. |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">proxy</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]</code> | proxy block. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy">proxy</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]</code> | proxy block. |
 
 ---
 
@@ -495,10 +495,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-tls.provider.TlsProviderConfig.property.proxy"></a>
 
 ```python
-proxy: typing.Union[IResolvable, typing.List[TlsProviderProxy]]
+proxy: IResolvable | typing.List[TlsProviderProxy]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-tls.provider.TlsProviderProxy">TlsProviderProxy</a>]
 
 proxy block.
 
@@ -514,7 +514,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_tls import provider
 
 provider.TlsProviderProxy(
-  from_env: typing.Union[bool, IResolvable] = None,
+  from_env: bool | IResolvable = None,
   password: str = None,
   url: str = None,
   username: str = None
@@ -525,7 +525,7 @@ provider.TlsProviderProxy(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv">from_env</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | When `true` the provider will discover the proxy configuration from environment variables. |
+| <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv">from_env</a></code> | <code>bool \| cdktf.IResolvable</code> | When `true` the provider will discover the proxy configuration from environment variables. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.password">password</a></code> | <code>str</code> | Password used for Basic authentication against the Proxy. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.url">url</a></code> | <code>str</code> | URL used to connect to the Proxy. Accepted schemes are: `http`, `https`, `socks5`. |
 | <code><a href="#@cdktf/provider-tls.provider.TlsProviderProxy.property.username">username</a></code> | <code>str</code> | Username (or Token) used for Basic authentication against the Proxy. |
@@ -535,10 +535,10 @@ provider.TlsProviderProxy(
 ##### `from_env`<sup>Optional</sup> <a name="from_env" id="@cdktf/provider-tls.provider.TlsProviderProxy.property.fromEnv"></a>
 
 ```python
-from_env: typing.Union[bool, IResolvable]
+from_env: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 When `true` the provider will discover the proxy configuration from environment variables.
 
